@@ -1,6 +1,7 @@
 <?php 
 $nome = "";
 $idade = "";
+$res ="";
 $n1 = 0;
 $n2 = 0;
 $n3 = 0;
@@ -8,7 +9,19 @@ $n4 = 0;
 $n5 = 0;
  
 
-if($n1){
+if($_SERVER["REQUEST_METHOD"]== "POST"){
+    $nome = $_POST["nome"];
+    $idade = $_POST["idade"];
+    $n1 = $_POST["n1"];
+    $n2 = $_POST["n2"];
+    $n3 = $_POST["n3"];
+    $n4 = $_POST["n4"];
+    $n5 = $_POST["n5"];
+    
+    if (($nome || $idade || $n1 || $n2 || $n3 || $n4|| $n5 )== ""){
+
+        $res = "preenche todos os campos";
+    }
 
 }
 ?>
@@ -37,7 +50,11 @@ if($n1){
             </form>
         </div>
         <div class="resultados">
-            
+
+        <?php if($res == "")  {?>
+            <h2><?= $nome ?></h2>
+
+            <?php } ?>
         </div>
     </main>
     

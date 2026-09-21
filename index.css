@@ -28,7 +28,7 @@ body {
     gap: 1rem;
 }
 
-.links a {
+a {
     display: block;
     text-align: center;
     padding: 0.8rem 1.5rem;
@@ -40,11 +40,11 @@ body {
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.links a:hover {
+a:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
 
-.links a:active {
+a:active {
     transform: translateY(0);
 }
