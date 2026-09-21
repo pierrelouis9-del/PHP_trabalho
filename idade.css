@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(9, 10, 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 3px;
+}
+
+.A {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.76);
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    border: solid 5px;
+    box-shadow: 3px 3px 3px rgb(255, 255, 255);
+
+}
+
+.A form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+}
+
+.A input {
+    width: 225px;
+    height: 30px;
+    color: black;
+    background-color: rgba(240, 248, 255, 0.76);
+    border: none;
+    border-radius: 5px;
+}
+
+.B {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.719);
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    border: solid 5px;
+    color: black;
+    box-shadow: 3px 3px 3px rgb(255, 255, 255);
+}
+button {
+   min-width: 80px;
+   height: 30px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: bold;
+}
+
+button:active {
+   background-color: black;
+   color: red;
+}

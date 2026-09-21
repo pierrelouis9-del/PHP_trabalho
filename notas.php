@@ -6,7 +6,11 @@ $n2 = 0;
 $n3 = 0;
 $n4 = 0;
 $n5 = 0;
+ 
 
+if($n1){
+
+}
 ?>
 
 
@@ -19,6 +23,23 @@ $n5 = 0;
     <title>Document</title>
 </head>
 <body>
+    <main class="container">
+        <div class="inputs">
+            <form method="POST">
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                <input type="number" id="idade" name="idade" placeholder="digite seu idade">
+                <input type="number" id="n1" name="n1" placeholder="digite o nota 1">
+                <input type="number" id="n2" name="n2" placeholder="digite o nota 2">
+                <input type="number" id="n3" name="n3" placeholder="digite o nota 3">
+                <input type="number" id="n4" name="n4" placeholder="digite o nota 4">
+                <input type="number" id="n5" name="n5" placeholder="digite o nota 5">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="resultados">
+            
+        </div>
+    </main>
     
 </body>
 </html>
