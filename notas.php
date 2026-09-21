@@ -54,6 +54,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
                 <input type="number" min="0" max="10" id="n4" name="n4" placeholder="digite o nota 4">
                 <input type="number" min="0" max="10" id="n5" name="n5" placeholder="digite o nota 5">
                 <button type="submit">Enviar</button>
+                <button><a href="index.css">voltar ao inicio</a></button>
             </form>
         </div>
         <div class="resultados">
@@ -63,6 +64,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
             <h2><?= $idade ?></h2>
             <strong>Média:</strong><?= $media ?>
             <h3><?= $res ?></h3>
+        
 
             <?php } ?>
         </div>
