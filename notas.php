@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
                 <input type="number" min="0" max="10" id="n4" name="n4" placeholder="digite o nota 4">
                 <input type="number" min="0" max="10" id="n5" name="n5" placeholder="digite o nota 5">
                 <button type="submit">Enviar</button>
-                <a href="index.php">volatr</a>
+                <a href="index.php">voltar</a>
             </form>
         </div>
         <div class="resultados">
