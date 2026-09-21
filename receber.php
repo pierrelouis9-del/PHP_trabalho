@@ -10,7 +10,7 @@ $n4 = 0;
 $n5 = 0;
  
 
-if($_SERVER["REQUEST_METHOD"]== "POST"){
+if($_SERVER["REQUEST_METHOD"]== "GET"){
     $nome = $_GET["nome"];
     $idade = $_GET["idade"];
     $n1 = $_GET["n1"];
@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
 <body>
     <main class="container">
         <div class="inputs">
-            <form method="POST">
+            <form method="GET">
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
                 <input type="number" min="0" max="99" id="idade" name="idade" placeholder="digite seu idade">
                 <input type="number" min="0" max="10" id="n1" name="n1" placeholder="digite o nota 1">
