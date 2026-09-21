@@ -1,3 +1,16 @@
+<?php 
+$nome = "";
+$idade = "";
+$n1 = 0;
+$n2 = 0;
+$n3 = 0;
+$n4 = 0;
+$n5 = 0;
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +19,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="idade.php">Verifiador de idade</a>
-    <a href="notas.php">Verificador de notas</a>
+    
 </body>
 </html>
