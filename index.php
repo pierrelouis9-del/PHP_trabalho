@@ -3,6 +3,8 @@ $nome = "";
 $idade = "";
 $resultado = "";
 
+
+
 //VERIFICANDO SE O METODO USADO E POST 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //re declarar variavel e chama os ids
@@ -54,6 +56,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?= $resultado ?>
                 </h4>
             <?php } ?>
+        </div>
+        <div class="c">
+
         </div>
 
     </main>
