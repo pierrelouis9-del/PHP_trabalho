@@ -129,13 +129,21 @@ form button:hover {
         flex-direction: column;
     }
 }
-a{
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
     width: 100px;
     height: 40px;
     background-color: #f0f0f0;
     color: #000000;
-    border-radius: 25%;
-    display: flex;
-    text-align: center;
-    
+    text-decoration: none;   
+    border-radius: 8px;      
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+a:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
 }
