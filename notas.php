@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     $n4 = $_POST["n4"];
     $n5 = $_POST["n5"];
 
-   $media = (($nota1*2)+($nota2*2)+($nota3*2)+($nota4*2)+($nota5*2))/10;
+   $media = (($nota1*2)+($nota2*3)+($nota3*1)+($nota4*1)+($nota5*3))/10;
 
    if($media >= 7){
     $res = "Aprovado!!";
