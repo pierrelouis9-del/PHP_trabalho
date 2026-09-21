@@ -11,9 +11,12 @@
 <body>
     <mian class="container">
         <div class="links">
-            <a href="idade.php">Verifiador de idade</a>
-            <a href="notas.php">Verificador de notas</a>
-            <a href="receber.php">receber notas</a>
+            <h3>Link de tarefa</h3>
+            <ul>
+                <a href="idade.php">Verifiador de idade</a>
+                <a href="notas.php">Verificador de notas</a>
+                <a href="receber.php">receber notas</a>
+            </ul>
         </div>
 
     </mian>
