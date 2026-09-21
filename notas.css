@@ -141,13 +141,11 @@ a {
     color: #000000;
 
     text-decoration: none;
-    border: 2px solid #000000;
     border-radius: 10px;
 
     font-size: 15px;
     font-weight: bold;
 
-    box-shadow: 0 4px 0 #000000;
 
     transition: all 0.2s ease;
 
@@ -155,13 +153,10 @@ a {
 }
 
 a:hover {
-    background: linear-gradient(135deg, #000000, #333333);
-    color: #ffffff;
-
-    transform: translateY(-3px);
-
-    box-shadow: 0 7px 0 #555555;
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
 }
+
 
 a:active {
     transform: translateY(2px);
