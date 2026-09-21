@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <mian class="container">
+    <main class="container">
         <div class="links">
             <h3>Link de tarefa</h3>
             <ul>
@@ -19,7 +19,7 @@
             </ul>
         </div>
 
-    </mian>
+    </main>
 
 </body>
 
