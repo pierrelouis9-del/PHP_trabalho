@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="number" placeholder="Escrever sua idade" id="idade" name="idade">
                 <br>
                 <button type="submit"> Enviar </button>
+                <a href="index.php">voltar</a>
             </form>
         </div>
         <div class="B">
