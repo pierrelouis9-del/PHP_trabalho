@@ -17,7 +17,7 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 1.5rem;
     width: 100%;
     max-width: 850px;
@@ -32,10 +32,6 @@ body {
     padding: 2rem;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
                 inset 0 0 0 1px #ffffff;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 form {
