@@ -16,6 +16,7 @@
                 <a href="idade.php">Verifiador de idade</a>
                 <a href="notas.php">Verificador de notas</a>
                 <a href="receber.php">receber notas</a>
+                <a href="https/google.com">ir para google</a>
             </ul>
         </div>
 
