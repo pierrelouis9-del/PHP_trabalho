@@ -10,10 +10,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000; 
+    background-color: #000000;
     padding: 20px;
 }
-
 
 .container {
     display: flex;
@@ -24,8 +23,7 @@ body {
     max-width: 850px;
 }
 
-
-.inputs, 
+.inputs,
 .resultados {
     flex: 1;
     background-color: #b0b5bc;
@@ -34,14 +32,11 @@ body {
     padding: 2rem;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
                 inset 0 0 0 1px #ffffff;
-
     min-height: 500px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-
 
 form {
     display: flex;
@@ -63,7 +58,6 @@ form input::placeholder {
     color: #6c757d;
 }
 
-
 form button {
     align-self: center;
     padding: 0.6rem 1.8rem;
@@ -83,25 +77,15 @@ form button:hover {
     transform: scale(1.03);
 }
 
-
 .resultados {
     text-align: center;
     color: #000;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
 }
 
 .resultados h2 {
     font-size: 1.4rem;
-    margin-bottom: 0.3rem;
-}
-
-.resultados p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.resultados .media {
-    font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
@@ -111,6 +95,7 @@ form button:hover {
     border-radius: 20px;
     font-size: 1.1rem;
     font-weight: bold;
+    margin-top: 1rem;
 }
 
 .aprovado {
@@ -128,47 +113,36 @@ form button:hover {
     color: #ffffff;
 }
 
-
-@media (max-width: 650px) {
-    .container {
-        flex-direction: column;
-    }
-}
 a {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 160px;
     height: 45px;
-
     background: linear-gradient(135deg, #ffffff, #dcdcdc);
     color: #000000;
-
     text-decoration: none;
     border-radius: 10px;
-
     font-size: 15px;
     font-weight: bold;
-
-
     transition: all 0.2s ease;
-
     margin: 10px auto;
 }
 
 a:hover {
-    background-color: #e0e0e0;
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, #000000, #333333);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 0 #555555;
 }
-
 
 a:active {
     transform: translateY(2px);
     box-shadow: 0 2px 0 #000000;
 }
-.freq{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+
+@media (max-width: 650px) {
+    .container {
+        flex-direction: column;
+    }
 }
