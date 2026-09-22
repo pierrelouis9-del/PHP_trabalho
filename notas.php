@@ -4,6 +4,7 @@ $idade = "";
 $res = "";
 $media = 0;
 $frequencia = 0;
+$calcul=0;
 $n1 = 0;
 $n2 = 0;
 $n3 = 0;
@@ -28,9 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif ($media >= 5 && $media < 7 && $frequencia >= 75) {
         $res = "Recuperação";
     } elseif ($media < 5 && $frequencia >= 75) {
+        $calcul = 7-$media;
         $res = "Reprovado por nota";
+        echo"falta $calcul para passar";
+
     } elseif ($media > 7 && $frequencia < 75) {
-        $res = "Reprovado!!!!!!";
+        $res = "Reprovado por frequência!!!!!!";
     } else {
         $res = "Reprovado!!!!";
     }
@@ -68,9 +72,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="resultados">
 
             <?php if ($res != "") { ?>
-                <h2><?= $nome ?></h2>
-                <h2><?= $idade ?></h2>
+                <h2>Nome: <?= $nome ?></h2>
+                <h2>Idade: <?= $idade ?></h2>
                 <div class="freq"><strong>Média: </strong><?= $media ?></div>
+                <br>
                 <div class="freq"> <strong>Frequência: </strong><?= $frequencia ?> <strong> %</strong></div>
                 <h3><?= $res ?></h3>
 
