@@ -74,10 +74,11 @@ form button:hover {
 }
 
 .resultados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: #000;
-    justify-content: flex-start;
-    padding-top: 2rem;
 }
 
 .resultados h2 {
