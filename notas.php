@@ -23,12 +23,17 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
 
    $media = (($n1*2)+($n2*3)+($n3*1)+($n4*1)+($n5*3))/10;
 
-   if($media >= 7){
+   if($media >= 7 && $frequencia >=75){
     $res = "Aprovado!!";
-   } elseif($media >=5 && $media <7){
+   } elseif($media >=5 && $media <7 && $frequencia >=75){
     $res = "Recuperação";
-   } else{
-    $res = "Reprovado por nota";
+   } elseif($media <5 && $frequencia >=75){
+     $res="Reprovado por nota";
+   }elseif($media >7 && $frequencia <75){
+    $res="Reprovado!!!!!!";
+   }
+   else{
+    $res = "Reprovado!!!!";
    }
 
 }
@@ -66,7 +71,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
             <h2><?= $nome ?></h2>
             <h2><?= $idade ?></h2>
             <strong>Média:</strong><?= $media ?>
-            <strong>Frequência:</strong><?= $frequencia ?>
+            <strong>Frequência:</strong><?= $frequencia ?> <strong>%</strong>
             <h3><?= $res ?></h3>
         
 
