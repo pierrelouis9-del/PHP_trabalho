@@ -57,13 +57,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main class="container">
         <div class="inputs">
             <form method="POST">
+                <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do aluno">
+                <label for="idade">Idade</label>
                 <input type="number" min="0" max="99" id="idade" name="idade" placeholder="digite a idade do aluno">
+                <label for="frequencia">Fequência</label>
                 <input type="number" min="0" max="100" id="frequencia" name="frequencia" placeholder="digite a porcentagem de frequencia do aluno" />
+                <label for="n1">Nota1 (peso 2)</label>
                 <input type="number" min="0" max="10" id="n1" name="n1" placeholder="digite o nota 1">
+                <label for="n2">Nota2 (peso 3)</label>
                 <input type="number" min="0" max="10" id="n2" name="n2" placeholder="digite o nota 2">
+                <label for="n3">Nota3 (peso 1)</label>
                 <input type="number" min="0" max="10" id="n3" name="n3" placeholder="digite o nota 3">
+                <label for="n4">Nota4 (peso 1)</label>
                 <input type="number" min="0" max="10" id="n4" name="n4" placeholder="digite o nota 4">
+                <label for="n5">Nota5 (peso 3)</label>
                 <input type="number" min="0" max="10" id="n5" name="n5" placeholder="digite o nota 5">
                 <button type="submit">Enviar</button>
                 <a href="index.php">voltar</a>
