@@ -3,6 +3,7 @@ $nome = "";
 $idade = "";
 $res ="";
 $media = 0;
+$frequencia = 0;
 $n1 = 0;
 $n2 = 0;
 $n3 = 0;
@@ -13,6 +14,7 @@ $n5 = 0;
 if($_SERVER["REQUEST_METHOD"]== "POST"){
     $nome = $_POST["nome"];
     $idade = $_POST["idade"];
+    $frequencia = $_POST["frequencia"];
     $n1 = $_POST["n1"];
     $n2 = $_POST["n2"];
     $n3 = $_POST["n3"];
@@ -26,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
    } elseif($media >=5 && $media <7){
     $res = "Recuperação";
    } else{
-    $res = "Reprovado";
+    $res = "Reprovado por nota";
    }
 
 }
@@ -46,8 +48,9 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     <main class="container">
         <div class="inputs">
             <form method="POST">
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
-                <input type="number" min="0" max="99" id="idade" name="idade" placeholder="digite seu idade">
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome do aluno">
+                <input type="number" min="0" max="99" id="idade" name="idade" placeholder="digite a idade do aluno">
+                <input type="" min="0" max="100" id="frequencia" name="frequencia" placeholder="digite a porcentagem de frequencia do aluno" />
                 <input type="number" min="0" max="10" id="n1" name="n1" placeholder="digite o nota 1">
                 <input type="number" min="0" max="10" id="n2" name="n2" placeholder="digite o nota 2">
                 <input type="number" min="0" max="10" id="n3" name="n3" placeholder="digite o nota 3">
@@ -63,6 +66,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
             <h2><?= $nome ?></h2>
             <h2><?= $idade ?></h2>
             <strong>Média:</strong><?= $media ?>
+            <strong>Frequência:</strong><?= $frequencia ?>
             <h3><?= $res ?></h3>
         
 
