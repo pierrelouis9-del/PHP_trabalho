@@ -1,7 +1,7 @@
-<?php 
+<?php
 $nome = "";
 $idade = "";
-$res ="";
+$res = "";
 $media = 0;
 $frequencia = 0;
 $n1 = 0;
@@ -9,9 +9,9 @@ $n2 = 0;
 $n3 = 0;
 $n4 = 0;
 $n5 = 0;
- 
 
-if($_SERVER["REQUEST_METHOD"]== "POST"){
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $idade = $_POST["idade"];
     $frequencia = $_POST["frequencia"];
@@ -21,21 +21,19 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     $n4 = $_POST["n4"];
     $n5 = $_POST["n5"];
 
-   $media = (($n1*2)+($n2*3)+($n3*1)+($n4*1)+($n5*3))/10;
+    $media = (($n1 * 2) + ($n2 * 3) + ($n3 * 1) + ($n4 * 1) + ($n5 * 3)) / 10;
 
-   if($media >= 7 && $frequencia >=75){
-    $res = "Aprovado!!";
-   } elseif($media >=5 && $media <7 && $frequencia >=75){
-    $res = "Recuperação";
-   } elseif($media <5 && $frequencia >=75){
-     $res="Reprovado por nota";
-   }elseif($media >7 && $frequencia <75){
-    $res="Reprovado!!!!!!";
-   }
-   else{
-    $res = "Reprovado!!!!";
-   }
-
+    if ($media >= 7 && $frequencia >= 75) {
+        $res = "Aprovado!!";
+    } elseif ($media >= 5 && $media < 7 && $frequencia >= 75) {
+        $res = "Recuperação";
+    } elseif ($media < 5 && $frequencia >= 75) {
+        $res = "Reprovado por nota";
+    } elseif ($media > 7 && $frequencia < 75) {
+        $res = "Reprovado!!!!!!";
+    } else {
+        $res = "Reprovado!!!!";
+    }
 }
 ?>
 
@@ -43,12 +41,14 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="notas.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <main class="container">
         <div class="inputs">
@@ -67,17 +67,18 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
         </div>
         <div class="resultados">
 
-        <?php if($res != "")  {?>
-            <h2><?= $nome ?></h2>
-            <h2><?= $idade ?></h2>
-           <div class="freq"><strong>Média: </strong><?= $media ?></div> 
-            <div class="freq">  <strong>Frequência: </strong><?= $frequencia ?> <strong> %</strong></div>
-            <h3><?= $res ?></h3>
-        
+            <?php if ($res != "") { ?>
+                <h2><?= $nome ?></h2>
+                <h2><?= $idade ?></h2>
+                <div class="freq"><strong>Média: </strong><?= $media ?></div>
+                <div class="freq"> <strong>Frequência: </strong><?= $frequencia ?> <strong> %</strong></div>
+                <h3><?= $res ?></h3>
+
 
             <?php } ?>
         </div>
     </main>
-    
+
 </body>
+
 </html>
