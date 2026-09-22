@@ -78,6 +78,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php if ($res != "") { ?>
                 <h2>Nome: <?= $nome ?></h2>
                 <h2>Idade: <?= $idade ?></h2>
+                <h3>Nota1: <?= $n1 ?></h3>
+                <h3>Nota2: <?= $n2 ?></h3>
+                <h3>Nota3: <?= $n3 ?></h3>
+                <h3>Nota4: <?= $n4 ?></h3>
+                <h3>Nota5: <?= $n5 ?></h3>
                 <div class="freq"><h2><strong>Média: </strong><?= $media ?></h2></div>
                 <br>
                 <div class="freq"> <h2><strong>Frequência: </strong><?= $frequencia ?> <strong> %</strong></h2></div>
