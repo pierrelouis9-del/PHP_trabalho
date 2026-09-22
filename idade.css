@@ -68,16 +68,26 @@ body {
 }
 button {
    min-width: 80px;
-   height: 30px;
+   align-self: center;
+   padding: 0.6rem 1.8rem;
+   background-color: #ffffff;
+   color: #000000;
    border: none;
-   border-radius: 5px;
-   cursor: pointer;
+   border-radius: 8px;
+   font-size: 1rem;
    font-weight: bold;
+   cursor: pointer;
+   margin-top: 0.5rem;
+   transition: transform 0.1s ease, background-color 0.2s ease;
 }
 
 button:active {
    background-color: black;
    color: red;
+}
+button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.03);
 }
 
 a {
@@ -85,7 +95,7 @@ a {
     justify-content: center;
     align-items: center;
 
-    width: 160px;
+    width: 80px;
     height: 45px;
 
     background: linear-gradient(135deg, #ffffff, #dcdcdc);
