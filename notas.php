@@ -71,7 +71,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
             <h2><?= $nome ?></h2>
             <h2><?= $idade ?></h2>
             <strong>Média:</strong><?= $media ?>
-            <strong>Frequência:</strong><?= $frequencia ?> <strong>%</strong>
+           <div class="freq">  <strong>Frequência:</strong><?= $frequencia ?> <strong>%</strong></div>
             <h3><?= $res ?></h3>
         
 
