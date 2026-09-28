@@ -8,14 +8,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $senha = $_POST["senha"];
 
-    if ($nome =="usuario" && $senha == "1357") {
+    if ($nome == "usuario" && $senha == "1357") {
         $res = "Seu login foi realizado com successo";
-    } elseif($nome !="usuario" && $senha == "1357") {
+    } elseif ($nome != "usuario" && $senha == "1357") {
         $res = "Usuario ou senha incorretos";
-    } else{
-        $res="";
+    } elseif ($nome != "usuario" || $senha == "1357") {
+        $res = "Usuario ou senha incorretos";
+    } else {
+        $res = "";
     }
-
 }
 ?>
 
