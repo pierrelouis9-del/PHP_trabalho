@@ -31,6 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $res = "Reprovado por nota";
     } elseif ($media > 7 && $frequencia < 75) {
         $res = "Reprovado por frequência!!!!!!";
+    }elseif(($nome || $idade || $media || $frequencia || $n1 || $n2 || $n3 || $n4 || $n4 || $n5)){
+        $res="preenche todos os campos"
     } else {
         $res = "Reprovado!!!!";
     }
