@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $senha = $_POST["senha"];
 
-    if ($nome && $senha != "") {
+    if ($nome =="usuario" && $senha == "1357") {
         $res = "Seu login foi realizado com successo";
     } else {
         $res = "prenche todos os campos";
