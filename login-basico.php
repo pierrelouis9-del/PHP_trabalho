@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($nome =="usuario" && $senha == "1357") {
         $res = "Seu login foi realizado com successo";
     } else {
-        $res = "prenche todos os campos";
+        $res = "Usuario ou senha incorretos";
     }
 }
 ?>
