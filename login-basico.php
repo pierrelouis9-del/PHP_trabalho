@@ -12,9 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $res = "Seu login foi realizado com successo";
     } elseif($nome !="usuario" && $senha == "1357") {
         $res = "Usuario ou senha incorretos";
-    } else(
+    } else{
         $res="";
-    )
+    }
+
 }
 ?>
 
