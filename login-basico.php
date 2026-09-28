@@ -10,9 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($nome =="usuario" && $senha == "1357") {
         $res = "Seu login foi realizado com successo";
-    } else {
+    } elseif($nome !="usuario" && $senha == "1357") {
         $res = "Usuario ou senha incorretos";
-    }
+    } else(
+        $res="";
+    )
 }
 ?>
 
@@ -37,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <div class="affiche">
             <?php if ($res != "") { ?>
-                <h3>Bem-vindo <strong><?= $nome ?> </strong></h3>
                 <p><?= $res ?></p>
 
 
