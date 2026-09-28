@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -51,3 +52,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
+<!-- A differença entre oget e o post é que o no GET o nome do usuario vai aparecer no url enquanto no POST o url não vai mudar
+
+
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $nome = $_GET["nome"];
+    $senha = $_GET["senha"];
+
+    if ($nome == "usuario" && $senha == "1357") {
+        $res = "Seu login foi realizado com successo";
+    } elseif ($nome != "usuario" && $senha == "1357") {
+        $res = "Usuario ou senha incorretos";
+    } elseif ($nome != "usuario" || $senha == "1357") {
+        $res = "Usuario ou senha incorretos";
+    } else {
+        $res = "";
+    }
+        <div class="inputs">
+            <form method="GET">
+                <input type="text" name="nome" id="nome" placeholder="digite seu nome">
+                <input type="password" name="senha" id="senha" placeholder="digite seu senha">
+                <button type="submit">Entrar</button>
+            </form>
+?> -->
