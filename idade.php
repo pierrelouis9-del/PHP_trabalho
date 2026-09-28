@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main class="container">
         <div class="A">
             <form method="POST">
-                <input type="text" placeholder="Escrever seu nome" id="nome" name="nome">
+                <input type="text" min="0" max="100" placeholder="Escrever seu nome" id="nome" name="nome">
                 <br>
                 <input type="number" placeholder="Escrever sua idade" id="idade" name="idade">
                 <br>
