@@ -1,18 +1,18 @@
 <?php
-$nome="";
-$senha="";
-$res="";
+$nome = "";
+$senha = "";
+$res = "";
 
 
-if($_SERVER["REQUEST_METHOD"]=="POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $senha = $_POST["senha"];
 
-if($nome && $senha != ""){
-    $res="Seu login foi realizado com successo";
-} else {
-    $res="prenche todos os campos";
-}
+    if ($nome && $senha != "") {
+        $res = "Seu login foi realizado com successo";
+    } else {
+        $res = "prenche todos os campos";
+    }
 }
 ?>
 
@@ -29,16 +29,18 @@ if($nome && $senha != ""){
 <body>
     <main class="container">
         <div class="inputs">
-            <input type="text" name="nome" id="nome" placeholder="digite seu nome">
-            <input type="password" name="senha" id="senha" placeholder="digite seu senha">
-            <button type="submit">Entrar</button>
+            <form method="POST">
+                <input type="text" name="nome" id="nome" placeholder="digite seu nome">
+                <input type="password" name="senha" id="senha" placeholder="digite seu senha">
+                <button type="submit">Entrar</button>
+            </form>
         </div>
         <div class="affiche">
-            <?php if($res !=""){ ?>
-            <h3>Bem-vindo <strong><?= $nome ?> </strong></h3>
-            <p><?= $res ?></p>
-            
-            
+            <?php if ($res != "") { ?>
+                <h3>Bem-vindo <strong><?= $nome ?> </strong></h3>
+                <p><?= $res ?></p>
+
+
             <?php } ?>
         </div>
     </main>
