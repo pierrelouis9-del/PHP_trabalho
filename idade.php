@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($idade >= 18) {
         $resultado = "Voce é maior de idade";
     } elseif ($idade <= 0) {
-        $resultado = " voce ainda não nasceu";
+        $resultado = " voce ainda não nasceu, falta $idade anos para nascer";
     } else {
         $resultado = "Voce é menor de idade";
     }
