@@ -53,7 +53,7 @@ echo "<br> registro criado com sucesso! 2";
             <form method="POST">
                 <input type="text" id="nome" name="nome" placeholder="digite o nome do seu jogo">
                 <input type="text" id="genero" name="genero" placeholder="digite o genero do seu jogo">
-                <input type="number" min=0 max=10 id="nota" step="0.1" name="nota" placeholder="digite o nota do seu jogo">
+                <input type="number" min=0 max=5 id="nota" step="0.1" name="nota" placeholder="digite o nota do seu jogo">
                 <button type="submit">ENVIAR</button>
             </form>
 
