@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO Jogos (
         nome, genero, nota
-        )VALUES($nome,$genero,$nota)";
+        ) VALUES ('$nome','$genero',$nota)";
 echo "<br> registro criado com sucesso! 1";
 
     $pdo->exec($sql);
