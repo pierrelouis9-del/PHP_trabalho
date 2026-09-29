@@ -32,6 +32,7 @@
                 <a href="notas.php">Verificador de notas</a>
                 <a href="receber.php">receber notas</a>
                 <a href="login-basico.php">Fazer login</a>
+                <a href="jogos.php">Cadastrar jogos</a>
 
             </ul>
         </div>

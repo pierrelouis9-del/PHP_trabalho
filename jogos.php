@@ -11,7 +11,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
 
 $postar = "INSERT INTO jogos(
 nome, genero, nota
-)";
+)VALUES($nome,$genero,$nota)";
 
 $pdo->exec($sql);
 echo "<br> Tabela criado com sucesso!";
