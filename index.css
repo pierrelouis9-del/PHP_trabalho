@@ -6,7 +6,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, red 0%, white 50%, black 100%);
+    background: radial-gradient(circle at top left, #ff0000, transparent 40%),
+                radial-gradient(circle at bottom right, #0000ff, transparent 40%),
+                linear-gradient(135deg, #050505, #151515, #000000);
     min-height: 100vh;
     padding-top: 30px;
 }
