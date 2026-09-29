@@ -51,6 +51,7 @@ echo "<br> registro criado com sucesso! 2";
     <main class="container">
         <div class="inputs">
             <form method="POST">
+                <link rel="stylesheet" href="jogos.css">
                 <input type="text" id="nome" name="nome" placeholder="digite o nome do seu jogo">
                 <input type="text" id="genero" name="genero" placeholder="digite o genero do seu jogo">
                 <input type="number" min=0 max=5 id="nota" step="0.1" name="nota" placeholder="digite o nota do seu jogo">
