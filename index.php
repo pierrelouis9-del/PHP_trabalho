@@ -14,7 +14,7 @@
             <h3>Link de tarefa</h3>
             <ul>
                 <a href="https://github.com/pierrelouis9-del/PHP_trabalho">Ir para meu repositorio</a>
-                <a href="idade.php">Verifiador de idade</a>
+                <a href="idade.php">Verificador de idade</a>
                 <a href="notas.php">Verificador de notas</a>
                 <a href="receber.php">receber notas</a>
                 <a href="login-basico.php">Fazer login</a>
