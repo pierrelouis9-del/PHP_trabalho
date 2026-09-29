@@ -13,11 +13,11 @@ try{// semelhante a um if else se o try não ta coseguindo ele vai para o catch
     // => SERVE PARA PUSHAR algo que pertende aquele objeto
     // PDO::ATTR_ERRMODE é para  cponfigurar o modo de erros do PDO
     // PDO::ERRMODE_EXEPTION é para quando acontecr algum erro; transformar em execução
-    $pdo->setAttributs(
+    $pdo->setAttribute(
         PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION  //isso significa que estamos accessando um atributo do PDO
     );
-    echo "conectado com sucesso!!"
+    echo "conectado com sucesso!!";
 }catch (PDOException $erro) {
     echo "erro ao conectar:".$erro->getMessage();
 
