@@ -1,7 +1,15 @@
 <?php
-require "conexao.php";
-echo "Meu sistema está conectado !";
+    require "conexao.php";
+    echo "<br>Meu sistema está conectado !";
 
+    $sql = "CREATE TABLE IF NOT EXISTS teste (
+        id INT AUTO_INCREMENT PRIMARY kEY,
+        nome VARCHAR(100),
+        idade INT 
+    )";
+
+    $pdo->exec($sql);
+    echo "<br> Tabela criado com sucesso!";
 ?>
 
 <!DOCTYPE html>
