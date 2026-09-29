@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
 
-    $postar = "INSERT INTO Jogos(
+    $postar = "INSERT INTO Jogos (
         nome, genero, nota
         )VALUES($nome,$genero,$nota)";
 
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form method="POST">
                 <input type="text" id="nome" name="nome" placeholder="digite o nome do seu jogo">
                 <input type="text" id="genero" name="genero" placeholder="digite o genero do seu jogo">
-                <input type="number" id="nota" name="nota" placeholder="digite o nota do seu jogo">
+                <input type="number" min=0 max=10 id="nota" name="nota" placeholder="digite o nota do seu jogo">
                 <button type="submit">ENVIAR</button>
             </form>
 
