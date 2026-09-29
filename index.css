@@ -6,12 +6,23 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, red 0% ,white 50% , black 100%);
+    background: linear-gradient(135deg, red 0%, white 50%, black 100%);
+    min-height: 100vh;
+    padding-top: 30px;
+}
+
+body > br:first-child {
+    display: none;
+}
+
+body {
+    color: white;
 }
 
 .container {
     width: 500px;
     margin: 100px auto;
+    margin-top: 30px;
     padding: 30px;
     background-color: white;
     border-radius: 15px;
