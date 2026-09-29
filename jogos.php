@@ -9,7 +9,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
         nota INT 
     )";
 
-$postar = "INSERT INTO jogos(
+$postar = "INSERT INTO Jogos(
 nome, genero, nota
 )VALUES($nome,$genero,$nota)";
 
