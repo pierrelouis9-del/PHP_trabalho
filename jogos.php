@@ -9,15 +9,13 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
         nota INT 
     )";
 
-$postar = "INSERT INTO Jogos(
-nome, genero, nota
-)VALUES($nome,$genero,$nota)";
+
 
 $pdo->exec($sql);
 echo "<br> Tabela criado com sucesso!";
-?>
 
-<?php
+
+
 $nome = "";
 $genero = "";
 $nota = "";
@@ -27,6 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
+
+    $postar = "INSERT INTO Jogos(
+        nome, genero, nota
+        )VALUES($nome,$genero,$nota)";
 
     $pdo->exec($postar);
 }
