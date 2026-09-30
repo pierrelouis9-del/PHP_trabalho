@@ -52,7 +52,7 @@ if ($senha == "1357"){
 
     $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }  else {
-    $res ="Senha errada"
+    $res ="Senha errada";
 }
 
 
