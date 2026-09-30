@@ -7,17 +7,18 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
         genero VARCHAR(50) NOT NULL,
-        nota DECIMAL(3,1)
+        nota DECIMAL(3,1),
+        ano_lancamento DATE NOT NULL
     )";
 
 
 // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
 $pdo->exec($sql);
 
-$alterar = "ALTER TABLE Jogos 
-            ADD COLUMN ano_lancamento DATE NOT NULL";
+// $alterar = "ALTER TABLE Jogos 
+         //   ADD COLUMN ano_lancamento DATE NOT NULL";
 
-$pdo->exec($alterar);          
+// $pdo->exec($alterar);          
 echo '<div class="mensagens">Tabela criada com sucesso!</div>';
 
 $nome = "";
@@ -33,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ano = $_POST["ano"];
 
     $sql = "INSERT INTO Jogos (
-        nome, genero, nota,  ano_lancamento
+        nome, genero, nota, ano_lancamento
     ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
     echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
@@ -119,6 +120,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td><?= $jogo["nome"] ?></td>
                             <td><?= $jogo["genero"] ?></td>
                             <td><?= $jogo["nota"] ?></td>
+                            <td><?= $jogo["ano_lancamento"] ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>
