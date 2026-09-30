@@ -114,7 +114,9 @@ if ($senha == "1357"){
 
         </div>
         <div class="alerta">
+            <?php if ($res !=""){ ?>
             <h2><strong><?= $res ?></strong></h2>
+        <?php } ?>
         </div>
         <div class="afficche">
             <h2>Jogos registrados</h2>
