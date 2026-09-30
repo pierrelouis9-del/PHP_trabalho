@@ -25,30 +25,36 @@ $nome = "";
 $genero = "";
 $nota = "";
 $ano = "";
+$senha ="";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($senha == "1357"){
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $nome = $_POST["nome"];
-    $genero = $_POST["genero"];
-    $nota = $_POST["nota"];
-    $ano = $_POST["ano"];
+        $nome = $_POST["nome"];
+        $genero = $_POST["genero"];
+        $nota = $_POST["nota"];
+        $ano = $_POST["ano"];
 
-    $sql = "INSERT INTO Jogos (
-        nome, genero, nota, ano_lancamento
-    ) VALUES ('$nome', '$genero', $nota, '$ano')";
+        $sql = "INSERT INTO Jogos (
+            nome, genero, nota, ano_lancamento
+        ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
-    echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
-    // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
-    $pdo->exec($sql);
+        echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
+        // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
+       $pdo->exec($sql);
 
-    echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
+        echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
+    }
+    //buscar os dados do jogos registrados no BANCO DE DADOS
+    $buscar = "SELECT * FROM Jogos";
+    // query() = executa uma consulta quando você quer receber dados de volta
+    $stmt = $pdo->query($buscar);
+
+    $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}  else {
+    $res ="Senha errada"
 }
-//buscar os dados do jogos registrados no BANCO DE DADOS
-$buscar = "SELECT * FROM Jogos";
-// query() = executa uma consulta quando você quer receber dados de volta
-$stmt = $pdo->query($buscar);
 
-$jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -69,6 +75,12 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="inputs">
 
             <form method="POST">
+
+            <input
+                    type="password"
+                    id="senha"
+                    name="nsenha"
+                    placeholder="Digite a senha do aplicativo">
 
                 <input
                     type="text"
@@ -100,6 +112,9 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             </form>
 
+        </div>
+        <div class="alerta">
+            <h2><strong><?= $res ?></strong></h2>
         </div>
         <div class="afficche">
             <h2>Jogos registrados</h2>
