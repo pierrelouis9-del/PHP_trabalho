@@ -23,7 +23,7 @@ echo '<div class="mensagens">Tabela criada com sucesso!</div>';
 
 $nome = "";
 $genero = "";
-$nota = "";
+$nota = 0;
 $ano = "";
 $senha = "";
 $res = "";
