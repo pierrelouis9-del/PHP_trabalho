@@ -37,20 +37,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST["senha"];
 
     if ($senha == "1357") {
+
         echo '<div class="mensagens">Registro criado com sucesso! 3</div>';
+
         $res = "acesso desbloqueiado!!";
+
         echo '<div class="mensagens">Registro criado com sucesso! 4</div>';
+
         $sql = "INSERT INTO Jogos (
             nome, genero, nota, ano_lancamento
             ) VALUES ('$nome', '$genero', $nota, '$ano')";
-        echo '<div class="mensagens">Registro criado com sucesso!51</div>';
+
         echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
+
         // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
         $pdo->exec($sql);
 
         echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
 
 
+    } else { 
+        $res = "acesso negado !!";
     }
         //buscar os dados do jogos registrados no BANCO DE DADOS
         $buscar = "SELECT * FROM Jogos";
@@ -119,7 +126,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
 
         </div>
-       
+     
+        <?php if ($res != "") { ?>
+            <div class="alerta">
+            <?= $res ?>
+            </div>
+        <?php } ?>
         <div class="afficche">
             <h2>Jogos registrados</h2>
             <table>
