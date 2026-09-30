@@ -25,7 +25,7 @@ $nome = "";
 $genero = "";
 $nota = "";
 $ano = "";
-$senha ="";
+$senha ="1357";
 
 if ($senha == "1357"){
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -79,7 +79,7 @@ if ($senha == "1357"){
             <input
                     type="password"
                     id="senha"
-                    name="nsenha"
+                    name="senha"
                     placeholder="Digite a senha do aplicativo">
 
                 <input
