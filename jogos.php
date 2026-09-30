@@ -26,6 +26,7 @@ $genero = "";
 $nota = "";
 $ano = "";
 $senha = "";
+$res = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -33,11 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
     $ano = $_POST["ano"];
-   
 
-    if($senha =="1357"){
-        
-        $res="acesso desbloqueiado!!";
+
+    if ($senha == "1357") {
+
+        $res = "acesso desbloqueiado!!";
+
         $sql = "INSERT INTO Jogos (
             nome, genero, nota, ano_lancamento
             ) VALUES ('$nome', '$genero', $nota, '$ano')";
@@ -48,15 +50,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
 
-        
+        //buscar os dados do jogos registrados no BANCO DE DADOS
+        $buscar = "SELECT * FROM Jogos";
+        // query() = executa uma consulta quando você quer receber dados de volta
+        $stmt = $pdo->query($buscar);
+
+        $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-//buscar os dados do jogos registrados no BANCO DE DADOS
-$buscar = "SELECT * FROM Jogos";
-// query() = executa uma consulta quando você quer receber dados de volta
-$stmt = $pdo->query($buscar);
 
-$jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
