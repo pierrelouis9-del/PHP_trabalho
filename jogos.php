@@ -16,7 +16,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
 $pdo->exec($sql);
 
 // $alterar = "ALTER TABLE Jogos 
-         //   ADD COLUMN ano_lancamento DATE NOT NULL";
+//   ADD COLUMN ano_lancamento DATE NOT NULL";
 
 // $pdo->exec($alterar);          
 echo '<div class="mensagens">Tabela criada com sucesso!</div>';
@@ -25,35 +25,36 @@ $nome = "";
 $genero = "";
 $nota = "";
 $ano = "";
-$senha ="1357";
+$senha = "";
 
-if ($senha == "1357"){
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $nome = $_POST["nome"];
-        $genero = $_POST["genero"];
-        $nota = $_POST["nota"];
-        $ano = $_POST["ano"];
+    $nome = $_POST["nome"];
+    $genero = $_POST["genero"];
+    $nota = $_POST["nota"];
+    $ano = $_POST["ano"];
+   
 
+    if($senha =="1357"){
         $sql = "INSERT INTO Jogos (
             nome, genero, nota, ano_lancamento
-        ) VALUES ('$nome', '$genero', $nota, '$ano')";
+            ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
         echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
         // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
-       $pdo->exec($sql);
+        $pdo->exec($sql);
 
         echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
-    }
-    //buscar os dados do jogos registrados no BANCO DE DADOS
-    $buscar = "SELECT * FROM Jogos";
-    // query() = executa uma consulta quando você quer receber dados de volta
-    $stmt = $pdo->query($buscar);
 
-    $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-}  else {
-    $res ="Senha errada";
+        $res="acesso desbloqueiado!!";
+    }
 }
+//buscar os dados do jogos registrados no BANCO DE DADOS
+$buscar = "SELECT * FROM Jogos";
+// query() = executa uma consulta quando você quer receber dados de volta
+$stmt = $pdo->query($buscar);
+
+$jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -76,7 +77,7 @@ if ($senha == "1357"){
 
             <form method="POST">
 
-            <input
+                <input
                     type="password"
                     id="senha"
                     name="senha"
@@ -103,7 +104,7 @@ if ($senha == "1357"){
                     name="nota"
                     placeholder="Digite a nota do seu jogo">
 
-                    <input
+                <input
                     type="date"
                     id="ano"
                     name="ano"
@@ -114,9 +115,9 @@ if ($senha == "1357"){
 
         </div>
         <div class="alerta">
-            <?php if ($res !=""){ ?>
-            <h2><strong><?= $res ?></strong></h2>
-        <?php } ?>
+            <?php if ($res != "") { ?>
+                <h2><strong><?= $res ?></strong></h2>
+            <?php } ?>
         </div>
         <div class="afficche">
             <h2>Jogos registrados</h2>
