@@ -34,13 +34,19 @@ body {
 }
 
 .container {
-    width: 450px;
+    width: 900px;
     max-width: 100%;
     padding: 35px;
     margin-top: 10px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+.inputs {
+    width: 450px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .inputs form {
@@ -90,28 +96,13 @@ body {
     transform: translateY(0);
 }
 
-@media (max-width: 600px) {
-    body {
-        padding: 20px;
-    }
-
-    .container,
-    .mensagens {
-        width: 100%;
-    }
-
-    .container {
-        padding: 25px;
-    }
-}
-
 .afficche {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 35px;
     padding: 25px;
     background: rgba(241, 233, 233, 0.95);
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     color: #222;
 }
 
@@ -125,8 +116,7 @@ body {
 .afficche table {
     width: 100%;
     border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 10px;
+    table-layout: fixed;
 }
 
 .afficche th {
@@ -142,6 +132,8 @@ body {
     text-align: center;
     border-bottom: 1px solid #ddd;
     font-size: 15px;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .afficche tr:nth-child(even) {
@@ -155,4 +147,38 @@ body {
 .afficche td:first-child {
     font-weight: bold;
     color: #007bff;
+}
+
+@media (max-width: 950px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .mensagens {
+        width: 100%;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+    .afficche {
+        padding: 10px;
+    }
+
+    .afficche th,
+    .afficche td {
+        padding: 8px 4px;
+        font-size: 12px;
+    }
 }
