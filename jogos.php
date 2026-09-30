@@ -36,6 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
 
     if($senha =="1357"){
+        
+        $res="acesso desbloqueiado!!";
         $sql = "INSERT INTO Jogos (
             nome, genero, nota, ano_lancamento
             ) VALUES ('$nome', '$genero', $nota, '$ano')";
@@ -46,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
 
-        $res="acesso desbloqueiado!!";
+        
     }
 }
 //buscar os dados do jogos registrados no BANCO DE DADOS
