@@ -110,6 +110,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <th>Nom</th>
                         <th>Gênero</th>
                         <th>Nota</th>
+                        <th>Data_lançamento</th>
                     </tr>
                 </thead>
                 <!-- foreac() -> para cada item nessa lista vfaça alguma coisa com x variavel -->
