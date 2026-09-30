@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
     $ano = $_POST["ano"];
-
+    $senha = $_POST["senha"];
 
     if ($senha == "1357") {
 
@@ -57,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 }
 
 
