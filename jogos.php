@@ -9,7 +9,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
         genero VARCHAR(50) NOT NULL,
         nota DECIMAL(3,1)
     )";
-
+// exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
 $pdo->exec($sql);
 
 echo '<div class="mensagens">Tabela criada com sucesso!</div>';
@@ -30,11 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ) VALUES ('$nome', '$genero', $nota)";
 
     echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
-
+// exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
     $pdo->exec($sql);
 
     echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
 }
+//buscar os dados do jogos registrados no BANCO DE DADOS
+$buscar = "SELECT * FROM Jogos";
+// query() = executa uma consulta quando você quer receber dados de volta
+$stmt = $pdo->query($buscar);
+
+$jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -55,34 +62,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <form method="POST">
 
-                <input 
-                    type="text" 
-                    id="nome" 
-                    name="nome" 
-                    placeholder="Digite o nome do seu jogo"
-                >
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite o nome do seu jogo">
 
-                <input 
-                    type="text" 
-                    id="genero" 
-                    name="genero" 
-                    placeholder="Digite o gênero do seu jogo"
-                >
+                <input
+                    type="text"
+                    id="genero"
+                    name="genero"
+                    placeholder="Digite o gênero do seu jogo">
 
-                <input 
-                    type="number" 
-                    min="0" 
-                    max="5" 
-                    id="nota" 
-                    step="0.1" 
-                    name="nota" 
-                    placeholder="Digite a nota do seu jogo"
-                >
+                <input
+                    type="number"
+                    min="0"
+                    max="5"
+                    id="nota"
+                    step="0.1"
+                    name="nota"
+                    placeholder="Digite a nota do seu jogo">
 
                 <button type="submit">ENVIAR</button>
 
             </form>
 
+        </div>
+        <div class="afficche">
+            <h2>Jogos registrados</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Genero</th>
+                    <th>Nota</th>
+                </tr>
+<!-- foreac() -> para cada item nessa lista vfaça alguma coisa com x variavel -->
+                <?php foreach($jogos as $jogo){ ?>
+                    <td><?= $jogo["id"] ?></td>
+                    <td><?= $jogo["nome"] ?></td>
+                    <td><?= $jogo["genero"] ?></td>
+                    <td><?= $jogo["nota"] ?></td>
+                    <?php } ?>
+            </table>
         </div>
 
     </main>
