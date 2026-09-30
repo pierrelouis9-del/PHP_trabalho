@@ -9,25 +9,32 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
         genero VARCHAR(50) NOT NULL,
         nota DECIMAL(3,1)
     )";
+
+
 // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
 $pdo->exec($sql);
 
+$alterar = "ALTER TABLE Jogos 
+            ADD COLUMN ano_lancamento DATE NOT NULL";
+
+$pdo->exec($alterar);          
 echo '<div class="mensagens">Tabela criada com sucesso!</div>';
 
 $nome = "";
 $genero = "";
 $nota = "";
-$res = "";
+$ano = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $nome = $_POST["nome"];
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
+    $ano = $_POST["ano"];
 
     $sql = "INSERT INTO Jogos (
-        nome, genero, nota
-    ) VALUES ('$nome', '$genero', $nota)";
+        nome, genero, nota,  ano_lancamento
+    ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
     echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
     // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
@@ -83,6 +90,11 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     name="nota"
                     placeholder="Digite a nota do seu jogo">
 
+                    <input
+                    type="date"
+                    id="ano"
+                    name="ano"
+                    placeholder="Digite o ano de lançamento do seu jogo">
                 <button type="submit">ENVIAR</button>
 
             </form>
