@@ -50,14 +50,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
 
+
+    }
         //buscar os dados do jogos registrados no BANCO DE DADOS
         $buscar = "SELECT * FROM Jogos";
         // query() = executa uma consulta quando você quer receber dados de volta
         $stmt = $pdo->query($buscar);
 
         $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
 }
 
 
