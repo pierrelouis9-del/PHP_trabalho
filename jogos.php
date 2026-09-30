@@ -7,7 +7,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
         genero VARCHAR(50) NOT NULL,
-        nota DECIMAL(3,1),
+        nota DECIMAL(3,2),
         ano_lancamento DATE NOT NULL
     )";
 
