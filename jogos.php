@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ) VALUES ('$nome', '$genero', $nota)";
 
     echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
-// exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
+    // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
     $pdo->exec($sql);
 
     echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
@@ -91,19 +91,25 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="afficche">
             <h2>Jogos registrados</h2>
             <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Genero</th>
-                    <th>Nota</th>
-                </tr>
-<!-- foreac() -> para cada item nessa lista vfaça alguma coisa com x variavel -->
-                <?php foreach($jogos as $jogo){ ?>
-                    <td><?= $jogo["id"] ?></td>
-                    <td><?= $jogo["nome"] ?></td>
-                    <td><?= $jogo["genero"] ?></td>
-                    <td><?= $jogo["nota"] ?></td>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Gênero</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+                <!-- foreac() -> para cada item nessa lista vfaça alguma coisa com x variavel -->
+                <tbody>
+                    <?php foreach ($jogos as $jogo) { ?>
+                        <tr>
+                            <td><?= $jogo["id"] ?></td>
+                            <td><?= $jogo["nome"] ?></td>
+                            <td><?= $jogo["genero"] ?></td>
+                            <td><?= $jogo["nota"] ?></td>
+                        </tr>
                     <?php } ?>
+                </tbody>
             </table>
         </div>
 

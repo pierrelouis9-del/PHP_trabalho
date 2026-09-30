@@ -116,11 +116,13 @@ body {
 .afficche table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .afficche th {
-    padding: 14px 10px;
+    padding: 14px 12px;
     background: #007bff;
     color: white;
     text-align: center;
@@ -128,57 +130,22 @@ body {
 }
 
 .afficche td {
-    padding: 12px 10px;
+    padding: 14px 12px;
     text-align: center;
     border-bottom: 1px solid #ddd;
     font-size: 15px;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    color: #222;
 }
 
-.afficche tr:nth-child(even) {
-    background: #f2f2f2;
+.afficche tbody tr:nth-child(even) {
+    background: #f2f6fa;
 }
 
-.afficche tr:hover {
+.afficche tbody tr:hover {
     background: #e3f0ff;
 }
 
 .afficche td:first-child {
     font-weight: bold;
     color: #007bff;
-}
-
-@media (max-width: 950px) {
-    .container {
-        width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        padding: 20px;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    .mensagens {
-        width: 100%;
-    }
-
-    .inputs {
-        width: 100%;
-    }
-
-    .afficche {
-        padding: 10px;
-    }
-
-    .afficche th,
-    .afficche td {
-        padding: 8px 4px;
-        font-size: 12px;
-    }
 }
