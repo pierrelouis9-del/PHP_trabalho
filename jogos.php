@@ -119,11 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
 
         </div>
-        <div class="alerta">
-            <?php if ($res != "") { ?>
-                <h2><strong><?= $res ?></strong></h2>
-            <?php } ?>
-        </div>
+       
         <div class="afficche">
             <h2>Jogos registrados</h2>
             <table>
