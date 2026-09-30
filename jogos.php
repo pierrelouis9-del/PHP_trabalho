@@ -1,24 +1,26 @@
 <?php
+
 require "conexao.php";
 
 echo '<div class="mensagens">Meu sistema está conectado!</div>';
 
 $sql = "CREATE TABLE IF NOT EXISTS Jogos (
+
         id INT AUTO_INCREMENT PRIMARY KEY,
+
         nome VARCHAR(100) NOT NULL,
+
         genero VARCHAR(50) NOT NULL,
+
         nota DECIMAL(3,2),
+
         ano_lancamento DATE NOT NULL
+
     )";
 
-
-// exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
+// exec() = executa algo quando você não precisa receber dados de volta [só enviar]
 $pdo->exec($sql);
 
-// $alterar = "ALTER TABLE Jogos 
-//   ADD COLUMN ano_lancamento DATE NOT NULL";
-
-// $pdo->exec($alterar);          
 echo '<div class="mensagens">Tabela criada com sucesso!</div>';
 
 $nome = "";
@@ -27,6 +29,7 @@ $nota = 0;
 $ano = "";
 $senha = "";
 $res = "";
+$jogos = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -38,47 +41,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($senha == "1357") {
 
-        echo '<div class="mensagens">Registro criado com sucesso! 3</div>';
-
-        $res = "acesso desbloqueiado!!";
-
-        echo '<div class="mensagens">Registro criado com sucesso! 4</div>';
+        $res = "acesso desbloqueado!!";
 
         $sql = "INSERT INTO Jogos (
             nome, genero, nota, ano_lancamento
             ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
-        echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
-
-        // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
+        // exec() = executa algo quando você não precisa receber dados de volta [só enviar]
         $pdo->exec($sql);
 
-        echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
+        echo '<div class="mensagens">Registro criado com sucesso!</div>';
 
+    } else {
 
-    } else { 
         $res = "acesso negado !!";
     }
-        //buscar os dados do jogos registrados no BANCO DE DADOS
-        $buscar = "SELECT * FROM Jogos";
-        // query() = executa uma consulta quando você quer receber dados de volta
-        $stmt = $pdo->query($buscar);
-
-        $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// buscar os dados dos jogos registrados no BANCO DE DADOS
 
+$buscar = "SELECT * FROM Jogos";
+
+// query() = executa uma consulta quando você quer receber dados de volta
+$stmt = $pdo->query($buscar);
+
+$jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="jogos.css">
+
     <title>Jogos</title>
+
 </head>
 
 <body>
@@ -121,42 +125,73 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     id="ano"
                     name="ano"
                     placeholder="Digite o ano de lançamento do seu jogo">
+
                 <button type="submit">ENVIAR</button>
 
             </form>
 
         </div>
-     
+
         <?php if ($res != "") { ?>
+
             <div class="alerta">
-            <?= $res ?>
+
+                <?= $res ?>
+
             </div>
+
         <?php } ?>
+
         <div class="afficche">
+
             <h2>Jogos registrados</h2>
+
             <table>
+
                 <thead>
+
                     <tr>
+
                         <th>ID</th>
-                        <th>Nom</th>
+
+                        <th>Nome</th>
+
                         <th>Gênero</th>
+
                         <th>Nota</th>
+
                         <th>Data_lançamento</th>
+
                     </tr>
+
                 </thead>
-                <!-- foreac() -> para cada item nessa lista vfaça alguma coisa com x variavel -->
+
+                <!-- foreach() -> para cada item nessa lista faça alguma coisa com a variável -->
+
                 <tbody>
+
                     <?php foreach ($jogos as $jogo) { ?>
+
                         <tr>
+
                             <td><?= $jogo["id"] ?></td>
+
                             <td><?= $jogo["nome"] ?></td>
+
                             <td><?= $jogo["genero"] ?></td>
+
                             <td><?= $jogo["nota"] ?></td>
+
                             <td><?= $jogo["ano_lancamento"] ?></td>
+
                         </tr>
+
                     <?php } ?>
+
                 </tbody>
+
             </table>
+
         </div>
 
     </main>
