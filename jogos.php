@@ -33,10 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
     $ano = $_POST["ano"];
-    $senha = $_POST["senha"];
- 
-        echo '<div class="mensagens">Senha correta!</div>';
-    
+
     $sql = "INSERT INTO Jogos (
         nome, genero, nota, ano_lancamento
     ) VALUES ('$nome', '$genero', $nota, '$ano')";
@@ -46,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->exec($sql);
 
     echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
-    
 }
 //buscar os dados do jogos registrados no BANCO DE DADOS
 $buscar = "SELECT * FROM Jogos";
@@ -101,13 +97,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     id="ano"
                     name="ano"
                     placeholder="Digite o ano de lançamento do seu jogo">
-
-                    <input
-                    type="password"
-                    id="senha"
-                    name="senha"
-                    placeholder="Digite a senha do aplicativo">
-
+                    
                 <button type="submit">ENVIAR</button>
 
             </form>
@@ -122,7 +112,6 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <th>Nom</th>
                         <th>Gênero</th>
                         <th>Nota</th>
-                        <th>Ano_lançamento</th>
                     </tr>
                 </thead>
                 <!-- foreac() -> para cada item nessa lista vfaça alguma coisa com x variavel -->
