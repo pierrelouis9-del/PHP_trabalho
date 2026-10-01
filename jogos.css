@@ -149,3 +149,35 @@ body {
     font-weight: bold;
     color: #007bff;
 }
+.debloquer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.debloquer p {
+    padding: 15px 30px;
+    background: #1e1e2f;
+    color: #ffffff;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
