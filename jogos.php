@@ -25,6 +25,7 @@ $nome = "";
 $genero = "";
 $nota = "";
 $ano = "";
+$senha ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -32,10 +33,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
     $ano = $_POST["ano"];
+    $senha = $_POST["senha"];
 
     $sql = "INSERT INTO Jogos (
         nome, genero, nota, ano_lancamento
     ) VALUES ('$nome', '$genero', $nota, '$ano')";
+
+    if ($nome == "usuario" && $senha == "1357") {
+        $res = "Seu login foi realizado com successo";
+    } elseif ($nome != "usuario" && $senha == "1357") {
+        $res = "Usuario ou senha incorretos";
+    } elseif ($nome != "usuario" || $senha == "1357") {
+        $res = "Usuario ou senha incorretos";
+    } else {
+        $res = "";
+    }
 
     echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
     // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
@@ -69,6 +81,11 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="inputs">
 
             <form method="POST">
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite a senha do seu jogo">
 
                 <input
                     type="text"
@@ -100,6 +117,11 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             </form>
 
+        </div>
+        <div class="debloquer">
+            <?php if ($res != "") { ?>
+                <p><?= $res ?></p>
+            <?php } ?>
         </div>
         <div class="afficche">
             <h2>Jogos registrados</h2>

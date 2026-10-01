@@ -43,8 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="affiche">
             <?php if ($res != "") { ?>
                 <p><?= $res ?></p>
-
-
             <?php } ?>
         </div>
     </main>
