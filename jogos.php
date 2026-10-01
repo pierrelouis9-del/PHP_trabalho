@@ -35,12 +35,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ano = $_POST["ano"];
     $senha = $_POST["senha"];
 
-    $sql = "INSERT INTO Jogos (
-        nome, genero, nota, ano_lancamento
-    ) VALUES ('$nome', '$genero', $nota, '$ano')";
+   // $sql = "INSERT INTO Jogos (
+   //     nome, genero, nota, ano_lancamento
+  //  ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
     if ($nome == "usuario" && $senha == "1357") {
         $res = "Seu login foi realizado com successo";
+
+    $sql = "INSERT INTO Jogos (
+        nome, genero, nota, ano_lancamento
+    ) VALUES ('$nome', '$genero', $nota, '$ano')";
+        
     } elseif ($nome != "usuario" && $senha == "1357") {
         $res = "Usuario ou senha incorretos";
     } elseif ($nome != "usuario" || $senha == "1357") {
