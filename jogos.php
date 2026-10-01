@@ -35,10 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ano = $_POST["ano"];
     $senha = $_POST["senha"];
  
-    if ($senha != "123456") {
-        echo '<div class="mensagens">Senha incorreta!</div>';
-        exit;
-    } else {
         echo '<div class="mensagens">Senha correta!</div>';
     
     $sql = "INSERT INTO Jogos (
@@ -50,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->exec($sql);
 
     echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
-    }
+    
 }
 //buscar os dados do jogos registrados no BANCO DE DADOS
 $buscar = "SELECT * FROM Jogos";
