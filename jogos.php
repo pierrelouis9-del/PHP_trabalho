@@ -25,7 +25,6 @@ $nome = "";
 $genero = "";
 $nota = "";
 $ano = "";
-$senha ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -97,7 +96,6 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     id="ano"
                     name="ano"
                     placeholder="Digite o ano de lançamento do seu jogo">
-                    
                 <button type="submit">ENVIAR</button>
 
             </form>
