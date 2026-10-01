@@ -7,7 +7,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
         genero VARCHAR(50) NOT NULL,
-        nota DECIMAL(3,1),
+        nota DECIMAL(3,2),
         ano_lancamento DATE NOT NULL
     )";
 
@@ -16,16 +16,16 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
 $pdo->exec($sql);
 
 // $alterar = "ALTER TABLE Jogos 
-         //   ADD COLUMN ano_lancamento DATE NOT NULL";
+//   ADD COLUMN ano_lancamento DATE NOT NULL";
 
 // $pdo->exec($alterar);          
 echo '<div class="mensagens">Tabela criada com sucesso!</div>';
 
 $nome = "";
 $genero = "";
-$nota = "";
+$nota = 0;
 $ano = "";
-$senha ="";
+$res = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -34,30 +34,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nota = $_POST["nota"];
     $ano = $_POST["ano"];
     $senha = $_POST["senha"];
- 
-    if ($senha != "123456") {
-        echo '<div class="mensagens">Senha incorreta!</div>';
-        exit;
-    } else {
-        echo '<div class="mensagens">Senha correta!</div>';
-    
-    $sql = "INSERT INTO Jogos (
-        nome, genero, nota, ano_lancamento
-    ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
-    echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
-    // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
-    $pdo->exec($sql);
+    if ($senha == "1357") {
 
-    echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
+        echo '<div class="mensagens">Registro criado com sucesso! 3</div>';
+
+        $res = "acesso desbloqueiado!!";
+
+        echo '<div class="mensagens">Registro criado com sucesso! 4</div>';
+
+        $sql = "INSERT INTO Jogos (
+            nome, genero, nota, ano_lancamento
+            ) VALUES ('$nome', '$genero', $nota, '$ano')";
+
+        echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
+
+        // exec() = executa algo quando você não precisa receber dados de volta [só enviar ]
+        $pdo->exec($sql);
+
+        echo '<div class="mensagens">Registro criado com sucesso! 2</div>';
+
+
+    } else { 
+        $res = "acesso negado !!";
     }
-}
-//buscar os dados do jogos registrados no BANCO DE DADOS
-$buscar = "SELECT * FROM Jogos";
-// query() = executa uma consulta quando você quer receber dados de volta
-$stmt = $pdo->query($buscar);
+        //buscar os dados do jogos registrados no BANCO DE DADOS
+        $buscar = "SELECT * FROM Jogos";
+        // query() = executa uma consulta quando você quer receber dados de volta
+        $stmt = $pdo->query($buscar);
 
-$jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
 
 ?>
 
@@ -80,6 +89,12 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <form method="POST">
 
                 <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite a senha do aplicativo">
+
+                <input
                     type="text"
                     id="nome"
                     name="nome"
@@ -100,23 +115,22 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     name="nota"
                     placeholder="Digite a nota do seu jogo">
 
-                    <input
+                <input
                     type="date"
                     id="ano"
                     name="ano"
                     placeholder="Digite o ano de lançamento do seu jogo">
-
-                    <input
-                    type="password"
-                    id="senha"
-                    name="senha"
-                    placeholder="Digite a senha do aplicativo">
-
                 <button type="submit">ENVIAR</button>
 
             </form>
 
         </div>
+     
+        <?php if ($res != "") { ?>
+            <div class="alerta">
+            <?= $res ?>
+            </div>
+        <?php } ?>
         <div class="afficche">
             <h2>Jogos registrados</h2>
             <table>
@@ -126,7 +140,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <th>Nom</th>
                         <th>Gênero</th>
                         <th>Nota</th>
-                        <th>Ano_lançamento</th>
+                        <th>Data_lançamento</th>
                     </tr>
                 </thead>
                 <!-- foreac() -> para cada item nessa lista vfaça alguma coisa com x variavel -->
