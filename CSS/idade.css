@@ -1,125 +1,120 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: rgb(9, 10, 10);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    background:
+        radial-gradient(circle at top left, rgba(0, 119, 255, 0.35), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(0, 200, 255, 0.2), transparent 35%),
+        linear-gradient(135deg, #020617, #0f172a, #172554);
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 3px;
+    width: 100%;
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
-.A {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: rgba(240, 248, 255, 0.76);
-    width: 250px;
-    height: 250px;
-    border-radius: 20px;
-    border: solid 5px;
-    box-shadow: 3px 3px 3px rgb(255, 255, 255);
-
+.A,
+.B {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 .A form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1px;
+    gap: 15px;
 }
 
 .A input {
-    width: 225px;
-    height: 30px;
-    color: black;
-    background-color: rgba(240, 248, 255, 0.76);
+    width: 100%;
+    padding: 16px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.A input:focus {
+    border-color: #087ff5;
+    box-shadow: 0 0 0 4px rgba(8, 127, 245, 0.12);
+}
+
+.A button {
+    width: 100%;
+    padding: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #087ff5, #0055c7);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.A button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(8, 127, 245, 0.35);
+}
+
+.A a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #475569;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.A a:hover {
+    color: #087ff5;
 }
 
 .B {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    background-color: rgba(240, 248, 255, 0.719);
-    width: 250px;
-    height: 250px;
-    border-radius: 20px;
-    border: solid 5px;
-    color: black;
-    box-shadow: 3px 3px 3px rgb(255, 255, 255);
-}
-button {
-   min-width: 80px;
-   align-self: center;
-   padding: 0.6rem 1.8rem;
-   background-color: #ffffff;
-   color: #000000;
-   border: none;
-   border-radius: 8px;
-   font-size: 1rem;
-   font-weight: bold;
-   cursor: pointer;
-   margin-top: 0.5rem;
-   transition: transform 0.1s ease, background-color 0.2s ease;
+    min-height: 300px;
 }
 
-button:active {
-   background-color: black;
-   color: red;
-}
-button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.03);
-}
-
-a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 80px;
-    height: 45px;
-
-    background: linear-gradient(135deg, #ffffff, #dcdcdc);
-    color: #000000;
-
-    text-decoration: none;
-    border-radius: 10px;
-
-    font-size: 15px;
-    font-weight: bold;
-
-
-    transition: all 0.2s ease;
-
-    margin: 10px auto;
+.B h4 {
+    width: 100%;
+    padding: 25px;
+    border-radius: 16px;
+    background: #eff6ff;
+    border: 2px solid #bfdbfe;
+    color: #1e293b;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
-a:hover {
-    background-color: #e0e0e0;
-    transform: translateY(-1px);
+.B strong {
+    color: #087ff5;
 }
 
+.c {
+    display: none;
+}
 
-a:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 #000000;
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }

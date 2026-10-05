@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -10,76 +10,87 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #e7e7e700 0%, #0d131d 100%);
-    padding: 20px;
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at top left, rgba(99, 102, 241, 0.35), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.25), transparent 35%),
+        linear-gradient(135deg, #020617, #111827, #1e1b4b);
 }
 
 .container {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 16px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 360px;
+    max-width: 450px;
+}
+
+.inputs {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
 }
 
 .inputs form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 }
 
 .inputs input {
     width: 100%;
-    padding: 14px 16px;
-    border: 1.5px solid #cbd5e1;
-    border-radius: 8px;
-    font-size: 15px;
+    padding: 17px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
     outline: none;
-    transition: all 0.2s ease-in-out;
-    background-color: #f8fafc;
-    color: #0f172a;
+    transition: 0.3s;
 }
 
 .inputs input:focus {
-    border-color: #3b82f6;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
 }
 
 .inputs button {
-    width: 100%;
-    padding: 14px;
-    background-color: #2563eb;
+    padding: 17px;
     border: none;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    margin-top: 8px;
+    transition: 0.3s;
 }
 
 .inputs button:hover {
-    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
 }
 
-.inputs button:active {
-    transform: scale(0.98);
+.inputs a {
+    text-align: center;
+    text-decoration: none;
+    color: #64748b;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.inputs a:hover {
+    color: #4f46e5;
 }
 
 .affiche {
     margin-top: 20px;
-    text-align: center;
 }
 
 .affiche p {
-    font-size: 14px;
-    font-weight: 500;
-    padding: 12px 16px;
-    border-radius: 8px;
-    background-color: #f1f5f9;
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.97);
+    text-align: center;
     color: #334155;
-    border: 1px solid #e2e8f0;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
