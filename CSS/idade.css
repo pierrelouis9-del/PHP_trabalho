@@ -75,15 +75,25 @@ body {
 
 .A a {
     display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+
+    background: #e2e8f0;
+    color: #1e293b;
+
     text-align: center;
     text-decoration: none;
-    color: #475569;
+    font-size: 17px;
     font-weight: bold;
-    margin-top: 5px;
+
+    transition: 0.3s;
 }
 
 .A a:hover {
-    color: #087ff5;
+    background: #cbd5e1;
+    color: #0f172a;
+    transform: translateY(-2px);
 }
 
 .B {

@@ -71,16 +71,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
+    min-height: 52px;
+
     text-decoration: none;
     border-radius: 12px;
+
     background: #e2e8f0;
     color: #1e293b;
+
+    font-size: 17px;
     font-weight: bold;
+
     transition: 0.3s;
 }
 
 .inputs a:hover {
     background: #cbd5e1;
+    color: #0f172a;
+    transform: translateY(-2px);
 }
 
 .debloquer {

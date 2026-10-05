@@ -78,15 +78,28 @@ body {
 }
 
 .inputs a {
+    display: block;
+    width: 100%;
+    padding: 15px;
+
     text-align: center;
     text-decoration: none;
-    color: #64748b;
+
+    background: #e2e8f0;
+    color: #1e293b;
+
+    border-radius: 11px;
+
+    font-size: 16px;
     font-weight: bold;
-    margin-top: 5px;
+
+    transition: 0.3s;
 }
 
 .inputs a:hover {
-    color: #0284c7;
+    background: #cbd5e1;
+    color: #0f172a;
+    transform: translateY(-2px);
 }
 
 .resultados {
