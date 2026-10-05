@@ -72,5 +72,10 @@ header{
   .inicio h1 {
     font-size: 60px;
     margin-bottom: 5px;
-    
+
+  }
+  .inicio h2 {
+    font-size: 30px;
+    color: #aaaaaa;
+    margin-bottom: 20px;
   }

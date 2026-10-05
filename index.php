@@ -185,7 +185,7 @@
         <p>
            © Desenvolvido por <a href="pierrelouisjuvensky5@gmail.com">JUvensky</a> 
         </p>
-        <p>2026</p>
+        
     </footer>
 
 </body>
