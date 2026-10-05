@@ -39,19 +39,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    //     nome, genero, nota, ano_lancamento
   //  ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
-    if ($nome == "usuario" && $senha == "1357") {
+    if ($senha == "1357") {
         $res = "Seu login foi realizado com successo";
 
-    $sql = "INSERT INTO Jogos (
-        nome, genero, nota, ano_lancamento
-    ) VALUES ('$nome', '$genero', $nota, '$ano')";
+        $sql = "INSERT INTO Jogos (
+            nome, genero, nota, ano_lancamento
+        ) VALUES ('$nome', '$genero', $nota, '$ano')";
+        //buscar os dados do jogos registrados no BANCO DE DADOS
+        $buscar = "SELECT * FROM Jogos";
+        // query() = executa uma consulta quando você quer receber dados de volta
+       $stmt = $pdo->query($buscar);
+
+       $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-    } elseif ($nome != "usuario" && $senha == "1357") {
-        $res = "Usuario ou senha incorretos";
-    } elseif ($nome != "usuario" || $senha == "1357") {
-        $res = "Usuario ou senha incorretos";
     } else {
-        $res = "";
+        $res = "Senha incorretos";
     }
 
     echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
