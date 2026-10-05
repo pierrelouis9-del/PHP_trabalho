@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="nome" id="nome" placeholder="digite seu nome">
                 <input type="password" name="senha" id="senha" placeholder="digite seu senha">
                 <button type="submit">Entrar</button>
+                <a href="index.php">voltar</a>
             </form>
         </div>
         <div class="affiche">
