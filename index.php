@@ -1,17 +1,3 @@
-<?php
-require "conexao.php";
-echo "<br>Meu sistema está conectado !";
-
-$sql = "CREATE TABLE IF NOT EXISTS teste (
-        id INT AUTO_INCREMENT PRIMARY kEY,
-        nome VARCHAR(100),
-        idade INT 
-    )";
-
-$pdo->exec($sql);
-echo "<br> Tabela criado com sucesso!";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,17 +34,17 @@ echo "<br> Tabela criado com sucesso!";
                 </p>
 
                 <h1>
-                    Juvensky Pierre Louis
+                    Juvensky
                 </h1>
 
                 <h2>Desenvolvedorem formação</h2>
-                
+
                 <p>
-                    Aluno em desenvolvimento tecnico de sistema 
+                    Aluno em desenvolvimento tecnico de sistema
                 </p>
 
                 <a href="#projetos" class="botao">
-                    Ver meus projetos 
+                    Ver meus projetos
                 </a>
 
             </div>
@@ -67,7 +53,117 @@ echo "<br> Tabela criado com sucesso!";
 
         <section id="sobre" class="sobre">
             <h1>Sobre mim </h1>
+            <div class="foto">
+                yo
+            </div>
+            <div class="sobre-texto">
+                <h3>Quem sou eu?</h3>
+                <p>
+                    Meu nome é Juvensky Pierre Louis e sou
+                    estudante em desenvolvimento de sistema.
+                </p>
+                <p>
+                    Atualmente estou no fim do meu curso tecnico, onde eu aprendo o
+                    desenvolimento web, programação em Javascript,
+                    Html e react. Este portfolio reune alguns dos
+                    meus projetos desnvolvidos com o meu professor durante o curso.
+                </p>
+                <p>
+                    Meu objetivo é trabalhar na area da tecnologia continuando
+                    desenvolver minhas habilidades e meus competencias e aprender
+                    novas tecnologias.
+
+                </p>
+            </div>
         </section>
+        <section id="habilidades" class="secao">
+            <h2 class="titulo-secao">Minhas Habilidades</h2>
+            <p class="subtitulo-secao">Algumas tecnologias que estou estudando:</p>
+            <div class="habilidades">HTML</div>
+            <div class="habilidades">CSS</div>
+            <div class="habilidades">PHP</div>
+            <div class="habilidades">Javascript</div>
+        </section>
+
+        <section id="projetos" class="secao">
+            <div class="projeto">
+                <div class="projeto-numero">
+                    01
+                </div>
+                <h3>Verificação de idade</h3>
+                <p>
+                    sistema desenvolvido para praticar formulario e manipulação de dados.
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                </div>
+                <a href="Projetos/idade.php" class="link-projeto">Ver projeto →</a>
+            </div>
+            <div class="projeto">
+                <div class="projeto-numero">
+                    02
+                </div>
+                <h3>Verificação de notas</h3>
+                <p>
+                    sistema desenvolvido para praticar formulario e manipulação de dados.
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                </div>
+                <a href="Projetos/notas.php" class="link-projeto">Ver projeto →</a>
+            </div>
+            <div class="projeto-">
+                <div class="projeto-numero">
+                    03
+                </div>
+                <h3>fazer login</h3>
+                <p>
+                    sistema desenvolvido para praticar formulario e manipulação de dados.
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                </div>
+                <a href="Projetos/login-basico.php" class="link-projeto">Ver projeto →</a>
+            </div>
+            <div class="projeto-">
+                <div class="projeto-numero">
+                    04
+                </div>
+                <h3>Cadastrar Jogos</h3>
+                <p>
+                    sistema desenvolvido para praticar formulario e manipulação de dados.
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                </div>
+                <a href="Projetos/jogos.php" class="link-projeto">Ver projeto →</a>
+            </div>
+        </section>
+        <section id="contato" class="secao secao-destaque">
+            <h2 class="titulo-secao">Meu contato</h2>
+            <p class="subtitulo-secao">
+                Pode entrar em contato conmigo com esses dados
+            </p>
+            <div class="contato-container">
+                <div class="contato-item">
+                    <h3>GitHub</h3>
+                    <p>https://github.com/pierrelouis9-del</p>
+                </div>
+                <div class="contato-item">
+                    <h3>Linkdin</h3>
+                    <p>www.linkedin.com/in/pierre-louis-juvensky-6b5492418</p>
+                </div>
+            </div>
+        </section>
+
 
         <!--  <section class="tareffas">
     <div class="links">
@@ -85,6 +181,12 @@ echo "<br> Tabela criado com sucesso!";
     </section> -->
 
     </main>
+    <footer>
+        <p>
+           © Desenvolvido por <a href="pierrelouisjuvensky5@gmail.com">JUvensky</a> 
+        </p>
+        <p>2026</p>
+    </footer>
 
 </body>
 
