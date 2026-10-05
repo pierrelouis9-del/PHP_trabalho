@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //  ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
     if ($senha == "1357") {
-        $res = "Seu login foi realizado com successo";
+        $res = "Jogo adicionado com sucesso";
 
         $sql = "INSERT INTO Jogos (
             nome, genero, nota, ano_lancamento
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
     } else {
-        $res = "Senha incorretos";
+        $res = "Senha incorreta";
     }
 
     echo '<div class="mensagens">Registro criado com sucesso! 1</div>';
