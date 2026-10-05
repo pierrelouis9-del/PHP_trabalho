@@ -121,7 +121,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     name="ano"
                     placeholder="Digite o ano de lançamento do seu jogo">
                 <button type="submit">ENVIAR</button>
-                <a href="index.php">Voltar</a>
+                <a href="../index.php">Voltar</a>
 
             </form>
 

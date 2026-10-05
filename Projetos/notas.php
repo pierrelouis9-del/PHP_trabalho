@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="n5"><strong>Nota5</strong> (peso 3)</label>
                 <input type="number" min="0" max="10" id="n5" name="n5" placeholder="digite o nota 5">
                 <button type="submit">Enviar</button>
-                <a href="index.php">voltar</a>
+                <a href="../index.php">voltar</a>
             </form>
         </div>
         <div class="resultados">

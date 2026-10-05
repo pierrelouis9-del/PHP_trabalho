@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="nome" id="nome" placeholder="digite seu nome">
                 <input type="password" name="senha" id="senha" placeholder="digite seu senha">
                 <button type="submit">Entrar</button>
-                <a href="index.php">voltar</a>
+                <a href="../index.php">voltar</a>
             </form>
         </div>
         <div class="affiche">
