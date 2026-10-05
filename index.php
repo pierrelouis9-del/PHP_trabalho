@@ -28,11 +28,11 @@
             <h3>Link de tarefa</h3>
             <ul>
                 <a href="https://github.com/pierrelouis9-del/PHP_trabalho">Ir para meu repositorio</a>
-                <a href="idade.php">Verificador de idade</a>
-                <a href="notas.php">Verificador de notas</a>
-                <a href="receber.php">receber notas</a>
-                <a href="login-basico.php">Fazer login</a>
-                <a href="jogos.php">Cadastrar jogos</a>
+                <a href="Projetos/idade.php">Verificador de idade</a>
+                <a href="Projetos/notas.php">Verificador de notas</a>
+                <a href="Projetos/receber.php">receber notas</a>
+                <a href="Projetos/login-basico.php">Fazer login</a>
+                <a href="Projetos/jogos.php">Cadastrar jogos</a>
 
             </ul>
         </div>
