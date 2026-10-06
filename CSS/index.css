@@ -83,10 +83,10 @@ header{
     max-width: 600px;
 }
 .botao{
-    width: 130px;
-    height: 30px;
+
     display: inline-block;
     margin-top: 30px;
+    padding: 12px 25px;
     background-color: #2563eb;
     color: white;
     text-decoration: none;
@@ -156,6 +156,16 @@ header{
 }
 .habilidade{
     background-color: white;
-
-
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+.habilidade:hover {
+    transform: translateY(-3px);
+}
+.pojeto-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
