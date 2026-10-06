@@ -44,7 +44,7 @@
             <h2>cadastro de projeto</h2>
             <form method="POST">
 
-                <label for="senha"> nome do jogo:</label>
+  <label for="senha">Senha</label>
 
                 <input
                     type="password"
@@ -52,7 +52,7 @@
                     name="senha"
                     placeholder="Digite a senha do seu jogo">
 
-                <label for="nome">Senha</label>
+                <label for="nome">Nome </label>
 
                 <input
                     type="text"
@@ -60,7 +60,7 @@
                     name="nome"
                     placeholder="Digite o nome do seu jogo">
 
-                <label for="genero"> Nome:</label>
+                <label for="genero"> Genero</label>
 
                 <input
                     type="text"
@@ -68,7 +68,7 @@
                     name="genero"
                     placeholder="Digite o gênero do seu jogo">
 
-                <label for="nota">Genero</label>
+                <label for="nota">Nota</label>
 
                 <input
                     type="number"
