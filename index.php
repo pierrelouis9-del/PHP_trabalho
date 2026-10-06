@@ -167,11 +167,11 @@
             <div class="contato-container">
                 <div class="contato-item">
                     <h3>GitHub</h3>
-                    <p>https://github.com/pierrelouis9-del</p>
+                    <p><a href="https://github.com/pierrelouis9-del"></a></p>
                 </div>
                 <div class="contato-item">
                     <h3>Linkdin</h3>
-                    <p>www.linkedin.com/in/pierre-louis-juvensky-6b5492418</p>
+                    <p><a href="www.linkedin.com/in/pierre-louis-juvensky-6b5492418"></a></p>
                 </div>
             </div>
         </section>
