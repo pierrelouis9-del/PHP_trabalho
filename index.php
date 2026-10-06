@@ -28,7 +28,7 @@
     <main class="container">
 
         <section id="inicio" class="inicio">
-            <div class="inicio_conteudo">
+            <div class="inicio-conteudo">
                 <p class="saudacao">
                     Olá eu sou
                 </p>
