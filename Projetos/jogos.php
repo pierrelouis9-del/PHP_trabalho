@@ -88,7 +88,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             <form method="POST">
 
-                <label for="senha"> nome do jogo:</label>
+                <label for="senha">Senha</label>
 
                 <input
                     type="password"
@@ -96,7 +96,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     name="senha"
                     placeholder="Digite a senha do seu jogo">
 
-                <label for="nome">Senha</label>
+                <label for="nome">Nome </label>
 
                 <input
                     type="text"
@@ -104,7 +104,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     name="nome"
                     placeholder="Digite o nome do seu jogo">
 
-                <label for="genero"> Nome:</label>
+                <label for="genero"> Genero</label>
 
                 <input
                     type="text"
@@ -112,7 +112,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     name="genero"
                     placeholder="Digite o gênero do seu jogo">
 
-                <label for="nota">Genero</label>
+                <label for="nota">Nota</label>
 
                 <input
                     type="number"
