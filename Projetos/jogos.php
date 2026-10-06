@@ -16,7 +16,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Jogos (
 $pdo->exec($sql);
 
 // $alterar = "ALTER TABLE Jogos 
-         //   ADD COLUMN ano_lancamento DATE NOT NULL";
+//   ADD COLUMN ano_lancamento DATE NOT NULL";
 
 // $pdo->exec($alterar);          
 echo '<div class="mensagens">Tabela criada com sucesso!</div>';
@@ -25,7 +25,7 @@ $nome = "";
 $genero = "";
 $nota = "";
 $ano = "";
-$senha ="";
+$senha = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -35,9 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ano = $_POST["ano"];
     $senha = $_POST["senha"];
 
-   // $sql = "INSERT INTO Jogos (
-   //     nome, genero, nota, ano_lancamento
-  //  ) VALUES ('$nome', '$genero', $nota, '$ano')";
+    // $sql = "INSERT INTO Jogos (
+    //     nome, genero, nota, ano_lancamento
+    //  ) VALUES ('$nome', '$genero', $nota, '$ano')";
 
     if ($senha == "1357") {
         $res = "Jogo adicionado com sucesso";
@@ -48,10 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //buscar os dados do jogos registrados no BANCO DE DADOS
         $buscar = "SELECT * FROM Jogos";
         // query() = executa uma consulta quando você quer receber dados de volta
-       $stmt = $pdo->query($buscar);
+        $stmt = $pdo->query($buscar);
 
-       $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
+        $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } else {
         $res = "Senha incorreta";
     }
@@ -88,11 +87,16 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="inputs">
 
             <form method="POST">
+
+                <label for="senha"> nome do jogo:</label>
+
                 <input
                     type="password"
                     id="senha"
                     name="senha"
                     placeholder="Digite a senha do seu jogo">
+
+                <label for="nome">Senha</label>
 
                 <input
                     type="text"
@@ -100,11 +104,15 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     name="nome"
                     placeholder="Digite o nome do seu jogo">
 
+                <label for="genero"> Nome:</label>
+
                 <input
                     type="text"
                     id="genero"
                     name="genero"
                     placeholder="Digite o gênero do seu jogo">
+
+                <label for="nota">Genero</label>
 
                 <input
                     type="number"
@@ -115,7 +123,9 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     name="nota"
                     placeholder="Digite a nota do seu jogo">
 
-                    <input
+                <label for="ano"> Data</label>
+
+                <input
                     type="date"
                     id="ano"
                     name="ano"
