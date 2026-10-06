@@ -23,7 +23,7 @@ header{
 .navbar {
     max-width: 1100px;
     margin: auto;
-    
+    color: aliceblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,4 +79,3 @@ header{
     color: #aaaaaa;
     margin-bottom: 20px;
   }
-  
