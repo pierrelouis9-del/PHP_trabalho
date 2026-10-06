@@ -30,17 +30,16 @@ body {
 }
 
 .inputs form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .inputs label {
     font-size: 15px;
     font-weight: bold;
     color: #1e293b;
-    margin-bottom: -8px;
-    letter-spacing: 0.3px;
+    margin-top: 8px;
 }
 
 .inputs input {
@@ -60,6 +59,7 @@ body {
 
 .inputs button {
     padding: 16px;
+    margin-top: 15px;
     border: none;
     border-radius: 12px;
     background: linear-gradient(135deg, #087ff5, #0055c7);
@@ -171,12 +171,8 @@ td {
 }
 
 @media (max-width: 700px) {
-    .inputs form {
-        grid-template-columns: 1fr;
-    }
-
-    .inputs a {
-        padding: 16px;
+    .inputs {
+        padding: 20px;
     }
 
     .afficche {
