@@ -147,7 +147,7 @@
                 <a href="Projetos/jogos.php" class="link-projeto">Ver projeto →</a>
             </div>
         </section>
-        <section id="contato" class="secao secao-destaque">
+        <section id="contato" class="secao-destaque">
             <h2 class="titulo-secao">Meu contato</h2>
             <p class="subtitulo-secao">
                 Pode entrar em contato conmigo com esses dados
