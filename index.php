@@ -76,7 +76,7 @@
                 </p>
             </div>
         </section>
-        <section id="habilidades" class="secao">
+        <section id="habilidades" class="secao secao-destaque">
             <h2 class="titulo-secao">Minhas Habilidades</h2>
             <p class="subtitulo-secao">Algumas tecnologias que estou estudando:</p>
             <div class="habilidades">HTML</div>
@@ -147,7 +147,7 @@
                 <a href="Projetos/jogos.php" class="link-projeto">Ver projeto →</a>
             </div>
         </section>
-        <section id="contato" class="secao-destaque">
+        <section id="contato" class="secao secao-destaque">
             <h2 class="titulo-secao">Meu contato</h2>
             <p class="subtitulo-secao">
                 Pode entrar em contato conmigo com esses dados
