@@ -171,7 +171,7 @@
                 </div>
                 <div class="contato-item">
                     <h3>Linkdin</h3>
-                    <p>awww.linkedin.com/in/pierre-louis-juvensky-6b5492418</p>
+                    <p>www.linkedin.com/in/pierre-louis-juvensky-6b5492418</p>
                 </div>
             </div>
         </section>
@@ -195,7 +195,7 @@
     </main>
     <footer>
         <p>
-            © Desenvolvido por <a href="pierrelouisjuvensky5@gmail.com">JUvensky</a>
+            © Desenvolvido por <a href="pierrelouisjuvensky5@gmail.com">Juvensky</a>
         </p>
 
     </footer>
