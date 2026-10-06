@@ -3,119 +3,194 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  html {
+}
+
+html {
     scroll-behavior: smooth;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5f5;
     color: #222222;
     line-height: 1.6;
-  }
-  
-  /* MENU / CABEÇALHO
-     Mesmo estilo utilizado no index.php */
-  header {
+}
+
+/* MENU / CABEÇALHO */
+header {
     background-color: #111827;
     position: sticky;
     top: 0;
     z-index: 100;
-  }
-  .navbar {
+}
+
+.navbar {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .logo{
-    color: white;
+}
 
-  }
-  .menu {
+.logo {
+    color: white;
+}
+
+.menu {
     display: flex;
     gap: 25px;
     list-style: none;
-  }
-  .menu a{
+}
+
+.menu a {
     color: #dddddd;
     text-decoration: none;
     font-weight: bold;
-  }
-  .menu a:hover{
-    color: #60a5fa;
-  }
-  /*Pagina do portfolio*/
+}
 
-  .pagina-projeto{
+.menu a:hover {
+    color: #60a5fa;
+}
+
+/* PÁGINA DO PORTFÓLIO */
+
+.pagina-projeto {
     min-height: calc(100vh - 150px);
     max-width: 1100px;
     margin: auto;
-    padding: 60px 20px 80px ;
-  }
-  /* Cabeçalho do Projeto */
- .cabecalho-projeto{
+    padding: 60px 20px 80px;
+}
+
+/* CABEÇALHO DO PROJETO */
+
+.cabecalho-projeto {
     margin-bottom: 40px;
- } 
- .projeto-tipo {
+}
+
+.projeto-tipo {
     color: #2563eb;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 5px;
- }
- .cabecalho-projeto h1 {
+}
+
+.cabecalho-projeto h1 {
     font-size: 40px;
     color: #111827;
     margin-bottom: 10px;
- }
- .cabeçalho-projeto > p:not(.projeto-tipo) {
+}
+
+.cabecalho-projeto > p:not(.projeto-tipo) {
     color: #666666;
     font-size: 18px;
     max-width: 700px;
 }
-/* ÁREA DA ATIVIDADE
-   Aqui ficará o conteúdo específico 
-   desenvolvido em jogos.php, idade.php, 
-   notas.php etc. */
 
-   .conteudo-projeto {
+/* ÁREA DA ATIVIDADE */
+
+.conteudo-projeto {
     background-color: white;
     padding: 35px;
     border-radius: 10px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
     margin-bottom: 30px;
+}
 
-  }
-  /* voltar ptojetos */
-  .voltar-projetos{
+/* FORMULÁRIO */
+
+.conteudo-projeto form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.conteudo-projeto label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-top: 10px;
+}
+
+.conteudo-projeto input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.conteudo-projeto input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.conteudo-projeto button {
+    margin-top: 15px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.conteudo-projeto button:hover {
+    background-color: #1d4ed8;
+}
+
+/* BOTÃO VOLTAR DO FORMULÁRIO */
+
+.conteudo-projeto form > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    background-color: #e5e7eb;
+    color: #111827;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.conteudo-projeto form > a:hover {
+    background-color: #d1d5db;
+}
+
+/* VOLTAR PROJETOS */
+
+.voltar-projetos {
     margin-top: 30px;
-  }
-  .voltar-projetos a {
+}
+
+.voltar-projetos a {
     color: #2563eb;
     text-decoration: none;
     font-weight: bold;
-  }
+}
 
-  .voltar-projetos a:hover{
+.voltar-projetos a:hover {
     text-decoration: underline;
-  }
-  /*Rodapé*/
-  footer{
+}
+
+/* RODAPÉ */
+
+footer {
     background-color: #111827;
     color: #cccccc;
     text-align: center;
     padding: 30px;
-  }
-  footer a{
+}
+
+footer a {
     color: #60a5fa;
     text-decoration: none;
-  }
-  footer a:hover{
+}
+
+footer a:hover {
     text-decoration: underline;
-  }
-  
+}
