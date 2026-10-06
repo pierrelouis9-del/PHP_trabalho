@@ -51,100 +51,112 @@
 
         </section>
 
-        <section id="sobre" class="sobre">
-            <h1>Sobre mim </h1>
-            <div class="foto">
-                yo
-            </div>
-            <div class="sobre-texto">
-                <h3>Quem sou eu?</h3>
-                <p>
-                    Meu nome é Juvensky Pierre Louis e sou
-                    estudante em desenvolvimento de sistema.
-                </p>
-                <p>
-                    Atualmente estou no fim do meu curso tecnico, onde eu aprendo o
-                    desenvolimento web, programação em Javascript,
-                    Html e react. Este portfolio reune alguns dos
-                    meus projetos desnvolvidos com o meu professor durante o curso.
-                </p>
-                <p>
-                    Meu objetivo é trabalhar na area da tecnologia continuando
-                    desenvolver minhas habilidades e meus competencias e aprender
-                    novas tecnologias.
+        <section id="sobre" class="secao">
+            <div class="sobre-conteudo">
+                <h1>Sobre mim </h1>
+                <div class="foto">
+                    yo
+                </div>
+                <div class="sobre-texto">
+                    <h3>Quem sou eu?</h3>
+                    <p>
+                        Meu nome é Juvensky Pierre Louis e sou
+                        estudante em desenvolvimento de sistema.
+                    </p>
+                    <p>
+                        Atualmente estou no fim do meu curso tecnico, onde eu aprendo o
+                        desenvolimento web, programação em Javascript,
+                        Html e react. Este portfolio reune alguns dos
+                        meus projetos desnvolvidos com o meu professor durante o curso.
+                    </p>
+                    <p>
+                        Meu objetivo é trabalhar na area da tecnologia continuando
+                        desenvolver minhas habilidades e meus competencias e aprender
+                        novas tecnologias.
 
-                </p>
+                    </p>
+                </div>
             </div>
+
         </section>
         <section id="habilidades" class="secao secao-destaque">
             <h2 class="titulo-secao">Minhas Habilidades</h2>
             <p class="subtitulo-secao">Algumas tecnologias que estou estudando:</p>
-            <div class="habilidades">HTML</div>
-            <div class="habilidades">CSS</div>
-            <div class="habilidades">PHP</div>
-            <div class="habilidades">Javascript</div>
+            <div class="lista-habilidades">
+                <div class="habilidades">HTML</div>
+                <div class="habilidades">CSS</div>
+                <div class="habilidades">PHP</div>
+                <div class="habilidades">Javascript</div>
+            </div>
         </section>
 
         <section id="projetos" class="secao">
-            <div class="projeto">
-                <div class="projeto-numero">
-                    01
+            <h2 class="subtitulo-secao">Meus Projetos</h2>
+            <p class="subtitulo-secao">
+                Alguns projetos desenvolvidos durante as aulas.
+            </p>
+            <div class="projetos-container">
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        01
+                    </div>
+                    <h3>Verificação de idade</h3>
+                    <p>
+                        sistema desenvolvido para praticar formulario e manipulação de dados.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="Projetos/idade.php" class="link-projeto">Ver projeto →</a>
                 </div>
-                <h3>Verificação de idade</h3>
-                <p>
-                    sistema desenvolvido para praticar formulario e manipulação de dados.
-                </p>
-                <div class="tecnologias">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        02
+                    </div>
+                    <h3>Verificação de notas</h3>
+                    <p>
+                        sistema desenvolvido para praticar formulario e manipulação de dados.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="Projetos/notas.php" class="link-projeto">Ver projeto →</a>
                 </div>
-                <a href="Projetos/idade.php" class="link-projeto">Ver projeto →</a>
-            </div>
-            <div class="projeto">
-                <div class="projeto-numero">
-                    02
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        03
+                    </div>
+                    <h3>fazer login</h3>
+                    <p>
+                        sistema desenvolvido para praticar formulario e manipulação de dados.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="Projetos/login-basico.php" class="link-projeto">Ver projeto →</a>
                 </div>
-                <h3>Verificação de notas</h3>
-                <p>
-                    sistema desenvolvido para praticar formulario e manipulação de dados.
-                </p>
-                <div class="tecnologias">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        04
+                    </div>
+                    <h3>Cadastrar Jogos</h3>
+                    <p>
+                        sistema desenvolvido para praticar formulario e manipulação de dados.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+
+                    <a href="Projetos/jogos.php" class="link-projeto">Ver projeto →</a>
                 </div>
-                <a href="Projetos/notas.php" class="link-projeto">Ver projeto →</a>
-            </div>
-            <div class="projeto-">
-                <div class="projeto-numero">
-                    03
-                </div>
-                <h3>fazer login</h3>
-                <p>
-                    sistema desenvolvido para praticar formulario e manipulação de dados.
-                </p>
-                <div class="tecnologias">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
-                </div>
-                <a href="Projetos/login-basico.php" class="link-projeto">Ver projeto →</a>
-            </div>
-            <div class="projeto-">
-                <div class="projeto-numero">
-                    04
-                </div>
-                <h3>Cadastrar Jogos</h3>
-                <p>
-                    sistema desenvolvido para praticar formulario e manipulação de dados.
-                </p>
-                <div class="tecnologias">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
-                </div>
-                <a href="Projetos/jogos.php" class="link-projeto">Ver projeto →</a>
             </div>
         </section>
         <section id="contato" class="secao secao-destaque">
@@ -183,9 +195,9 @@
     </main>
     <footer>
         <p>
-           © Desenvolvido por <a href="pierrelouisjuvensky5@gmail.com">JUvensky</a> 
+            © Desenvolvido por <a href="pierrelouisjuvensky5@gmail.com">JUvensky</a>
         </p>
-        
+
     </footer>
 
 </body>
