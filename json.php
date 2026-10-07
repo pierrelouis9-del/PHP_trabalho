@@ -1,8 +1,8 @@
 <?php
 
 $nome = "";
-$idade= 0;
-$curso ="";
+$idade = 0;
+$curso = "";
 
 // 1. DECLARAR O CAMINHO DO ARQUIVO JSON 
 $caminho = __DIR__ . "/dados.json";
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $novoAluno = [
         "nome" => $_POST["nome"],
-        "idade" =>$_POST["idade"],
+        "idade" => $_POST["idade"],
         "curso" =>  $_POST["curso"]
     ];
 
@@ -34,12 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         JSON_PRETTY_PRINT |
             JSON_UNESCAPED_UNICODE
     );
+
+
+    // 7. SALVAR NO ARQUIVO
+    file_put_contents($caminho, $jsonAtualizado);
+
+    echo "DADOS REGISTRADOS EM dados.json";
 }
 
-// 7. SALVAR NO ARQUIVO
-file_put_contents($caminho, $jsonAtualizado);
-
-echo "DADOS REGISTRADOS EM dados.json";
 ?>
 
 
@@ -53,15 +55,29 @@ echo "DADOS REGISTRADOS EM dados.json";
 </head>
 
 <body>
-    <form action="" method=POST>
-        <label for="nome">Nome</label>
-        <input type="text" name="nome">
-        <label for="">Idade</label>
-        <input type="number" name="idade">
-        <label for="">Curso</label>
-        <input type="text" name="curso">
-        <button type="submit">Enviar</button>
-    </form>
+    <div>
+        <form action="" method=POST>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+            <label for="">Idade</label>
+            <input type="number" name="idade">
+            <label for="">Curso</label>
+            <input type="text" name="curso">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div>
+        <h2>
+            ALUNOS CADASTRADOS
+        </h2>
+        <?php foreach ($alunos as $aluno) { ?>
+            <h3><?= $aluno["nome"] ?></h3>
+            <p>Idade: <?= $idade["idade"] ?></p>
+            <p>Curso<?= $curso["idade"] ?></p>
+
+
+        <?php } ?>
+    </div>
 </body>
 
 </html>
