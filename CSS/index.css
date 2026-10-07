@@ -512,3 +512,65 @@ footer a:hover {
         padding: 22px;
     }
 }
+
+/* MENU HAMBURGER */
+
+.menu-hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .menu-hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 0;
+
+        padding: 15px 0;
+
+        background: rgba(17, 24, 39, 0.98);
+
+        border-top: 1px solid rgba(96, 165, 250, 0.2);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu.ativo {
+        display: flex;
+    }
+
+    .menu a {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .menu a:hover {
+        background-color: rgba(37, 99, 235, 0.2);
+    }
+}

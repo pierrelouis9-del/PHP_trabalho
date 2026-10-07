@@ -12,6 +12,9 @@
     <header>
         <nav class="navbar">
             <h3> Menu portfolio</h3>
+            <button class="menu-hamburger">
+                ☰
+            </button>
             <ul class="menu">
                 <a href="https://github.com/pierrelouis9-del/PHP_trabalho">Ir para meu repositorio</a>
                 <a href="#inicio"></a>
