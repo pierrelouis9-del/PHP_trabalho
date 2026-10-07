@@ -1,44 +1,66 @@
-<?php 
-    // 1. DECLARAR O CAMINHO DO ARQUIVO JSON 
-    $caminho = __DIR__ . "/dados.json";
+<?php
 
-    // 2. ABRIR/ LER O ARQUIVO JSON
-    $json = file_get_contents($caminho);
+$nome = "";
+$idade= 0;
+$curso ="";
 
-    // 3. TRANSFORMAR JSPN EM ARRAY PHP
-    $alunos = json_decode($json, true);
+// 1. DECLARAR O CAMINHO DO ARQUIVO JSON 
+$caminho = __DIR__ . "/dados.json";
+
+// 2. ABRIR/ LER O ARQUIVO JSON
+$json = file_get_contents($caminho);
+
+// 3. TRANSFORMAR JSPN EM ARRAY PHP
+$alunos = json_decode($json, true);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
 
     // 4. CRIAR UM ALUNO
 
     $novoAluno = [
-        "nome" => "Juvensky",
-        "idade" => 18,
-        "curso" => "Desenvolvimento de Sistemas"
+        "nome" => $_POST["nome"],
+        "idade" =>$_POST["idade"],
+        "curso" =>  $_POST["curso"]
     ];
 
     // 5. ADICIONAR O ALUNO NO ARRAY
     $alunos[] = $novoAluno;
 
     // 6. TRANSFORMAR ARRAY PHP EM JSON
-    $jsonAtualizado = json_encode($alunos, JSON_PRETTY_PRINT | 
-    JSON_UNESCAPED_UNICODE
-);
+    $jsonAtualizado = json_encode(
+        $alunos,
+        JSON_PRETTY_PRINT |
+            JSON_UNESCAPED_UNICODE
+    );
+}
 
-    // 7. SALVAR NO ARQUIVO
-    file_put_contents($caminho, $jsonAtualizado);
+// 7. SALVAR NO ARQUIVO
+file_put_contents($caminho, $jsonAtualizado);
 
-    echo "DADOS REGISTRADOS EM dados.json";
+echo "DADOS REGISTRADOS EM dados.json";
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <form action="" method=POST>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome">
+        <label for="">Idade</label>
+        <input type="number" name="idade">
+        <label for="">Curso</label>
+        <input type="text" name="curso">
+    </form>
 </body>
+
 </html>
