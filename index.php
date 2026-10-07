@@ -17,11 +17,10 @@
             </button>
             <ul class="menu">
                 <a href="https://github.com/pierrelouis9-del/PHP_trabalho">Ir para meu repositorio</a>
-                <a href="#inicio"></a>
-                <a href="#Sobre">inicio</a>
-                <a href="#habilidades">Sobre</a>
-                <a href="$projetos">habilidades</a>
-                <a href="#contato">Contato</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#projetos">Projetos</a>
 
             </ul>
         </nav>

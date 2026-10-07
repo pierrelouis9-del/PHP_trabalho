@@ -415,7 +415,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* SCROLLBAR */
+
 
 ::-webkit-scrollbar {
     width: 9px;
@@ -434,7 +434,7 @@ footer a:hover {
     background: #3b82f6;
 }
 
-/* RESPONSIVO */
+
 
 @media (max-width: 800px) {
 
@@ -513,8 +513,6 @@ footer a:hover {
     }
 }
 
-/* MENU HAMBURGER */
-
 .menu-hamburger {
     display: none;
     background: transparent;
@@ -524,15 +522,13 @@ footer a:hover {
     cursor: pointer;
 }
 
-
-/* CELULAR */
-
 @media (max-width: 600px) {
 
     .navbar {
         position: relative;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         padding: 15px 20px;
     }
 
@@ -551,10 +547,9 @@ footer a:hover {
         align-items: center;
 
         gap: 0;
+        padding: 10px 0;
 
-        padding: 15px 0;
-
-        background: rgba(17, 24, 39, 0.98);
+        background-color: rgba(17, 24, 39, 0.98);
 
         border-top: 1px solid rgba(96, 165, 250, 0.2);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -567,6 +562,7 @@ footer a:hover {
     .menu a {
         width: 100%;
         padding: 15px;
+
         text-align: center;
     }
 
