@@ -60,6 +60,7 @@ echo "DADOS REGISTRADOS EM dados.json";
         <input type="number" name="idade">
         <label for="">Curso</label>
         <input type="text" name="curso">
+        <button type="submit">Enviar</button>
     </form>
 </body>
 
