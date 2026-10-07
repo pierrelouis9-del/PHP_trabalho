@@ -14,32 +14,53 @@ $json = file_get_contents($caminho);
 $alunos = json_decode($json, true);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $acao = $_POST["acao"];
 
+    if ($acao === "cadastrar") {
+        // 4. CRIAR UM ALUNO
 
+        $novoAluno = [
+            "nome" => $_POST["nome"],
+            "idade" => $_POST["idade"],
+            "curso" =>  $_POST["curso"]
+        ];
+        // 5. ADICIONAR O ALUNO NO ARRAY
+        $alunos[] = $novoAluno;
 
-    // 4. CRIAR UM ALUNO
+        // 6. TRANSFORMAR ARRAY PHP EM JSON
+        $jsonAtualizado = json_encode(
+            $alunos,
+            JSON_PRETTY_PRINT |
+                JSON_UNESCAPED_UNICODE
+        );
 
-    $novoAluno = [
-        "nome" => $_POST["nome"],
-        "idade" => $_POST["idade"],
-        "curso" =>  $_POST["curso"]
-    ];
+        // 7. SALVAR NO ARQUIVO
+        file_put_contents($caminho, $jsonAtualizado);
+    }
 
-    // 5. ADICIONAR O ALUNO NO ARRAY
-    $alunos[] = $novoAluno;
+    if ($acao === "atualizar") {
+        // PEGAR OS DADADOS DO FORMULÁRIO
+        $nome = $_POST["nome"];
+        $novaIdade = $_post["idade"];
+        $novoCurso = $_POST["curso"];
 
-    // 6. TRANSFORMAR ARRAY PHP EM JSON
-    $jsonAtualizado = json_encode(
-        $alunos,
-        JSON_PRETTY_PRINT |
-            JSON_UNESCAPED_UNICODE
-    );
+        foreach ($alunos as $posicao => $aluno) {
+            if ($aluno["nome"] == $nome) {
+                $alunos[$posicao]["idade"] = $novaIdade;
+                $alunos[$posicao]["curso"] = $novoCurso;
+            }
+        }
+        // 6. TRANSFORMAR ARRAY PHP EM JSON
+        $jsonAtualizado = json_encode(
+            $alunos,
+            JSON_PRETTY_PRINT |
+                JSON_UNESCAPED_UNICODE
+        );
 
-
-    // 7. SALVAR NO ARQUIVO
-    file_put_contents($caminho, $jsonAtualizado);
-
-    echo "DADOS REGISTRADOS EM dados.json";
+        // 7. SALVAR NO ARQUIVO
+        file_put_contents($caminho, $jsonAtualizado);
+        
+    }
 }
 
 ?>
@@ -56,6 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div>
+        <h2>CADASTRAR ALUNOS</h2>
         <form action="" method=POST>
             <label for="nome">Nome</label>
             <input type="text" name="nome">
@@ -63,9 +85,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="number" name="idade">
             <label for="">Curso</label>
             <input type="text" name="curso">
-            <button type="submit">Enviar</button>
+            <button type="submit" name="acao" value="cadastrar">cadastrar</button>
         </form>
     </div>
+
     <div>
         <h2>
             ALUNOS CADASTRADOS
@@ -77,6 +100,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         <?php } ?>
+    </div>
+
+    <div>
+        <form action="" method=POST>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+            <label for="">Idade</label>
+            <input type="number" name="idade">
+            <label for="">Curso</label>
+            <input type="text" name="curso">
+            <button type="submit" name="acao" value="atualizar">Atualizar</button>
+        </form>
     </div>
 </body>
 
