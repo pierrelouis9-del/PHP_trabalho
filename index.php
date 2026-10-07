@@ -202,6 +202,14 @@
         </p>
 
     </footer>
+    <script>
+        const botao = document.querySelector(".menu-hamburger");
+        const menu = document.querySelector(".menu");
+
+        botao.addEventListener("click", function() {
+            menu.classList.toggle("ativo");
+        });
+    </script>
 
 </body>
 
