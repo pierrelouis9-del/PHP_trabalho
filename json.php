@@ -59,10 +59,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // 7. SALVAR NO ARQUIVO
         file_put_contents($caminho, $jsonAtualizado);
-        
+    }
+
+    if ($acao === "deletar") {
+        //pegar o nome que queremos deletar
+        $nome = $_POST["nome"];
+        //pecorrer o que queremos deletar 
+
+        foreach ($alunos as $posicao => $aluno) {
+            //vrificar se encontou o aluno
+            if ($aluno["nome"] == $nome) {
+                unset($alunos($posicao));
+            }
+        }
+
+        //REORGANIZAR AS POSIÇÕES
+        $alunos = array_values($alunos);
     }
 }
-
 ?>
 
 
@@ -94,15 +108,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ALUNOS CADASTRADOS
         </h2>
         <?php foreach ($alunos as $aluno) { ?>
-            <h3><?= $aluno["nome"] ?></h3>
+            <h3> <?= $aluno["nome"] ?></h3>
             <p>Idade: <?= $aluno["idade"] ?></p>
-            <p>Curso<?= $aluno["curso"] ?></p>
+            <p>Curso: <?= $aluno["curso"] ?></p>
 
 
         <?php } ?>
     </div>
 
     <div>
+        <h2>ATUALIZAR</h2>
         <form action="" method=POST>
             <label for="nome">Nome</label>
             <input type="text" name="nome">
@@ -111,6 +126,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="">Curso</label>
             <input type="text" name="curso">
             <button type="submit" name="acao" value="atualizar">Atualizar</button>
+        </form>
+    </div>
+    <div>
+        <h2>DELETAR</h2>
+        <form action="" method=POST>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+            <label for="">Idade</label>
+            <input type="number" name="idade">
+            <label for="">Curso</label>
+            <input type="text" name="curso">
+            <button type="submit" name="acao" value="deletar">Deletar</button>
         </form>
     </div>
 </body>
