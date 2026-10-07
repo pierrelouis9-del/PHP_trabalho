@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php foreach ($alunos as $aluno) { ?>
             <h3><?= $aluno["nome"] ?></h3>
             <p>Idade: <?= $idade["idade"] ?></p>
-            <p>Curso<?= $curso["idade"] ?></p>
+            <p>Curso<?= $curso["curso"] ?></p>
 
 
         <?php } ?>
