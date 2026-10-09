@@ -1,4 +1,4 @@
-```php
+
 <?php
 
 require_once "helpdesk-func.php";
@@ -199,4 +199,4 @@ $funcionarios = Consultar();
 </body>
 
 </html>
-```
+
