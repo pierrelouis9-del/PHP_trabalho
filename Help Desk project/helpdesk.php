@@ -198,7 +198,7 @@ $funcionarios = Consultar();
             <form method="POST">
 
                 <label for="excluir">Numero do chamado:</label>
-                <input type="text" name="nome" id="nome" >
+                <input type="number" name="posicao" id="posicao" min="1" required>
 
                 <p>
                     <button type="submit" name="acao" value="excluir">

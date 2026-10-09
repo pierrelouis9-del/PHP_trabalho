@@ -115,11 +115,11 @@ function Excluir()
 
         if ($acao === "excluir") {
 
-            $nome = $_POST["nome"];
+            $posicao = $_POST["posicao"];
 
-            if (isset($funcionarios[$nome])) {
+            if (isset($funcionarios[$posicao])) {
 
-                unset($funcionarios[$nome]);
+                unset($funcionarios[$posicao]);
 
                 $funcionarios = array_values($funcionarios);
 
