@@ -45,7 +45,7 @@ function Cadastrar()
             $jsonAtualizado = json_encode(
                 $funcionarios,
                 JSON_PRETTY_PRINT |
-                JSON_UNESCAPED_UNICODE
+                    JSON_UNESCAPED_UNICODE
             );
 
             file_put_contents($caminho, $jsonAtualizado);
@@ -92,7 +92,7 @@ function Atualisar()
                     $jsonAtualizado = json_encode(
                         $funcionarios,
                         JSON_PRETTY_PRINT |
-                        JSON_UNESCAPED_UNICODE
+                            JSON_UNESCAPED_UNICODE
                     );
 
                     file_put_contents($caminho, $jsonAtualizado);
@@ -115,18 +115,18 @@ function Excluir()
 
         if ($acao === "excluir") {
 
-            $posicao = $_POST["posicao"];
+            $nome = $_POST["nome"];
 
-            if (isset($funcionarios[$posicao])) {
+            if (isset($funcionarios[$nome])) {
 
-                unset($funcionarios[$posicao]);
+                unset($funcionarios[$nome]);
 
                 $funcionarios = array_values($funcionarios);
 
                 $jsonAtualizado = json_encode(
                     $funcionarios,
                     JSON_PRETTY_PRINT |
-                    JSON_UNESCAPED_UNICODE
+                        JSON_UNESCAPED_UNICODE
                 );
 
                 file_put_contents($caminho, $jsonAtualizado);
@@ -134,9 +134,3 @@ function Excluir()
         }
     }
 }
-
-
-
-
-?>
-

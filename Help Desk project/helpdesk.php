@@ -6,7 +6,7 @@ $mensagem = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $acao = $_POST["acao"] ?? "";
+    $acao = $_POST["acao"];
 
     if ($acao == "cadastrar") {
         Cadastrar();
@@ -197,8 +197,8 @@ $funcionarios = Consultar();
 
             <form method="POST">
 
-                <label for="posicao_excluir">Numero do chamado:</label>
-                <input type="number" name="posicao" id="posicao" min="1" required>
+                <label for="excluir">Numero do chamado:</label>
+                <input type="text" name="nome" id="nome" >
 
                 <p>
                     <button type="submit" name="acao" value="excluir">
