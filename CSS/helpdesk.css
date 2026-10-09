@@ -6,29 +6,74 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
 body {
     background: #edf2f7;
     color: #263445;
-    padding: 30px 15px;
+}
+
+.header {
+    width: 100%;
+    background: #1d4ed8;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 12px #00000020;
+}
+
+.logo h2 {
+    color: white;
+    margin-bottom: 6px;
+}
+
+.logo p {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: #1d4ed8;
 }
 
 main {
     max-width: 950px;
-    margin: auto;
+    margin: 35px auto;
+    padding: 0 20px;
 }
 
-h1 {
-    background: #1d4ed8;
-    color: white;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-h2 {
+main > h1 {
     color: #1d4ed8;
     margin-bottom: 20px;
+}
+
+main > p {
+    margin-bottom: 20px;
+    color: #15803d;
+    font-weight: bold;
 }
 
 .cadastrar,
@@ -36,10 +81,16 @@ h2 {
 .atualizar,
 .excluir {
     background: white;
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 28px;
+    margin-bottom: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px #00000010;
+    scroll-margin-top: 120px;
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 20px;
 }
 
 label {
@@ -56,6 +107,14 @@ textarea {
     border-radius: 7px;
     margin-top: 8px;
     margin-bottom: 12px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 3px #1d4ed820;
 }
 
 textarea {
@@ -77,18 +136,21 @@ button {
     cursor: pointer;
     font-weight: bold;
     margin-top: 10px;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #1e40af;
+    transform: translateY(-2px);
 }
 
 .chamado {
     background: #f8fafc;
     border-left: 5px solid #1d4ed8;
-    padding: 18px;
-    margin-top: 15px;
+    padding: 20px;
+    margin-top: 18px;
     border-radius: 8px;
+    overflow-wrap: anywhere;
 }
 
 .chamado h3 {
@@ -97,12 +159,37 @@ button:hover {
 }
 
 .chamado p {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
+    line-height: 1.5;
 }
 
-main > p {
-    margin-bottom: 20px;
-    color: #15803d;
-    font-weight: bold;
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav {
+        width: 100%;
+        gap: 6px;
+    }
+
+    nav a {
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .cadastrar,
+    .consultar,
+    .atualizar,
+    .excluir {
+        padding: 18px;
+    }
 }
 

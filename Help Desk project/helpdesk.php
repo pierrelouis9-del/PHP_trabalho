@@ -1,4 +1,3 @@
-
 <?php
 
 require_once "helpdesk-func.php";
@@ -42,12 +41,27 @@ $funcionarios = Consultar();
 <body>
 
     <main>
+        
+        <header class="header">
+            <div class="logo">
+                <h2>HELP DESK</h2>
+                <p>Sistema de gerenciamento de chamados</p>
+            </div>
 
-        <h1>HELP DESK</h1>
+            <nav>
+                <a href="#cadastrar">Cadastrar</a>
+                <a href="#consultar">Consultar</a>
+                <a href="#atualizar">Atualizar</a>
+                <a href="#excluir">Excluir</a>
+            </nav>
+        </header>
+        
+
+
 
         <p><?= $mensagem ?></p>
 
-        <div class="cadastrar">
+        <div class="cadastrar" id="cadastrar">
 
             <h2>Cadastrar Chamado</h2>
 
@@ -117,7 +131,7 @@ $funcionarios = Consultar();
 
         </div>
 
-        <div class="consultar">
+        <div class="consultar" id="consultar">
 
             <h2>Consultar Chamados</h2>
 
@@ -146,14 +160,14 @@ $funcionarios = Consultar();
 
         </div>
 
-        <div class="atualizar">
+        <div class="atualizar" id="atualizar">
 
             <h2>Atualizar Status</h2>
 
             <form method="POST">
 
                 <label for="posicao_atualizar">Numero do chamado:</label>
-                <input type="number" name="posicao" id="posicao_atualizar" min="1" required>
+                <input type="number" name="posicao" id="posicao" min="1" required>
 
                 <p>Novo status:</p>
 
@@ -176,14 +190,14 @@ $funcionarios = Consultar();
 
         </div>
 
-        <div class="excluir">
+        <div class="excluir" id="excluir">
 
             <h2>Excluir Chamado</h2>
 
             <form method="POST">
 
                 <label for="posicao_excluir">Numero do chamado:</label>
-                <input type="number" name="posicao" id="posicao_excluir" min="1" required>
+                <input type="number" name="posicao" id="posicao" min="1" required>
 
                 <p>
                     <button type="submit" name="acao" value="excluir">
@@ -200,4 +214,3 @@ $funcionarios = Consultar();
 </body>
 
 </html>
-
