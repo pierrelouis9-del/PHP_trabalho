@@ -34,7 +34,7 @@ $funcionarios = Consultar();
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./CSS/helpdesk.css">
+    <link rel="stylesheet" href="../CSS/helpdesk.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HELP DESK</title>
 </head>
