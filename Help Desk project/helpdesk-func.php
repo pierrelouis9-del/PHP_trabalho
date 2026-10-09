@@ -51,6 +51,24 @@ function Cadastrar()
 }
 
 function Atualisar(){
-    
+    $caminho = __DIR__ . "./chamados.json";
+
+    $json = file_get_contents($caminho);
+
+    $funcionarios = json_decode($json, true);
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $acao = $_POST["acao"];
+
+        if ($acao === "atualizar"){
+            $nome = $_POST["nome"];
+            $setor =  $_POST["setor"];
+            $equipamento = $_POST["equipamento"];
+            $descricao = $_POST["descricao"];
+            $prioridade = $_POST["prioridade"];
+
+
+        }
+    }
 }
 ?>
