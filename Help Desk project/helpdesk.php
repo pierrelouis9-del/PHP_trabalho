@@ -1,7 +1,17 @@
 <?php
- require_once "helpdesk-func.php"
+require_once "helpdesk-func.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST["nome"];
+    $setor =  $_POST["setor"];
+    $equipamento = $_POST["equipamento"];
+    $descricao = $_POST["descricao"];
+    $prioridade = $_POST["prioridade"];
+    $status = $_POST["status"];
+    $acao = $_POST["acao"];
 
 
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,8 +46,8 @@
             </form>
         </section>
         <section class="consultar">
-            
-        <form method="POST">
+
+            <form method="POST">
                 <label for="nome"> NOme :</label>
                 <input type="text" name="nome" id="nome">
                 <label for="setor">Setor:</label>
@@ -54,8 +64,8 @@
             </form>
         </section>
         <section class="atualizar">
-            
-        <form method="POST">
+
+            <form method="POST">
                 <label for="nome"> NOme :</label>
                 <input type="text" name="nome" id="nome">
                 <label for="setor">Setor:</label>
@@ -72,8 +82,8 @@
             </form>
         </section>
         <section class="excluir">
-            
-        <form method="POST">
+
+            <form method="POST">
                 <label for="nome"> NOme :</label>
                 <input type="text" name="nome" id="nome">
                 <label for="setor">Setor:</label>

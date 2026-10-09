@@ -23,7 +23,7 @@ function Cadastrar()
     $json = file_get_contents($caminho);
 
     $funcionarios = json_decode($json, true);
-    
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $acao = $_POST["acao"];
 
@@ -48,5 +48,9 @@ function Cadastrar()
             file_put_contents($caminho, $jsonAtualizado);
         }
     }
+}
+
+function Atualisar(){
+    
 }
 ?>
