@@ -46,6 +46,7 @@ $funcionarios = Consultar();
             </div>
 
             <nav>
+                <a href="../index.php">index</a>
                 <a href="#cadastrar">Cadastrar</a>
                 <a href="#consultar">Consultar</a>
                 <a href="#atualizar">Atualizar</a>
