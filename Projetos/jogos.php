@@ -169,12 +169,12 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
 
     </main>
-    <footer>
+   
+</body>
+ <footer>
         <p>
             © Desenvolvido por <a href="pierrelouisjuvensky5@gmail.com">Juvensky</a>
         </p>
 
     </footer>
-</body>
-
 </html>
