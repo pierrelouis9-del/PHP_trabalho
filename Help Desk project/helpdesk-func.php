@@ -28,9 +28,9 @@ function Cadastrar()
             $prioridade = $_POST["prioridade"];
 
             if ($nome == "" || $descricao == "") {
+                echo "Erro: preencha o nome e a descricao.";
                 return;
             }
-
             $novoFuncionario = [
                 "nome" => $nome,
                 "setor" => $setor,
