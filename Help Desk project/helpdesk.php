@@ -39,9 +39,6 @@ $funcionarios = Consultar();
 </head>
 
 <body>
-
-    <main>
-        
         <header class="header">
             <div class="logo">
                 <h2>HELP DESK</h2>
@@ -55,6 +52,9 @@ $funcionarios = Consultar();
                 <a href="#excluir">Excluir</a>
             </nav>
         </header>
+    <main>
+        
+
         
 
 
