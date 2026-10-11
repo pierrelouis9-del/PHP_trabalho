@@ -55,11 +55,6 @@ $funcionarios = Consultar();
         </header>
     <main>
         
-
-        
-
-
-
         <p><?= $mensagem ?></p>
 
         <div class="cadastrar" id="cadastrar">
