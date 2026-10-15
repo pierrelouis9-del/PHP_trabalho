@@ -15,6 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // $acao = ";
     //}
 
+// [? .... : >...] => if else forma abrégiada
+
+// ....??....  => else forma abregiada
+
     if ($acao === "cadastrar") {
         $successo = cadastrarChamados(
             $_POST["nome"] ?? "",
@@ -23,9 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_POST["descricao"] ?? "",
             $_POST["prioridade"] ?? ""
         );
-        $mensdagem = $successo ? "Chamado cadastrado com sucesso!" : "erro ao cadastrar. verifique os dados";
+        $mensdagem = $sucesso ? "Chamado cadastrado com sucesso!" : "erro ao cadastrar. verifique os dados";
     }
     if ($acao === "atualizar") {
+        //o (int) é uma conversão do tipo,também chamada type casting.
+        // ele tenta transformar e valor em um numerfo inteiro.
         $sucesso = atualizarChamado(
             (int) ($_POST["posicao"] ?? -1),
             $_POST["status"] ?? ""
@@ -33,6 +39,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if($acao === "excluir") {
-        
+        $sucesso =  excluirChamado((int) ($_POST["posicao"] ?? -1));
+
+        $mensagem = $successo ? "chamado excluido!" : "Não foi possiveç excluir.";
     }
 }
+$chamados = lerChamados();
+$relatorio = gerarRelatorio();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
