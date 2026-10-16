@@ -464,11 +464,19 @@ header {
 
     transition: 0.3s;
 }
+
 .links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
+    flex-wrap: wrap;
 }
+
+.links a {
+    display: inline-block;
+    text-decoration: none;
+}
+
 .link-projeto:hover {
     color: #1d4ed8;
 
