@@ -464,7 +464,11 @@ header {
 
     transition: 0.3s;
 }
-
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .link-projeto:hover {
     color: #1d4ed8;
 

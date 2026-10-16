@@ -196,10 +196,10 @@
                         <span>PHP</span>
                         <span>JSON</span>
                     </div>
-
-                    <a href="Help Desk project/helpdesk.php" class="link-projeto">Ver projeto v1 →</a>
-                    <a href="Projetos/helpdesk-1.php" class="link-projeto">Ver projeto v2 com professor →</a>
-
+                    <div class="links">
+                        <a href="Help Desk project/helpdesk.php" class="link-projeto">Ver projeto v1 →</a>
+                        <a href="Projetos/helpdesk-1.php" class="link-projeto">Ver projeto v2 com professor →</a>
+                    </div>
                 </div>
             </div>
         </section>
