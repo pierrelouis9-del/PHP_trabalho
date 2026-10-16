@@ -77,6 +77,7 @@ function escapar($valor)
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/helpdesk-1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help Desk - Gerenciamento de Chamados</title>
 </head>
