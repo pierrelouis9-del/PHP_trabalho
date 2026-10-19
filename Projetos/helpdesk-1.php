@@ -112,38 +112,38 @@ function escapar($valor)
                 <input type="text" name="nome" id="nome" required>
 
                 <p>Setor:</p>
-
-                <input type="radio" name="setor" id="producao" value="Producao" required>
                 <label for="producao">Produção</label>
+                <input type="radio" name="setor" id="producao" value="Producao" required>
 
-                <input type="radio" name="setor" id="administrativo" value="Administrativo">
                 <label for="administrativo">Administrativo</label>
+                <input type="radio" name="setor" id="administrativo" value="Administrativo">
 
-                <input type="radio" name="setor" id="logistica" value="Logistica">
                 <label for="logistica">Logística</label>
+                <input type="radio" name="setor" id="logistica" value="Logistica">
 
+               <label for="financeiro">Financeiro</label>
                 <input type="radio" name="setor" id="financeiro" value="Financeiro">
-                <label for="financeiro">Financeiro</label>
+ 
 
-                <input type="radio" name="setor" id="ti" value="TI">
                 <label for="ti">TI</label>
+                <input type="radio" name="setor" id="ti" value="TI">
 
                 <p>Equipamento:</p>
-
-                <input type="radio" name="equipamento" id="computador" value="Computador" required>
                 <label for="computador">Computador</label>
+                <input type="radio" name="equipamento" id="computador" value="Computador" required>
 
-                <input type="radio" name="equipamento" id="impressora" value="Impressora">
                 <label for="impressora">Impressora</label>
+                <input type="radio" name="equipamento" id="impressora" value="Impressora">
 
-                <input type="radio" name="equipamento" id="rede" value="Rede">
                 <label for="rede">Rede</label>
+                <input type="radio" name="equipamento" id="rede" value="Rede">
 
-                <input type="radio" name="equipamento" id="sistema" value="Sistema">
                 <label for="sistema">Sistema</label>
+                <input type="radio" name="equipamento" id="sistema" value="Sistema">
+
+                <label for="outro">Outro</label>
 
                 <input type="radio" name="equipamento" id="outro" value="Outro">
-                <label for="outro">Outro</label>
 
                 <p>
                     <label for="descricao">Descrição:</label>
@@ -152,15 +152,15 @@ function escapar($valor)
                 <textarea name="descricao" id="descricao" required></textarea>
 
                 <p>Prioridade:</p>
-
-                <input type="radio" name="prioridade" id="baixa" value="Baixa" required>
                 <label for="baixa">Baixa</label>
+                <input type="radio" name="prioridade" id="baixa" value="Baixa" required>
 
-                <input type="radio" name="prioridade" id="media" value="Media">
                 <label for="media">Média</label>
+                <input type="radio" name="prioridade" id="media" value="Media">
 
-                <input type="radio" name="prioridade" id="alta" value="Alta">
                 <label for="alta">Alta</label>
+                <input type="radio" name="prioridade" id="alta" value="Alta">
+
 
                 <p>
                     <button type="submit" name="acao" value="cadastrar">
