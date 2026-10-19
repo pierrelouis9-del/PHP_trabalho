@@ -211,15 +211,15 @@ function escapar($valor)
                 <input type="number" name="posicao" id="posicao_atualizar" min="1" required>
 
                 <p>Novo status:</p>
-
-                <input type="radio" name="status" id="aberto" value="Aberto" required>
                 <label for="aberto">Aberto</label>
+                <input type="radio" name="status" id="aberto" value="Aberto" required>
 
-                <input type="radio" name="status" id="andamento" value="Em andamento">
                 <label for="andamento">Em andamento</label>
+                <input type="radio" name="status" id="andamento" value="Em andamento">
 
-                <input type="radio" name="status" id="resolvido" value="Resolvido">
                 <label for="resolvido">Resolvido</label>
+                <input type="radio" name="status" id="resolvido" value="Resolvido">
+
 
                 <p>
                     <button type="submit" name="acao" value="atualizar">
