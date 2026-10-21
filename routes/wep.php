@@ -1,6 +1,6 @@
 <?php 
   //  require_once __DIR__ . '/../app/Http/controllers/HelpdeskController.php';
-    require_once __DIR__ . '/../app/Http/Controllers/PortfolioController.php';
+    require __DIR__ . '/../app/Http/Controllers/PortfolioController.php';
    // require_once __DIR__ . '/..';
 
    // listando em arrays as rotas que vamos criar.
