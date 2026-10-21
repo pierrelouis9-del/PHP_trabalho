@@ -13,10 +13,10 @@
           //  'idade' => []
 
         ],
-        [
+        
             'post' => [
       //          'helpdesk' => [new HelpdeskController(), '']
-            ]        ]
+            ]        
      ];       
     
     
