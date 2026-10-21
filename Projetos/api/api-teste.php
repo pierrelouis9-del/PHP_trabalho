@@ -70,13 +70,13 @@ header('Allow: GET , POST');
 http_response_code(405);
 
 // COMANDOS NA VPS PARA TESTAR:
-// curl -i -X GET https://juvenskyy315.devlook.xyz/Projetos/api/api-teste.php
-// curl -i -X POST https://juvenskyy315.devlook.xyz/Projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"titulo":"Impressora com defeito"}'
-// curl -i -X POST https://juvenskyy315.devlook.xyz/Projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"titulo":""}'
-// curl -i -X POST https://juvenskyy315.devlook.xyz/Projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"descricao":"Computador não liga"}'
-// curl -i -X POST https://juvenskyy315.devlook.xyz/Projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"titulo":}'
-// curl -i -X DELETE https://juvenskyy315.devlook.xyz/Projetos/api/api-teste.php
-// curl -i -X GET https://juvenskyy315.devlook.xyz/Projetos/api/arquivo-inexistente.php
+// curl -i -X GET https://juvensky315.devlook.xyz/Projetos/api/api-teste.php
+// curl -i -X POST https://juvensky315.devlook.xyz/Projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"titulo":"Impressora com defeito"}'
+// curl -i -X POST https://juvensky315.devlook.xyz/Projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"titulo":""}'
+// curl -i -X POST https://juvensky315.devlook.xyz/Projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"descricao":"Computador não liga"}'
+// curl -i -X POST https://juvensky315.devlook.xyz/Projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"titulo":}'
+// curl -i -X DELETE https://juvensky315.devlook.xyz/Projetos/api/api-teste.php
+// curl -i -X GET https://juvensky315.devlook.xyz/Projetos/api/arquivo-inexistente.php
 
 
 //   Parâmetro   Significado
