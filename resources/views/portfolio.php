@@ -39,7 +39,7 @@
                     Juvensky
                 </h1>
 
-                <h2>Desenvolvedorem formação</h2>
+                <h2>Desenvolvedor em formação</h2>
 
                 <p>
                     Aluno em desenvolvimento tecnico de sistema
