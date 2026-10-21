@@ -19,5 +19,4 @@ if (!isset($rotas[$metodo][$rota])) {
 //
 $controller->$acao();
 
-
 ?> 

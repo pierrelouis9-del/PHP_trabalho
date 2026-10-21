@@ -1,5 +1,5 @@
 <?php 
-    require_once __DIR__ . '/../app/Http/controllers/HelpdeskController.php';
+  //  require_once __DIR__ . '/../app/Http/controllers/HelpdeskController.php';
     require_once __DIR__ . '/../app/Http/Controllers/PortfolioController.php';
    // require_once __DIR__ . '/..';
 
@@ -7,15 +7,15 @@
      return[
         'GET' => [
             'portfolio' => [new PortfolioController(), 'index'],
-            'helpdesk' => [new HelpdeskController(),'index'],
-            'jogos' => [],
-            'notas' => [],
-            'idade' => []
+          //  'helpdesk' => [new HelpdeskController(),'index'],
+          //  'jogos' => [],
+          //  'notas' => [],
+          //  'idade' => []
 
         ],
         [
             'post' => [
-                'helpdesk' => [new HelpdeskController(), '']
+      //          'helpdesk' => [new HelpdeskController(), '']
             ]        ]
      ];       
     
