@@ -15,9 +15,9 @@ if (!isset($rotas[$metodo][$rota])) {
     exit;
 }
 //
-[ $controller, $acao] = $rota[$metodo][$rota]; 
+[$controller, $acao] = $rota[$metodo][$rota]; 
 //
-$controller->$acao;
+$controller->$acao();
 
 
 ?> 
