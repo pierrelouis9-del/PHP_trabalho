@@ -1,6 +1,6 @@
 <?php 
 // carregaando o arquivo de rotas e guardando o valor retornado por ele na variavel
- $rotas = require __DIR__ . "/routes/web.php";
+$rotas = require __DIR__ . "/routes/web.php";
 
 // Se a rota estiver vazia, vai direcionar automaticamente para o portfolio.
 $rota = $_GET['rota'] ?? 'portfolio';
