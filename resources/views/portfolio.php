@@ -116,7 +116,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="Projetos/idade.php" class="link-projeto">Ver projeto →</a>
+                    <a href="/resources/views/Projetos/idade.php" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -136,7 +136,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="Projetos/notas.php" class="link-projeto">Ver projeto →</a>
+                    <a href="/resources/views/Projetos/notas.php" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -156,7 +156,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="Projetos/login-basico.php" class="link-projeto">Ver projeto →</a>
+                    <a href="/resources/views/Projetos/login-basico.php" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -177,7 +177,7 @@
                         <span>PHP</span>
                     </div>
 
-                    <a href="Projetos/jogos.php" class="link-projeto">Ver projeto →</a>
+                    <a href="/resources/views/Projetos/jogos.php" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -197,8 +197,8 @@
                         <span>JSON</span>
                     </div>
                     <div class="links">
-                        <a href="Help Desk project/helpdesk.php" class="link-projeto">Ver projeto v1 →</a>
-                        <a href="Projetos/helpdesk-1.php" class="link-projeto">Ver projeto v2 com professor →</a>
+                        <a href="/resources/views/Projetos/Help Desk project/helpdesk.php" class="link-projeto">Ver projeto v1 →</a>
+                        <a href="/resources/views/Projetos/helpdesk-1.php" class="link-projeto">Ver projeto v2 com professor →</a>
                     </div>
                 </div>
             </div>
