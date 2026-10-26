@@ -19,12 +19,12 @@ return [
           'login' => [new loginController(),'index']   
     ],
 
-   'POST' => [
-       //          'helpdesk' => [new HelpdeskController(), '']
-       'jogos' => [new jogosController(),'index'],
-       'notas' => [new notasController(),'index'],
-       'idade' => [new idadeController(),'index'],
-       'login' => [new loginController(),'index']  
-   ],
+//    'POST' => [
+//        //          'helpdesk' => [new HelpdeskController(), '']
+//        'jogos' => [new jogosController(),'index'],
+//        'notas' => [new notasController(),'index'],
+//        'idade' => [new idadeController(),'index'],
+//        'login' => [new loginController(),'index']  
+//    ],
 ];
 ?>
