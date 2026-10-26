@@ -106,7 +106,7 @@ function escapar($valor)
 
             <h2>Cadastrar Chamado</h2>
 
-            <form method="POST">
+            <form action="index.php?rota=helpdesk" method="POST">
 
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required>
@@ -205,7 +205,7 @@ function escapar($valor)
 
             <h2>Atualizar Status</h2>
 
-            <form method="POST">
+            <form action="index.php?rota=helpdesk" method="POST">
 
                 <label for="posicao_atualizar">Número do chamado:</label>
                 <input type="number" name="posicao" id="posicao_atualizar" min="1" required>
@@ -235,7 +235,7 @@ function escapar($valor)
 
             <h2>Excluir Chamado</h2>
 
-            <form method="POST">
+            <form action="index.php?rota=helpdesk" method="POST">
 
                 <label for="posicao_excluir">Número do chamado:</label>
                 <input type="number" name="posicao" id="posicao_excluir" min="1" required>
