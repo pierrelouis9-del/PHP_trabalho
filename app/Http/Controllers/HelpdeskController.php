@@ -1,6 +1,6 @@
 <?php
  
-require_once __DIR__ . "/../../Models/chamado.php";
+require __DIR__ . "/../../Models/chamado.php";
  
 class HelpdeskController
 {
