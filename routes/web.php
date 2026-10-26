@@ -18,8 +18,8 @@ return [
           //'idade' => [new idadeController(),'index']  
     ],
 
-   'POST' => [
+   //'POST' => [
        //          'helpdesk' => [new HelpdeskController(), '']
-   ]
+   //]
 ];
 ?>
