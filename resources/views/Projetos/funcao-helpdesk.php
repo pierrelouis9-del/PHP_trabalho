@@ -3,7 +3,7 @@
 //READ - Ler todos os chamados
 function lerChamados()
 {
-    $arquivo = __DIR__ . "/../Help Desk project/chamados.json";
+    $arquivo = __DIR__ . "/../../storage/data/chamados.json";
     // verificar se o arquivo existe
     if (!file_exists($arquivo)) {
         file_put_contents($arquivo, "[]");
@@ -24,7 +24,7 @@ function lerChamados()
 //Salvar os chamados no JSON
 function salvarChamados($chamados)
 {
-    $arquivo = __DIR__ . "/../Help Desk project/chamados.json";
+    $arquivo = __DIR__ . "/../../storage/data/chamados.json";
 
     return file_put_contents(
         $arquivo,
