@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <main class="container">
         <div class="A">
-            <form method="POST">
+            <form action="/index.php?rota=idade" method="POST">
                 <input type="text" min="0" max="100" placeholder="Escrever seu nome" id="nome" name="nome">
                 <br>
                 <input type="number" placeholder="Escrever sua idade" id="idade" name="idade">

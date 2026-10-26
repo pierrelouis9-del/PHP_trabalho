@@ -1,5 +1,5 @@
 <?php
-//  require_once __DIR__ . '/../app/Http/controllers/HelpdeskController.php';
+ require_once __DIR__ . '/../app/Http/controllers/HelpdeskController.php';
 require __DIR__ . '/../app/Http/Controllers/PortfolioController.php';
 // require __DIR__ . "/../app/Http/Controllers/HelpdeskController.php";
 require __DIR__ . "/../app/Http/Controllers/idadeController.php";
@@ -19,8 +19,12 @@ return [
           'login' => [new loginController(),'index']   
     ],
 
-   //'POST' => [
+   'POST' => [
        //          'helpdesk' => [new HelpdeskController(), '']
-   //]
+       'jogos' => [new jogosController(),'index'],
+       'notas' => [new notasController(),'index'],
+       'idade' => [new idadeController(),'index'],
+       'login' => [new loginController(),'index']  
+   ],
 ];
 ?>

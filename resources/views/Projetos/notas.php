@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <main class="container">
         <div class="inputs">
-            <form method="POST">
+            <form action="/index.php?rota=notas" method="POST">
                 <label for="nome"><strong>Nome</strong></label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do aluno">
                 <label for="idade"><strong>Idade</strong></label>
