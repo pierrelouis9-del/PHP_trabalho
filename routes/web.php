@@ -14,8 +14,8 @@ return [
         'portfolio' => [new PortfolioController(), 'index'],
         'helpdesk' => [new HelpdeskController(),'index'],
         'jogos' => [new jogosController(),'index'],
-        'notas' => [new notasController(),'index'],
-        'idade' => [new idadeController(),'index']
+      //  'notas' => [new notasController(),'index'],
+      //  'idade' => [new idadeController(),'index']
     ],
 
   // 'POST' => [
