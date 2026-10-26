@@ -4,6 +4,7 @@ class JogosController {
         
         require __DIR__ . "/../../../resources/views/Projetos/jogos.php";
     
-        }       
+        }
+        
 }
 ?>
