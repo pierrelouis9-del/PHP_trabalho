@@ -1,7 +1,7 @@
 
 <?php
-require_once __DIR__ . "/../../../app/Models/chamado.php";
-
+require_once __DIR__ . "/funcao-helpdesk.php";
+// require_once __DIR__ . "/../../../app/Models/chamado.php";
 $mensagem = "";
 
 //identificar a operação solicitada
