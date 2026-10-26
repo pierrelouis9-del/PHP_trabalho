@@ -12,8 +12,8 @@ require __DIR__ . "/../app/Http/Controllers/notasController.php";
 return [
     'GET' => [
         'portfolio' => [new PortfolioController(), 'index'],
-        'helpdesk' => [new HelpdeskController(),'index'],
-        'jogos' => [new jogosController(),'index'],
+      //  'helpdesk' => [new HelpdeskController(),'index'],
+      //  'jogos' => [new jogosController(),'index'],
       //  'notas' => [new notasController(),'index'],
       //  'idade' => [new idadeController(),'index']
     ],
