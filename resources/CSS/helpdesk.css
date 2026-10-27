@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background-image: -webkit-linear-gradient(0% red, 100% blue);
+    background-image: -webkit-linear-gradient(0% red, 50% blue);
     color: #000000;
 }
 
