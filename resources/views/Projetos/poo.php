@@ -38,15 +38,18 @@
 
 //ENCAPSULAMENTO
 //Proteger informações para que não sejam alteradas de qualquer jeito.
+
 //HERANÇA
 //Criar uma classe nova aproveitando características de outra.
+
 //POLIMORFISMO
 //Permitir que objetos diferentes respondam à mesma ação de maneiras diferentes.
+
 //ABSTRAÇÃO
 //Mostrar o que é necessário e esconder detalhes complicados de funcionamento.
 class Personagem {
     public $nome;
-    public $vida = 100;
+    private $vida = 100;
     public $dano =10;
 
     public function __construct($nome, $vida, $dano){
@@ -54,15 +57,54 @@ class Personagem {
         $this->vida = $vida;
         $this->dano= $dano;
     }
+    //GETTER
+    public function getVida(){
+        return $this->vida;
+    }
+    //SETTER
+    public function setVida($vida){
+        if ($vida < 0){
+            echo "A vida não pode ser menor que 0";
+            return;
+        }
+        $this->vida = $vida;
+    }
+
     public function atacar(){
-    echo"$this-nome realizou um ataque!";
+    echo"$this->nome realizou um ataque!";
    }
 }
 
 $Juvensky = new Personagem("juvensky", 100,10);
+$Juvensky ->setVida(50); 
 $Dantes = new Personagem("Dantes", 50, 5);
-$Chloe = new Personagem("Chloe", 25,5);
+$Chloe = new Personagem("Chloe", 30,5);
 
+$Juvensky->atacar();
 
+//HERANÇA
+class Guereiro extends Personagem{
+    public function defender(){
+        echo "$this->nome levantou o escudo!";
+    }
+}
+$guereiro = new Guereiro("Juvensky", 100, 10);
+
+$guereiro->atacar(); // metodo herdado
+$guereiro->defender(); // metodo proprio
+
+//1. O que é uma classe?
+//Um molde para criar objetos
+
+//2. O que significa new Personagem()?
+//Criar um objeto da classe Personagem
+
+//3. Para que serve $this->nome?
+//Acessar o nome do objeto atual
+
+//4. O que significa extends?
+//Herdar características e métodos de outra classe
+
+//ENCAPSULAMENTO
 
 ?>
