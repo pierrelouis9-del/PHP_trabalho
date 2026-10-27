@@ -75,10 +75,10 @@ class Personagem {
    }
 }
 
-$Juvensky = new Personagem("juvensky", 100,10);
-$Juvensky ->setVida(50); 
-$Dantes = new Personagem("Dantes", 50, 5);
-$Chloe = new Personagem("Chloe", 30,5);
+// $Juvensky = new Personagem("juvensky", 100,10);
+// $Juvensky ->setVida(50); 
+// $Dantes = new Personagem("Dantes", 50, 5);
+// $Chloe = new Personagem("Chloe", 30,5);
 
 $Juvensky->atacar();
 
@@ -106,9 +106,9 @@ class Mago extends Personagem{
     }
 }
 
-// $guereiro = new Guereiro("Juvensky", 100, 10);
-// $mago = new Mago("Chloe", 30, 5);
-// $personagem = new Personagem("Dantes", 50, 10);
+$guereiro = new Guereiro("Juvensky", 100, 10);
+$mago = new Mago("Chloe", 30, 5);
+$personagem = new Personagem("Dantes", 50, 10);
 
 $personagens =[$guereiro, $mago, $personagem ];
 foreach($personagem as $p){
