@@ -88,7 +88,7 @@ class Guereiro extends Personagem{
     public function atacar() //POLIMORFISMO
    
     {
-        echo"$this->nome atacou com uma espada\n";
+        echo"$this->nome atacou com uma espada!\n";
     }
 
     public function defender(){
