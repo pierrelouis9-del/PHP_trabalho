@@ -49,7 +49,7 @@
 //Mostrar o que é necessário e esconder detalhes complicados de funcionamento.
 class Personagem {
     public $nome;
-    private $vida = 100;
+    private $vida = 100;//ENCAPSULAMENTO
     public $dano =10;
 
     public function __construct($nome, $vida, $dano){
@@ -82,10 +82,11 @@ $Chloe = new Personagem("Chloe", 30,5);
 
 $Juvensky->atacar();
 
-//HERANÇA
+//HERANÇA e POLIMORFISMO
 class Guereiro extends Personagem{
     //sobrescrevendo o metodo da classe pai (PERSONAGEM)
-    public function atacar()
+    public function atacar() //POLIMORFISMO
+   
     {
         echo"$this->nome atacou com uma espada";
     }
@@ -109,6 +110,11 @@ $guereiro = new Guereiro("Juvensky", 100, 10);
 $mago = new Mago("Chloe", 30, 5);
 $personagem = new Personagem("Dantes", 50, 10);
 
+$personagens =[$guereiro, $mago, $personagem ];
+foreach($personagem as $p){
+    $p->atacar();
+}
+
 // $guereiro = new Guereiro("Juvensky", 100, 10);
 
 // $guereiro->atacar(); // metodo herdado
@@ -119,7 +125,6 @@ $personagem = new Personagem("Dantes", 50, 10);
 // $mago->atacar(); // metodo herdado
 // $mago->lancarMagia(); // metodo proprio do Mago
 
-//POLIMORFISMO
 
 //1. O que é uma classe?
 //Um molde para criar objetos
@@ -132,7 +137,7 @@ $personagem = new Personagem("Dantes", 50, 10);
 
 //4. O que significa extends?
 //Herdar características e métodos de outra classe
-
-//ENCAPSULAMENTO
+ // para acessar 
+ // Https://juvensky315.devlook.xyz/resources/views/projetos/poo.php
 
 ?>
