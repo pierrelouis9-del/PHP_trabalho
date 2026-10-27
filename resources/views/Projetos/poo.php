@@ -106,9 +106,9 @@ class Mago extends Personagem{
     }
 }
 
-$guereiro = new Guereiro("Juvensky", 100, 10);
-$mago = new Mago("Chloe", 30, 5);
-$personagem = new Personagem("Dantes", 50, 10);
+// $guereiro = new Guereiro("Juvensky", 100, 10);
+// $mago = new Mago("Chloe", 30, 5);
+// $personagem = new Personagem("Dantes", 50, 10);
 
 $personagens =[$guereiro, $mago, $personagem ];
 foreach($personagem as $p){
@@ -138,6 +138,6 @@ foreach($personagem as $p){
 //4. O que significa extends?
 //Herdar características e métodos de outra classe
  // para acessar 
- // Https://juvensky315.devlook.xyz/resources/views/projetos/poo.php
+ // https://juvensky315.devlook.xyz/resources/views/Projetos/poo.php
 
 ?>
