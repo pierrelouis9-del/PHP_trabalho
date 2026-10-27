@@ -88,10 +88,21 @@ class Guereiro extends Personagem{
         echo "$this->nome levantou o escudo!";
     }
 }
+class Mago extends Personagem{
+    public function lancarMagia(){
+        echo"$this->nome lançou uma bola de fogo!\n";
+    }
+}
 $guereiro = new Guereiro("Juvensky", 100, 10);
 
 $guereiro->atacar(); // metodo herdado
-$guereiro->defender(); // metodo proprio
+$guereiro->defender(); // metodo proprio Guereiro
+
+$mago = new Mago("Juvensky", 100, 10);
+
+$mago->atacar(); // metodo herdado
+$mago->lancarMagia(); // metodo proprio do Mago
+
 
 //1. O que é uma classe?
 //Um molde para criar objetos
