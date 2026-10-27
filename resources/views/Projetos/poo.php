@@ -126,7 +126,7 @@ $personagens =[$guereiro, $mago, $curandeiro ];
 foreach($personagens as $p){
     $p->atacar();
 }
-$curandeiro->curar($guereiro,50); echo"$guereiro \n";
+$curandeiro->curar($guereiro,50); 
 
 echo"vida depois da cura:" . $guereiro->getVida() . "\n";
 // $guereiro = new Guereiro("Juvensky", 100, 10);
