@@ -128,6 +128,7 @@ foreach($personagens as $p){
 }
 $curandeiro->curar($guereiro,50);
 
+echo"vida depois da cura:" . $guereiro->getVida() . "\n";
 // $guereiro = new Guereiro("Juvensky", 100, 10);
 
 // $guereiro->atacar(); // metodo herdado
