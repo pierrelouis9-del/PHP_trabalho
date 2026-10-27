@@ -80,7 +80,7 @@ class Personagem {
 // $Dantes = new Personagem("Dantes", 50, 5);
 // $Chloe = new Personagem("Chloe", 30,5);
 
-$Juvensky->atacar();
+// $Juvensky->atacar();
 
 //HERANÇA e POLIMORFISMO
 class Guereiro extends Personagem{
@@ -88,11 +88,11 @@ class Guereiro extends Personagem{
     public function atacar() //POLIMORFISMO
    
     {
-        echo"$this->nome atacou com uma espada";
+        echo"$this->nome atacou com uma espada\n";
     }
 
     public function defender(){
-        echo "$this->nome levantou o escudo!";
+        echo "$this->nome levantou o escudo!\n";
     }
 }
 class Mago extends Personagem{
@@ -111,7 +111,7 @@ $mago = new Mago("Chloe", 30, 5);
 $personagem = new Personagem("Dantes", 50, 10);
 
 $personagens =[$guereiro, $mago, $personagem ];
-foreach($personagem as $p){
+foreach($personagens as $p){
     $p->atacar();
 }
 
