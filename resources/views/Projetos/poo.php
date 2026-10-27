@@ -84,25 +84,42 @@ $Juvensky->atacar();
 
 //HERANÇA
 class Guereiro extends Personagem{
+    //sobrescrevendo o metodo da classe pai (PERSONAGEM)
+    public function atacar()
+    {
+        echo"$this->nome atacou com uma espada";
+    }
+
     public function defender(){
         echo "$this->nome levantou o escudo!";
     }
 }
 class Mago extends Personagem{
+        //sobrescrevendo o metodo da classe pai (PERSONAGEM)
+    public function atacar()
+    {
+        echo"$this->nome lançou uma bola de fogo!\n";
+    }
     public function lancarMagia(){
         echo"$this->nome lançou uma bola de fogo!\n";
     }
 }
+
 $guereiro = new Guereiro("Juvensky", 100, 10);
+$mago = new Mago("Chloe", 30, 5);
+$personagem = new Personagem("Dantes", 50, 10);
 
-$guereiro->atacar(); // metodo herdado
-$guereiro->defender(); // metodo proprio Guereiro
+// $guereiro = new Guereiro("Juvensky", 100, 10);
 
-$mago = new Mago("Juvensky", 100, 10);
+// $guereiro->atacar(); // metodo herdado
+// $guereiro->defender(); // metodo proprio Guereiro
 
-$mago->atacar(); // metodo herdado
-$mago->lancarMagia(); // metodo proprio do Mago
+// $mago = new Mago("Juvensky", 100, 10);
 
+// $mago->atacar(); // metodo herdado
+// $mago->lancarMagia(); // metodo proprio do Mago
+
+//POLIMORFISMO
 
 //1. O que é uma classe?
 //Um molde para criar objetos
