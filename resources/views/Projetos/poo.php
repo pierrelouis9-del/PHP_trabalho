@@ -143,9 +143,9 @@ foreach($personagens as $p){
 $curandeiro->curar($guereiro,50); 
 echo"vida de $guereiro->nome depois da cura:" . $guereiro->getVida() . "\n";
 $arqueiro->atacaEspecial($mago, 20);
-echo"vida depois do ataque:" . $mago->getVida() . "\n";
+echo"vida $mago->nome depois do ataque:" . $mago->getVida() . "\n";
 $mago->lancarMagia($arqueiro, 30);
-echo"vida depois do ataque:" . $arqueiro->getVida() . "\n";
+echo"vida de $arqueiro->nome depois do ataque:" . $arqueiro->getVida() . "\n";
 // $guereiro = new Guereiro("Juvensky", 100, 10);
 
 // $guereiro->atacar(); // metodo herdado
