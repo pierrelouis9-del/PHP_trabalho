@@ -141,7 +141,7 @@ foreach($personagens as $p){
     $p->atacar();
 }
 $curandeiro->curar($guereiro,50); 
-echo"vida depois da cura:" . $guereiro->getVida() . "\n";
+echo"vida de $guereiro->nome depois da cura:" . $guereiro->getVida() . "\n";
 $arqueiro->atacaEspecial($mago, 20);
 echo"vida depois do ataque:" . $mago->getVida() . "\n";
 $mago->lancarMagia($arqueiro, 30);
