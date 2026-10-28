@@ -134,7 +134,7 @@ function escapar($texto){
             <button type="submit">Enviar</button>
         </form>
     </div>
-    <div >
+    <div class="mensagem">
         <?php if ($mensagem != "") {?>
       <strong>  <?= $mensagem ?></strong>
         
