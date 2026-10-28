@@ -139,11 +139,11 @@ function escapar($texto){
         
     </div>
     <div>
-        <h3><?= $nome ?></h3>
-        <h3><?= $tipo ?></h3>
-        <h3><?= $quantidade?></h3>
+        <p><strong>Nome Maquina</strong><?= $nome ?></p>
+        <p><strong>Tipo De Maquina</strong><?= $tipo ?></p>
+        <p><strong>Quantidade de Maquinas</strong><?= $quantidade?></p>
     </div>
-<?php }?>
+    <?php }?>
     </main>
 </body>
 </html>
