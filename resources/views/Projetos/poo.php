@@ -103,7 +103,7 @@ class Mago extends Personagem{
         echo"$this->nome lançou uma bola de fogo!\n";
     }
     public function lancarMagia(Personagem $alvo, int $quantidade){
-        $novoVida = $alvo->getVida() - $quantidade * 1.25;
+        $novoVida = $alvo->getVida() - $quantidade / 0.5;
         $alvo->setVida($novoVida);
         echo"$this->nome lançou uma bola de fogo! sobre $alvo->nome\n";
     }
