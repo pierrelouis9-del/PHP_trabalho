@@ -113,19 +113,23 @@ function escapar($texto){
             Um prototipo de um sistema que faz o cadastro de maquinas  numa empresa. 
         </div>
     </div>
+    <br>
     <main class="container">
         <div>
         <form action="" method="post">
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome">
+            <br>
             <label for="tipo">Tipo</label>
             <select name="tipo" id="tipo">
                 <option value="esteira">esteira</option>
                 <option value="prensa">prensa</option>
                 <option value="robosoldagem">robosoldagem</option>
             </select>
+            <br>
             <label for="quantidade">Quantidade</label>
             <input type="number" min=0 name="quantidade" id="quantidade">
+            <br>
             <button type="submit">Enviar</button>
         </form>
     </div>
