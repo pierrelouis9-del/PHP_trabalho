@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         // Guardando o objeto na Sessão 
         $_SESSION["maquinas"][] = $maquina;
 
-        $mensagem = "maquina cadastrada com successo!";
+        $mensagem = "Maquina cadastrada com successo!";
     }
 }
 
@@ -110,7 +110,7 @@ function escapar($texto){
         <h1>Sistema de controle de Produção industrial</h1>
         </div>
         <div class="subtitle">
-            Um prototipo de um sistema que controle a produção de peças numa empresa. 
+            Um prototipo de um sistema que faz o cadastro de maquinas  numa empresa. 
         </div>
     </div>
     <main class="container">
