@@ -133,7 +133,7 @@ class Arqueiro extends Personagem{
 }
 
 $guereiro = new Guereiro("Juvensky", 100, 10);
-$mago = new Mago("Chloe", 30, 5);
+$mago = new Mago("Chloe", 70, 5);
 $curandeiro = new Curandeiro("Dantes", 50, 10);
 $arqueiro = new Arqueiro("Jake", 80, 15);
 $personagens =[$guereiro, $mago, $curandeiro, $arqueiro];
@@ -144,7 +144,7 @@ $curandeiro->curar($guereiro,50);
 echo"vida depois da cura:" . $guereiro->getVida() . "\n";
 $arqueiro->atacaEspecial($mago, 20);
 echo"vida depois do ataque:" . $mago->getVida() . "\n";
-$mago->lancarMagia($arqueiro, 10);
+$mago->lancarMagia($arqueiro, 30);
 echo"vida depois do ataque:" . $arqueiro->getVida() . "\n";
 // $guereiro = new Guereiro("Juvensky", 100, 10);
 
