@@ -118,6 +118,9 @@ function escapar($texto)
 </head>
 
 <body>
+    <header>
+        <h1>PROGRAMAÇÂO ORIENTADO OBJETO</h1>
+    </header>
     <div class="header">
         <div class="title">
             <h1>Sistema de controle de Produção industrial</h1>
