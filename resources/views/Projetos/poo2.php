@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $mensagem = "Maquina cadastrada com successo!";
     }
-    
+
 }
 
 // evitar interpretar textos como Html
@@ -133,7 +133,7 @@ function escapar($texto)
     <br>
     <main class="container">
         <div class="mensagem">
-            <?php if ($mensagem != "") { ?>
+            <?php ?>
                 <strong> <?= $mensagem ?></strong>
 
         </div>
@@ -161,7 +161,7 @@ function escapar($texto)
             <p><strong>Tipo De Maquina: </strong><?= $tipo ?></p>
             <p><strong>Quantidade de Maquinas: </strong><?= $quantidade ?></p>
         </div>
-    <?php } ?>
+    <?php  ?>
     </main>
 </body>
 
