@@ -114,14 +114,14 @@ public function atacar()
 public function curar(Personagem $alvo, int $quantidade){
     $novaVida = $alvo->getVida() +$quantidade;
     $alvo->setVida($novaVida);
-    echo"$this->nome \n";
+    echo"$this->nome curou $alvo->nome!\n";
 }
 }
 class Arqueiro extends Personagem{
     public function atacar(){
         echo"$this->nome atacou com uma flecha normal!\n";
     }
-    public function atacaEspecial(Personagem $alvo, int $ quantidade){
+    public function atacaEspecial(Personagem $alvo, int $quantidade){
         $novaVida = $alvo->getVida() - $quantidade;
         $alvo->setVida($novaVida);
         echo"$this->nome atacou $alvo->nome com uma flecha especial!\n";
