@@ -223,7 +223,7 @@
                         <span>PHP</span>
                     </div>
 
-                    <a href="https://juvensky315.devlook.xyz/resources/views/Projetos/poo2.php" class="link-projeto">Ver projeto →</a>
+                    <a href="/index.php?rota=poo2" class="link-projeto">Ver projeto →</a>
                 </div>
             </div>
 
