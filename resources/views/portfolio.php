@@ -216,6 +216,7 @@
                 <div class="contato-item">
                     <h3>Linkdin</h3>
                     <p>www.linkedin.com/in/pierre-louis-juvensky-6b5492418</p>
+                    <a href="https://juvensky315.devlook.xyz/resources/views/Projetos/poo.php">POO</a>
                 </div>
             </div>
         </section>
