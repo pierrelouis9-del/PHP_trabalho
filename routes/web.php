@@ -27,7 +27,7 @@ return [
        'notas' => [new notasController(),'index'],
        'idade' => [new idadeController(),'index'],
        'login' => [new loginController(),'index'],
-       'poo2'  => [new pooController(),'index']  
+      // 'poo2'  => [new pooController(),'index']  
    ],
 ];
 ?>
