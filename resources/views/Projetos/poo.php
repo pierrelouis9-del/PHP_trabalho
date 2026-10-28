@@ -66,6 +66,8 @@ abstract class Personagem {
         if ($vida < 0){
             echo "A vida não pode ser menor que 0";
             return;
+        }else if ($vida == 0){
+            echo "$this->nome morreu!\n";
         }
         $this->vida = $vida;
     }
@@ -142,6 +144,8 @@ $curandeiro->curar($guereiro,50);
 echo"vida depois da cura:" . $guereiro->getVida() . "\n";
 $arqueiro->atacaEspecial($mago, 20);
 echo"vida depois do ataque:" . $mago->getVida() . "\n";
+$mago->lancarMagia($arqueiro, 10);
+echo"vida depois do ataque:" . $arqueiro->getVida() . "\n";
 // $guereiro = new Guereiro("Juvensky", 100, 10);
 
 // $guereiro->atacar(); // metodo herdado
