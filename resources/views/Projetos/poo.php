@@ -117,18 +117,29 @@ public function curar(Personagem $alvo, int $quantidade){
     echo"$this->nome \n";
 }
 }
+class Arqueiro extends Personagem{
+    public function atacar(){
+        echo"$this->nome atacou com uma flecha normal!\n";
+    }
+    public function atacaEspecial(Personagem $alvo, int $ quantidade){
+        $novaVida = $alvo->getVida() - $quantidade;
+        $alvo->setVida($novaVida);
+        echo"$this->nome atacou $alvo->nome com uma flecha especial!\n";
+    }
+}
 
 $guereiro = new Guereiro("Juvensky", 100, 10);
 $mago = new Mago("Chloe", 30, 5);
 $curandeiro = new Curandeiro("Dantes", 50, 10);
-
-$personagens =[$guereiro, $mago, $curandeiro ];
+$arqueiro = new Arqueiro("Jake", 80, 15);
+$personagens =[$guereiro, $mago, $curandeiro, $arqueiro];
 foreach($personagens as $p){
     $p->atacar();
 }
 $curandeiro->curar($guereiro,50); 
-
 echo"vida depois da cura:" . $guereiro->getVida() . "\n";
+$arqueiro->atacaEspecial($mago, 20);
+echo"vida depois do ataque:" . $mago->getVida() . "\n";
 // $guereiro = new Guereiro("Juvensky", 100, 10);
 
 // $guereiro->atacar(); // metodo herdado
