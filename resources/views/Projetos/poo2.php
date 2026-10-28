@@ -118,6 +118,7 @@ function escapar($texto){
             </select>
             <label for="quantidade">Quantidade</label>
             <input type="number" min=0 name="quantidade" id="quantidade">
+            <button type="submit">Enviar</button>
         </form>
     </div>
     <div>
