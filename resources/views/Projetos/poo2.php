@@ -105,6 +105,14 @@ function escapar($texto){
     <title>Document</title>
 </head>
 <body>
+    <div class="header">
+        <div class="title">
+        <h1>Sistema de controle de Produção industrial</h1>
+        </div>
+        <div class="subtitle">
+            Um prototipo de um sistema que controle a produção de peças numa empresa. 
+        </div>
+    </div>
     <main class="container">
         <div>
         <form action="" method="post">
