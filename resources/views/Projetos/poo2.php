@@ -27,6 +27,27 @@ abstract class Maquina{
     }
 
     // Abstração
-    
+  abstract public function operar();  
 }
+
+//2-Herança
+class Esteira extends Maquina{
+    public function operar(){
+        return "transportando peças...";
+    }
+}
+
+class Prensa extends Maquina{
+    public function operar(){
+        return "Prensando peças...";
+    }
+}
+
+class Robosoldagem extends Maquina{
+    public function operar(){
+        return "Soldando peças...";
+    }
+}
+//
+
 ?>

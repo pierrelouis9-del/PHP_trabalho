@@ -1,7 +1,7 @@
 <?php
  //require_once __DIR__ . '/../app/Http/controllers/HelpdeskController.php';
 require __DIR__ . '/../app/Http/Controllers/PortfolioController.php';
-// require __DIR__ . "/../app/Http/Controllers/HelpdeskController.php";
+require __DIR__ . "/../app/Http/Controllers/HelpdeskController.php";
 require __DIR__ . "/../app/Http/Controllers/idadeController.php";
 require __DIR__ . "/../app/Http/Controllers/jogosController.php";
 require __DIR__ . "/../app/Http/Controllers/loginController.php";
