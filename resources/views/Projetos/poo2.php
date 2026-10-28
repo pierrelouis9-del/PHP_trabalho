@@ -121,12 +121,17 @@ function escapar($texto){
             <button type="submit">Enviar</button>
         </form>
     </div>
-    <div>
+    <div class="mensagem">
         <?php if ($mensagem != "") {?>
-        <?= $mensagem ?>
-        <?php }?>
+      <strong>  <?= $mensagem ?></strong>
+        
     </div>
-
+    <div>
+        <h3><?= $nome ?></h3>
+        <h3><?= $tipo ?></h3>
+        <h3><?= $quantidade?></h3>
+    </div>
+<?php }?>
     </main>
 </body>
 </html>
