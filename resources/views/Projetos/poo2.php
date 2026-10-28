@@ -82,7 +82,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $maquina->registrarProducao($quantidade);
 
         // Guardando o objeto na Sessão 
-        $_SESSION[]
+        $_SESSION["maquinas"][] = $maquina;
+
+        $mensagem = "maquina cadastrada com successo!";
     }
 }
 
