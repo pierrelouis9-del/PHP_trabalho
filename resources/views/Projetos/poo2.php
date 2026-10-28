@@ -139,7 +139,7 @@ function escapar($texto)
                 <input type="text" name="nome" id="nome">
                 <br>
                 <label for="tipo">Tipo</label>
-                <select name="tipo" id="tipo">
+                <select name="tipo" id="tipo"> 22
                     <option value="esteira">esteira</option>
                     <option value="prensa">prensa</option>
                     <option value="robosoldagem">robosoldagem</option>
