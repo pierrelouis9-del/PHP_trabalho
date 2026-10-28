@@ -95,6 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $mensagem = "Maquina cadastrada com successo!";
     }
+    
 }
 
 // evitar interpretar textos como Html
