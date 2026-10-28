@@ -108,10 +108,22 @@ function escapar($texto){
     <main class="container">
         <div>
         <form action="" method="post">
+            <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome">
-            <input type="text" name="tipo" id="tipo">
+            <label for="tipo">Tipo</label>
+            <select name="tipo" id="tipo">
+                <option value="esteira">esteira</option>
+                <option value="prensa">prensa</option>
+                <option value="robosoldagem">robosoldagem</option>
+            </select>
+            <label for="quantidade">Quantidade</label>
             <input type="number" min=0 name="quantidade" id="quantidade">
         </form>
+    </div>
+    <div>
+        <?php if ($mensagem != "") {?>
+        <?= $mensagem ?>
+        <?php }?>
     </div>
 
     </main>
