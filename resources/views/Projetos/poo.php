@@ -146,6 +146,8 @@ $arqueiro->atacaEspecial($mago, 20);
 echo"vida $mago->nome depois do ataque:" . $mago->getVida() . "\n";
 $mago->lancarMagia($arqueiro, 30);
 echo"vida de $arqueiro->nome depois do ataque:" . $arqueiro->getVida() . "\n";
+$curandeiro->curar($arqueiro, 10);
+echo"vida de $arqueiro->nome atual" . $arqueiro->getvida() . "\n";
 // $guereiro = new Guereiro("Juvensky", 100, 10);
 
 // $guereiro->atacar(); // metodo herdado
