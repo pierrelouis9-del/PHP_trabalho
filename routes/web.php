@@ -20,7 +20,7 @@ return [
     ],
 
    'POST' => [
-       'helpdesk' => [new HelpdeskController(),'index'],
+      // 'helpdesk' => [new HelpdeskController(),'index'],
        'jogos' => [new jogosController(),'index'],
        'notas' => [new notasController(),'index'],
        'idade' => [new idadeController(),'index'],
