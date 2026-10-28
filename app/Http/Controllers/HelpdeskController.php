@@ -1,4 +1,4 @@
-<?php
+<<?php
  
 require __DIR__ . "/../../Models/chamado.php";
 //require_once __DIR__ . "/../../../resources/views/Projetos/funcao-helpdesk.php";
@@ -60,3 +60,4 @@ class HelpdeskController
         require __DIR__ . "/../../../resources/Views/projetos/helpdesk.php";
     }
 }
+?>

@@ -98,6 +98,4 @@ function escapar($texto){
 }
 
 
-
-
 ?>
