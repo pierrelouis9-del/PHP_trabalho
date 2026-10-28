@@ -88,4 +88,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     }
 }
 
+// evitar interpretar textos como Html
+function escapar($texto){
+    return htmlspecialchars(
+        (string) $texto,
+        ENT_QUOTES,
+        "UTF-8");
+     
+}
+
+
+
+
 ?>
