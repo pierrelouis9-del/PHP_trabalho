@@ -201,16 +201,17 @@
                         <a href="/index.php?rota=helpdesk" class="link-projeto">Ver projeto v2 com professor →</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="projeto-card">
+                <div class="projeto-card">
                     <div class="projeto-numero">
                         06
                     </div>
                     <h3>Programação Orientado Objetos</h3>
-                    <strong><p>Sistema de controle de Produção industrial</p></strong>
+                    <strong>
+                        <p>Sistema de controle de Produção industrial</p>
+                    </strong>
                     <p>
-                        Esse sistema é um aplicativo de gerenciameno de Máquinas 
+                        Esse sistema é um aplicativo de gerenciameno de Máquinas
                         Ele foi desenvolvido com o objetivo de facilitar o cadastro das Máquinas.
 
                         Este projeto ajudou-me a praticar lógica de programação, criação de formulários, manipulação de dados usando PHP e POO.
@@ -224,7 +225,10 @@
 
                     <a href="https://juvensky315.devlook.xyz/resources/views/Projetos/poo2.php" class="link-projeto">Ver projeto →</a>
                 </div>
-                
+            </div>
+
+
+
         </section>
         <section id="contato" class="secao secao-destaque">
             <h2 class="titulo-secao">Meu contato</h2>
