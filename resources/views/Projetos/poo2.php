@@ -63,7 +63,7 @@ if (!isset($_SESSION["maquinas"])) {
     $_SESSION["maquinas"] = [];
 }
 
-$mensagem = "";
+$mensagem = "ola";
 
 // 4 Server formulando via post
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $mensagem = "Maquina cadastrada com successo!";
     }
-
+    
 }
 
 // evitar interpretar textos como Html
@@ -133,7 +133,7 @@ function escapar($texto)
     <br>
     <main class="container">
         <div class="mensagem">
-            <?php ?>
+            <?php if ($mensagem != "") { ?>
                 <strong> <?= $mensagem ?></strong>
 
         </div>
@@ -161,7 +161,7 @@ function escapar($texto)
             <p><strong>Tipo De Maquina: </strong><?= $tipo ?></p>
             <p><strong>Quantidade de Maquinas: </strong><?= $quantidade ?></p>
         </div>
-    <?php  ?>
+    <?php } ?>
     </main>
 </body>
 
