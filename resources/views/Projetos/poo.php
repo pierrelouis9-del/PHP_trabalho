@@ -1,3 +1,239 @@
+
+<?php
+// 1. CLASSE ABSTRATA
+abstract class Robo
+{
+    public $modelo;
+    public $energia;
+    public $potencia;
+    public $funcao;
+
+    abstract public function operar();
+}
+
+// 2. HERANÇA E POLIMORFISMO
+class Explorador extends Robo
+{
+    public function __construct()
+    {
+        $this->modelo = "Explorador";
+        $this->energia = 100;
+        $this->potencia = 50;
+        $this->funcao = "Explorar ambientes";
+    }
+
+    public function operar()
+    {
+        return "Explorando o ambiente...";
+    }
+}
+
+class Engenheiro extends Robo
+{
+    public function __construct()
+    {
+        $this->modelo = "Engenheiro";
+        $this->energia = 150;
+        $this->potencia = 80;
+        $this->funcao = "Construir e reparar";
+    }
+
+    public function operar()
+    {
+        return "Construindo e reparando estruturas...";
+    }
+}
+
+class Defensor extends Robo
+{
+    public function __construct()
+    {
+        $this->modelo = "Defensor";
+        $this->energia = 200;
+        $this->potencia = 100;
+        $this->funcao = "Proteger a area";
+    }
+
+    public function operar()
+    {
+        return "Protegendo a area...";
+    }
+}
+
+// 3. ARMAZENAMENTO TEMPORARIO
+session_start();
+
+if (!isset($_SESSION["robos"])) {
+    $_SESSION["robos"] = [];
+}
+
+$mensagem = "";
+
+// 4. RECEBER OS DADOS DO FORMULARIO
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $modelo = $_POST["modelo"] ?? "";
+    $robo = null;
+
+    if ($modelo === "explorador") {
+        $robo = new Explorador();
+    } elseif ($modelo === "engenheiro") {
+        $robo = new Engenheiro();
+    } elseif ($modelo === "defensor") {
+        $robo = new Defensor();
+    }
+
+    if ($robo !== null) {
+        $_SESSION["robos"][] = $robo;
+        $mensagem = "Robo registrado com sucesso!";
+    } else {
+        $mensagem = "Selecione um modelo valido!";
+    }
+}
+
+// 5. PROTEGER OS TEXTOS HTML
+function escapar($texto)
+{
+    return htmlspecialchars(
+        (string) $texto,
+        ENT_QUOTES,
+        "UTF-8"
+    );
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro de Robos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        form, .robo {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        select, button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .mensagem {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Registro de Robos</h1>
+        <p>Cadastre e consulte os seus robos.</p>
+    </header>
+
+    <main class="container">
+
+        <h2>Cadastrar robo</h2>
+
+        <?php if ($mensagem !== ""): ?>
+            <p class="mensagem">
+                <?= escapar($mensagem) ?>
+            </p>
+        <?php endif; ?>
+
+        <form method="post">
+
+            <label for="modelo">Modelo do robo:</label>
+
+            <select name="modelo" id="modelo" required>
+                <option value="">Selecione um modelo</option>
+                <option value="explorador">Explorador</option>
+                <option value="engenheiro">Engenheiro</option>
+                <option value="defensor">Defensor</option>
+            </select>
+
+            <br>
+
+            <button type="submit">Registrar robo</button>
+
+        </form>
+
+        <h2>Robos registrados</h2>
+
+        <?php if (count($_SESSION["robos"]) === 0): ?>
+
+            <p>Nenhum robo registrado.</p>
+
+        <?php else: ?>
+
+            <?php foreach ($_SESSION["robos"] as $robo): ?>
+
+                <div class="robo">
+
+                    <h3>
+                        Modelo: <?= escapar($robo->modelo) ?>
+                    </h3>
+
+                    <p>
+                        <strong>Energia:</strong>
+                        <?= escapar($robo->energia) ?>
+                    </p>
+
+                    <p>
+                        <strong>Potencia:</strong>
+                        <?= escapar($robo->potencia) ?>
+                    </p>
+
+                    <p>
+                        <strong>Funcao:</strong>
+                        <?= escapar($robo->funcao) ?>
+                    </p>
+
+                    <p>
+                        <strong>Operacao:</strong>
+                        <?= escapar($robo->operar()) ?>
+                    </p>
+
+                </div>
+
+            <?php endforeach; ?>
+
+        <?php endif; ?>
+
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
 <?php 
 // POO => Programação Orientado Objetos
 
