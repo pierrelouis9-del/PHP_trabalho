@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at top left, rgba(99, 102, 241, 0.35), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.25), transparent 35%),
+        linear-gradient(135deg, #020617, #111827, #1e1b4b);
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.inputs {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.inputs form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 17px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.inputs input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+.inputs button {
+    padding: 17px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inputs button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+}
+
+.inputs a {
+    display: block;
+    width: 100%;
+    padding: 17px;
+
+    text-align: center;
+    text-decoration: none;
+
+    background: #e2e8f0;
+    color: #1e293b;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.inputs a:hover {
+    background: #cbd5e1;
+    color: #111827;
+    transform: translateY(-2px);
+}
+
+.affiche {
+    margin-top: 20px;
+}
+
+.affiche p {
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.97);
+    text-align: center;
+    color: #334155;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+footer {
+    background-color: rgba(17, 24, 39, 0.95);
+
+    color: #cccccc;
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+footer a {
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #93c5fd;
+
+    text-decoration: underline;
+}

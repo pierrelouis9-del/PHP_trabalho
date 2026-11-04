@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b1120;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+.header {
+    width: 100%;
+    background: #111827;
+    border-bottom: 1px solid #263449;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h2 {
+    color: #60a5fa;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+
+.logo p {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container > p:first-child {
+    padding: 14px 18px;
+    background: #172554;
+    color: #93c5fd;
+    border: 1px solid #1d4ed8;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.cadastrar,
+.consultar,
+.atualizar,
+.excluir {
+    background: #111827;
+    border: 1px solid #273449;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.cadastrar h2,
+.consultar h2,
+.atualizar h2,
+.excluir h2 {
+    color: #60a5fa;
+    font-size: 22px;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #293548;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+label,
+form p {
+    color: #d1d5db;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    background: #0b1120;
+    color: #f9fafb;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input[type="radio"] {
+    accent-color: #3b82f6;
+    cursor: pointer;
+    margin: 0 3px 0 0;
+}
+
+form label[for] {
+    cursor: pointer;
+}
+
+form button {
+    margin-top: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+.chamado {
+    background: #0b1120;
+    border: 1px solid #293548;
+    border-left: 4px solid #3b82f6;
+    border-radius: 10px;
+    padding: 22px;
+    margin-top: 18px;
+    overflow-wrap: anywhere;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+.chamado:hover {
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+.chamado h3 {
+    color: #60a5fa;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.chamado p {
+    color: #d1d5db;
+    padding: 5px 0;
+    border-bottom: 1px solid #1f2937;
+    font-size: 14px;
+}
+
+.chamado p:last-child {
+    border-bottom: none;
+}
+
+.consultar > p {
+    color: #9ca3af;
+    background: #0b1120;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+::selection {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 18px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        gap: 6px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+        gap: 20px;
+    }
+
+    .cadastrar,
+    .consultar,
+    .atualizar,
+    .excluir {
+        padding: 20px;
+    }
+
+    .logo h2 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    .cadastrar,
+    .consultar,
+    .atualizar,
+    .excluir {
+        padding: 16px;
+    }
+
+    .cadastrar h2,
+    .consultar h2,
+    .atualizar h2,
+    .excluir h2 {
+        font-size: 19px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
