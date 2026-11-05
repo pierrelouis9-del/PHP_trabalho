@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('portfolio');
 });
 
-Route::get('/helpdesk',[HelpdeskController::class, 'index'])->name('heldesk');
-Route::post('/helpdesk',[HelpdeskController::class, 'index'])->name('heldesk.salvar');
+Route::get('/helpdesk',[HelpdeskController::class, 'index'])->name('helpdesk');
+Route::post('/helpdesk',[HelpdeskController::class, 'index'])->name('helpdesk.salvar');
