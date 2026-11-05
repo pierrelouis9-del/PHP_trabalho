@@ -13,7 +13,8 @@ export default defineConfig({
                 'resources/css/jogos.css',
                 'resources/css/login.css',
                 'resources/css/helpdesk.css',
-                'resources/css/layout.css',],
+                'resources/css/layout.css',
+                'resources/css/layout.css'],
             refresh: true,
             fonts: [
                 bunny('Instrument Sans', {
