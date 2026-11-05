@@ -1,8 +1,10 @@
 <<?php
- 
-require __DIR__ . "/../../Models/chamado.php";
+
+use App\Http\Controllers\Controller;
+use App\Models\chamado;
+//require __DIR__ . "/../../Models/chamado.php";
 //require_once __DIR__ . "/../../../resources/views/Projetos/funcao-helpdesk.php";
-class HelpdeskController
+class HelpdeskController extends Controller
 {
     // GET - Exibir a página do Helpdesk
     public function index()
@@ -14,10 +16,12 @@ class HelpdeskController
  
         $mensagem = "";
  
-        require __DIR__ . "/../../../resources/views/Projetos/helpdesk-1.php";
+
+        return view('Projetos.helpdesk-1', compact('model', 'chamados', 'relatorio', 'mensagem'));
+      //  require __DIR__ . "/../../../resources/views/Projetos/helpdesk-1.php";
     }
  
-    // POST - Receber os formulários do Helpdesk
+    // POST - Receber os formulários do Helpdesk 
     public function salvar()
     {
         $model = new Chamado();
@@ -57,7 +61,8 @@ class HelpdeskController
         $chamados = $model->lerChamados();
         $relatorios = $model->gerarRelatorio();
  
-        require __DIR__ . "/../../../resources/Views/projetos/helpdesk.php";
+        return view('Projetos.helpdesk-1', compact('model', 'chamados', 'relatorio', 'mensagem'));
+       // require __DIR__ . "/../../../resources/Views/projetos/helpdesk.php";
     }
 }
 ?>

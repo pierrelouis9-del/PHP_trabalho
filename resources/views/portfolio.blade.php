@@ -117,7 +117,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="/resources//views//Projetos//idade.php" class="link-projeto">Ver projeto →</a>
+                    <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -137,7 +137,9 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="/index.php?rota=notas" class="link-projeto">Ver projeto →</a>
+                 
+                    <!--   <a href="/index.php?rota=notas" class="link-projeto">Ver projeto →</a> -->
+                    <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -158,6 +160,7 @@
                         <span>PHP</span>
                     </div>
                     <a href="/index.php?rota=login" class="link-projeto">Ver projeto →</a>
+                                        <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -179,6 +182,7 @@
                     </div>
 
                     <a href="/index.php?rota=jogos" class="link-projeto">Ver projeto →</a>
+                    <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -200,6 +204,8 @@
                     <div class="links">
                         <a href="/resources/views/Projetos/Help Desk project/helpdesk.php" class="link-projeto">Ver projeto v1 →</a>
                         <a href="/index.php?rota=helpdesk" class="link-projeto">Ver projeto v2 com professor →</a>
+                        <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
+                        <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
                     </div>
                 </div>
 
@@ -224,7 +230,8 @@
                         <span>PHP</span>
                     </div>
 
-                    <a href="/index.php?rota=poo2" class="link-projeto">Ver projeto →</a>
+                    <!--<a href="/index.php?rota=poo2" class="link-projeto">Ver projeto →</a> -->
+                    <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
                 </div>
             </div>
 
@@ -244,7 +251,8 @@
                 <div class="contato-item">
                     <h3>Linkdin</h3>
                     <p>www.linkedin.com/in/pierre-louis-juvensky-6b5492418</p>
-                    <a href="https://juvensky315.devlook.xyz/resources/views/Projetos/poo.php">POO</a>
+                  <!--  <a href="https://juvensky315.devlook.xyz/resources/views/Projetos/poo.php">POO</a> -->
+                  <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
                 </div>
             </div>
         </section>
