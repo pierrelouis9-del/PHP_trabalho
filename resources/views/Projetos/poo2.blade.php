@@ -158,9 +158,16 @@ function escapar($texto)
         </div>
 
         <div>
-            <p><strong>Nome Maquina: </strong><?= $nome ?></p>
+            {{-- <p><strong>Nome Maquina: </strong><?= $nome ?></p>
             <p><strong>Tipo De Maquina: </strong><?= $tipo ?></p>
-            <p><strong>Quantidade de Maquinas: </strong><?= $quantidade ?></p>
+            <p><strong>Quantidade de Maquinas: </strong><?= $quantidade ?></p> --}}
+            <div>
+                <p><strong>Nome Máquina:</strong> {{ $nome ?? 'Não informado' }}</p>
+            
+                <p><strong>Tipo de Máquina:</strong> {{ $tipo ?? 'Não informado' }}</p>
+            
+                <p><strong>Quantidade de Máquinas:</strong> {{ $quantidade ?? 'Não informado' }}</p>
+            </div>
         </div>
     <?php } ?>
     </main>
