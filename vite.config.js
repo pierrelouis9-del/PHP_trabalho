@@ -14,7 +14,8 @@ export default defineConfig({
                 'resources/css/login.css',
                 'resources/css/helpdesk.css',
                 'resources/css/layout.css',
-                'resources/css/layout.css'],
+                'resources/css/layout.css',
+                'resources/css/notas.css'],
             refresh: true,
             fonts: [
                 bunny('Instrument Sans', {
