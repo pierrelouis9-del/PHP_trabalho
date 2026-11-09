@@ -15,7 +15,7 @@ Route::get('/', function () {
 });
 
 Route::get('/helpdesk',[HelpdeskController::class, 'index'])->name('helpdesk');
-Route::post('/helpdesk',[HelpdeskController::class, 'salvar'])->name('helpdesk.salvar');
+Route::post('/helpdesk',[HelpdeskController::class, 'index'])->name('helpdesk.salvar');
 
 Route::get('/idade',[idadeController::class, 'index'])->name('idade');
 Route::post('/idade',[idadeController::class, 'index'])->name('idade.salvar');
