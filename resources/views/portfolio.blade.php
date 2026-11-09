@@ -227,7 +227,7 @@
                         {{-- <a href="/resources/views/Projetos/Help Desk project/helpdesk.php" class="link-projeto">Ver projeto v1 →</a>
                         <a href="/index.php?rota=helpdesk" class="link-projeto">Ver projeto v2 com professor →</a>
                         <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>--}}
-                        <a href="{{ route('heldesk') }}" class="link-projeto">Ver projeto →</a> 
+                        <a href="{{ route('helpdesk') }}" class="link-projeto">Ver projeto →</a> 
                     </div>
                 </div>
 
@@ -254,7 +254,7 @@
                     </div>
 
                     <!--<a href="/index.php?rota=poo2" class="link-projeto">Ver projeto →</a> -->
-                    {{-- <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a> --}}
+                    <a href="{{ route('poo2') }}" class="link-projeto">Ver projeto →</a> 
                 </div>
             </div>
 
