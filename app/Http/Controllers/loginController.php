@@ -1,9 +1,9 @@
 <?php 
-use resouces\views\projetos\login;
-class loginController {
+namespace App\Http\Controllers;
+class loginController extends Controller {
     public function index(){
         
-        require __DIR__ . "/../../../resources/views/Projetos/login-basico.php";
+       return view('Projetos.login');
     
         }
         
