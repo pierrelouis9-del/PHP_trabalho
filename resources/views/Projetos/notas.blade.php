@@ -36,6 +36,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $res="preenche todos os campos";
     } elseif(($nome && $idade && $media && $frequencia && $n1 && $n2 && $n3 && $n4 && $n4 && $n5)==""){
         $res="preenche todos os campos";
+    }elseif ($n1 =="") {
+        $n1 = 0;
+    }elseif ($n2 =="") {
+        $n2 = 0;
+    }elseif ($n3 =="") {
+        $n3 = 0;
+    }elseif ($n4 =="") {
+        $n4 = 0;
+    }elseif ($n5 =="") {
+        $n5 = 0;
     }else {
         $res = "Reprovado!!!!";
     }
