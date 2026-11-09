@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-$chamados = lerChamados();
+$chamados = $model->lerChamados();
 
 // evite exibir HTML enviado pelo usuário
 function escapar($valor)
