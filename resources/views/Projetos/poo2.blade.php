@@ -113,7 +113,7 @@ function escapar($texto)
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/resources/CSS/poo2.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     @vite(['resources/css/poo2.css'])
@@ -139,7 +139,7 @@ function escapar($texto)
 
         </div>
         <div>
-            <form action="" method="post">
+            <form action="/poo2" method="post">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome">
                 <br>
