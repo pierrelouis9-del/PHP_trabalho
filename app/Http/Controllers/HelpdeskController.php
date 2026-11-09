@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\Controller;
 use App\Models\chamado;
 //require __DIR__ . "/../../Models/chamado.php";
@@ -18,7 +19,7 @@ class HelpdeskController extends Controller
         $mensagem = "";
  
 
-        return view('Projetos.helpdesk-1', compact('model', 'chamados', 'relatorio', 'mensagem'));
+        return view('Projetos.helpdesk-1', compact('chamados', 'relatorio', 'mensagem'));
       //  require __DIR__ . "/../../../resources/views/Projetos/helpdesk-1.php";
     }
  
