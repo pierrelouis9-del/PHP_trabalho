@@ -1,4 +1,5 @@
 <?php 
+use resouces\views\projetos\idade;
 class idadeController {
     public function index(){
         

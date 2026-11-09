@@ -80,6 +80,7 @@ function escapar($valor)
     <link rel="stylesheet" href="/resources//CSS//helpdesk-1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help Desk - Gerenciamento de Chamados</title>
+    @vite(['resources/css/helpdesk-1.css'])
 </head>
 
 <body>

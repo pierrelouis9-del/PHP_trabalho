@@ -1,4 +1,5 @@
 <?php 
+use resouces\views\projetos\jogos;
 class JogosController {
     public function index(){
         

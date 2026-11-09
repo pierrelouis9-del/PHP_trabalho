@@ -1,4 +1,5 @@
 <?php 
+use resouces\views\projetos\notas;
 class notasController {
     public function index(){
         

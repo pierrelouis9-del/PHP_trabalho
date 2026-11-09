@@ -179,8 +179,7 @@
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>PHP</span>
-                    </div>
-{{-- 
+                    </div>{{-- 
                     <a href="/index.php?rota=jogos" class="link-projeto">Ver projeto →</a>
                     <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a> --}}
                 </div>
@@ -238,6 +237,7 @@
 
 
         </section>
+        
         <section id="contato" class="secao secao-destaque">
             <h2 class="titulo-secao">Meu contato</h2>
             <p class="subtitulo-secao">

@@ -1,4 +1,5 @@
 <?php 
+use resouces\views\projetos\poo2;
 class pooController {
     public function index(){
         
