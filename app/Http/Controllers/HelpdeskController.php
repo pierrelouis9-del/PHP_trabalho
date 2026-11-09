@@ -3,7 +3,9 @@
 use App\Models\chamado;
 //require __DIR__ . "/../../Models/chamado.php";
 //require_once __DIR__ . "/../../../resources/views/Projetos/funcao-helpdesk.php";
-class HelpdeskController // extends Controller
+
+// extends Controller
+class HelpdeskController 
 {
     // GET - Exibir a página do Helpdesk
     public function index()
