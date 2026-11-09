@@ -3,6 +3,7 @@
 // require __DIR__ . "/funcao-helpdesk.php";
 
 $mensagem = "";
+$model = new App\Models\chamado();
 
 //identificar a operação solicitada
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
