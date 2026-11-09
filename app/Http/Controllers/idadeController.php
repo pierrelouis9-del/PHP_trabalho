@@ -8,6 +8,6 @@ class idadeController extends Controller
 {
     public function index()
     {
-        return view('projetos.idade');
+        return view('Projetos.idade');
     }
 }
