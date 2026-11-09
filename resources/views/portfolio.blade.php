@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-   @vite(['resources/css/portfolio.css'])
+    @vite(['resources/css/portfolio.css'])
     <!-- <link rel="stylesheet" href="/resources//css/portfolio.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -107,9 +107,12 @@
                     <p>
                         Esse sistema é um verificador de idade desenvolvido usando PHP, HTML e CSS.
 
-                        Ele foi criado com o objetivo de identificar se uma pessoa é maior ou menor de idade com base na idade informada. O sistema permite inserir o nome e a idade e, após o envio do formulário, exibe os dados informados e uma mensagem com o resultado da verificação.
+                        Ele foi criado com o objetivo de identificar se uma pessoa é maior ou menor de idade com base na
+                        idade informada. O sistema permite inserir o nome e a idade e, após o envio do formulário, exibe
+                        os dados informados e uma mensagem com o resultado da verificação.
 
-                        Este projeto ajudou-me a praticar lógica de programação, estruturas condicionais (`if`, `elseif` e `else`), criação de formulários HTML e processamento de dados usando PHP com o método POST.
+                        Este projeto ajudou-me a praticar lógica de programação, estruturas condicionais (`if`, `elseif`
+                        e `else`), criação de formulários HTML e processamento de dados usando PHP com o método POST.
 
                     </p>
                     <div class="tecnologias">
@@ -117,7 +120,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="{{ route('helpdesk') }}" class="link-projeto">Ver projeto →</a>
+                    <a href="{{ route('idade') }}" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -127,9 +130,14 @@
                     <p>
                         Esse sistema é um verificador de notas escolares desenvolvido usando PHP, HTML e CSS.
 
-                        Ele foi criado com o objetivo de calcular a média ponderada de um aluno e verificar sua situação escolar de acordo com as notas obtidas e a frequência. O sistema permite informar o nome, a idade, a frequência e cinco notas com pesos diferentes. Após o envio do formulário, são exibidos os dados do aluno, a média calculada e o resultado, que pode ser aprovação, recuperação ou reprovação.
+                        Ele foi criado com o objetivo de calcular a média ponderada de um aluno e verificar sua situação
+                        escolar de acordo com as notas obtidas e a frequência. O sistema permite informar o nome, a
+                        idade, a frequência e cinco notas com pesos diferentes. Após o envio do formulário, são exibidos
+                        os dados do aluno, a média calculada e o resultado, que pode ser aprovação, recuperação ou
+                        reprovação.
 
-                        Este projeto ajudou-me a praticar lógica de programação, estruturas condicionais, cálculos matemáticos, formulários HTML e processamento de dados com PHP.
+                        Este projeto ajudou-me a praticar lógica de programação, estruturas condicionais, cálculos
+                        matemáticos, formulários HTML e processamento de dados com PHP.
 
                     </p>
                     <div class="tecnologias">
@@ -137,10 +145,11 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                 
+
                     <!--   <a href="/index.php?rota=notas" class="link-projeto">Ver projeto →</a> -->
-                    {{-- <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a> --}}
+                    <a href="{{ route('notas') }}" class="link-projeto">Ver projeto →</a>
                 </div>
+
                 <div class="projeto-card">
                     <div class="projeto-numero">
                         03
@@ -149,39 +158,47 @@
                     <p>
                         Esse sistema é uma página de login desenvolvida usando PHP, HTML e CSS.
 
-                        Ele foi criado com o objetivo de praticar a validação de usuário e senha por meio de formulários. O sistema verifica as informações enviadas pelo usuário e exibe mensagens de sucesso ou erro.
+                        Ele foi criado com o objetivo de praticar a validação de usuário e senha por meio de
+                        formulários. O sistema verifica as informações enviadas pelo usuário e exibe mensagens de
+                        sucesso ou erro.
 
-                        Este projeto ajudou-me a desenvolver conhecimentos em lógica de programação, condições em PHP, formulários HTML e processamento de dados usando o método POST.
+                        Este projeto ajudou-me a desenvolver conhecimentos em lógica de programação, condições em PHP,
+                        formulários HTML e processamento de dados usando o método POST.
 
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>PHP</span>
-                    {{-- </div>
+                    </div>
                     <a href="/index.php?rota=login" class="link-projeto">Ver projeto →</a>
-                                        <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
-                </div> --}}
+                    <a href="{{ route('login') }}" class="link-projeto">Ver projeto →</a>
+                </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
                         04
                     </div>
                     <h3>Cadastrar Jogos</h3>
                     <p>
-                        Esse sistema é um aplicativo de gerenciamento de jogos desenvolvido usando PHP, HTML, CSS.
+                        Esse sistema é um aplicativo de gerenciamento de jogos desenvolvido usando PHP, HTML,
+                        CSS.
 
-                        Ele foi desenvolvido com o objetivo de facilitar o cadastro e a consulta de jogos. O sistema permite registrar o nome, gênero, nota e data de lançamento de cada jogo, além de exibir os jogos cadastrados em uma tabela. O cadastro também possui uma verificação por senha.
+                        Ele foi desenvolvido com o objetivo de facilitar o cadastro e a consulta de jogos. O
+                        sistema permite registrar o nome, gênero, nota e data de lançamento de cada jogo, além
+                        de exibir os jogos cadastrados em uma tabela. O cadastro também possui uma verificação
+                        por senha.
 
-                        Este projeto ajudou-me a praticar lógica de programação, criação de formulários, integração com banco de dados, consultas SQL e manipulação de dados usando PHP e PDO.
+                        Este projeto ajudou-me a praticar lógica de programação, criação de formulários,
+                        integração com banco de dados, consultas SQL e manipulação de dados usando PHP e PDO.
 
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>PHP</span>
-                    </div>{{-- 
+                    </div>
                     <a href="/index.php?rota=jogos" class="link-projeto">Ver projeto →</a>
-                    <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a> --}}
+                    <a href="{{ route('login') }}" class="link-projeto">Ver projeto →</a>
                 </div>
                 <div class="projeto-card">
                     <div class="projeto-numero">
@@ -190,9 +207,15 @@
                     <h3>Help Desk</h3>
                     <p>
                         Esse sistema é uma sistema de Help Desk desenvolvido usando PHP, HTML e CSS.
-                        Ele é desenvolvido com o objetivo de facilitar o gerenciamento de chamados de suporte técnico. O sistema permite cadastrar chamados com nome do solicitante, setor, equipamento, descrição e prioridade, além de consultar os registros, atualizar o status e excluir chamados.
+                        Ele é desenvolvido com o objetivo de facilitar o gerenciamento de chamados de suporte
+                        técnico. O sistema permite cadastrar chamados com nome do solicitante, setor,
+                        equipamento, descrição e prioridade, além de consultar os registros, atualizar o status
+                        e excluir chamados.
 
-                        Os dados são armazenados em um arquivo JSON, permitindo manter os chamados salvos mesmo após fechar a página. Este projeto ajudou-me a praticar lógica de programação, criação de formulários, desenvolvimento web, manipulação de dados e organização de funções em PHP.
+                        Os dados são armazenados em um arquivo JSON, permitindo manter os chamados salvos mesmo
+                        após fechar a página. Este projeto ajudou-me a praticar lógica de programação, criação
+                        de formulários, desenvolvimento web, manipulação de dados e organização de funções em
+                        PHP.
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
@@ -203,8 +226,8 @@
                     <div class="links">
                         {{-- <a href="/resources/views/Projetos/Help Desk project/helpdesk.php" class="link-projeto">Ver projeto v1 →</a>
                         <a href="/index.php?rota=helpdesk" class="link-projeto">Ver projeto v2 com professor →</a>
-                        <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>
-                        <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a> --}}
+                        <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a>--}}
+                        <a href="{{ route('heldesk') }}" class="link-projeto">Ver projeto →</a> 
                     </div>
                 </div>
 
@@ -220,7 +243,8 @@
                         Esse sistema é um aplicativo de gerenciameno de Máquinas
                         Ele foi desenvolvido com o objetivo de facilitar o cadastro das Máquinas.
 
-                        Este projeto ajudou-me a praticar lógica de programação, criação de formulários, manipulação de dados usando PHP e POO.
+                        Este projeto ajudou-me a praticar lógica de programação, criação de formulários,
+                        manipulação de dados usando PHP e POO.
 
                     </p>
                     <div class="tecnologias">
@@ -230,14 +254,14 @@
                     </div>
 
                     <!--<a href="/index.php?rota=poo2" class="link-projeto">Ver projeto →</a> -->
-                    {{-- <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a> --}}
+                    <a href="{{ route('poo2') }}" class="link-projeto">Ver projeto →</a> 
                 </div>
             </div>
 
 
 
         </section>
-        
+
         <section id="contato" class="secao secao-destaque">
             <h2 class="titulo-secao">Meu contato</h2>
             <p class="subtitulo-secao">
@@ -251,8 +275,8 @@
                 <div class="contato-item">
                     <h3>Linkdin</h3>
                     <p>www.linkedin.com/in/pierre-louis-juvensky-6b5492418</p>
-                  <!--  <a href="https://juvensky315.devlook.xyz/resources/views/Projetos/poo.php">POO</a> -->
-                  {{-- <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a> --}}
+                    <!--  <a href="https://juvensky315.devlook.xyz/resources/views/Projetos/poo.php">POO</a> -->
+                    {{-- <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a> --}}
                 </div>
             </div>
         </section>
@@ -270,7 +294,7 @@
                 <a href="Projetos/jogos.php">Cadastrar jogos</a>
 
             </ul>
-        </div>      
+        </div>
     </section> -->
 
     </main>
