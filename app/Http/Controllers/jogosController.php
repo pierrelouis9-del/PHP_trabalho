@@ -9,4 +9,8 @@ class JogosController extends Controller
     {
         return view('Projetos.jogos');
     }
+    public function store(Request $request)
+    {
+        // Processar os dados enviados pelo formulário
+    }
 }
