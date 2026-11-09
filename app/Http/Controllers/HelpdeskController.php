@@ -19,7 +19,7 @@ class HelpdeskController extends Controller
         $mensagem = "";
  
 
-        return view('Projetos.helpdesk-1', compact('chamados', 'relatorio', 'mensagem'));
+        return view('Projetos.helpdesk-1', compact('chamados', 'relatorios', 'mensagem'));
       //  require __DIR__ . "/../../../resources/views/Projetos/helpdesk-1.php";
     }
  
@@ -63,7 +63,7 @@ class HelpdeskController extends Controller
         $chamados = $model->lerChamados();
         $relatorios = $model->gerarRelatorio();
  
-        return view('Projetos.helpdesk-1', compact('model', 'chamados', 'relatorio', 'mensagem'));
+        return view('Projetos.helpdesk-1', compact('chamados', 'relatorio', 'mensagem'));
        // require __DIR__ . "/../../../resources/Views/projetos/helpdesk.php";
     }
 }
