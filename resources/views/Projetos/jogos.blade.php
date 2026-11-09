@@ -87,7 +87,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <div class="inputs">
 
-            <form action="/index.php?rota=jogos" method="POST">
+            <form action="/jogos" method="POST">
 
                 <label for="senha">Senha</label>
 
