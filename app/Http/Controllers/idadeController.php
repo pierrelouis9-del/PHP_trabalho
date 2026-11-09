@@ -1,10 +1,13 @@
 <?php 
-use resouces\views\projetos\idade;
-class idadeController {
+namespace App\Http\Controllers;
+
+
+
+class idadeController extends Controller {
     public function index(){
         
-        require __DIR__ . "/../../../resources/views/Projetos/idade.php";
-    
+        return view('projetos.idade');
+
         }
         
 }
