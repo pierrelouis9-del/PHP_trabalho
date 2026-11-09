@@ -1,6 +1,7 @@
 
 <?php
 // require __DIR__ . "/funcao-helpdesk.php";
+require_once __DIR__ . "/funcao-helpdesk.php";
 
 $mensagem = "";
 
