@@ -1,6 +1,6 @@
 <?php 
 namespace App\Http\Controllers;
-class pooController extends Controller {
+class poo2Controller extends Controller {
     public function index(){
         
         return view('Projetos.poo2');

@@ -14,7 +14,7 @@ export default defineConfig({
                 'resources/css/login.css',
                 'resources/css/helpdesk.css',
                 'resources/css/layout.css',
-                'resources/css/layout.css',
+                'resources/css/poo2.css',
                 'resources/css/notas.css'],
             refresh: true,
             fonts: [
