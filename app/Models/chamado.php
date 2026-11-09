@@ -6,7 +6,7 @@ class Chamado
     //READ - Ler todos os chamados
     public function lerChamados()
     {
-        $arquivo = storage_path('app/chamados.json')
+        $arquivo = storage_path('app/chamados.json');
        // $arquivo = __DIR__ . "/../../storage/data/chamados.json";
         // verificar se o arquivo existe
         if (!file_exists($arquivo)) {
