@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <main class="container">
         <div class="inputs">
-            <form action="/index.php?rota=login" method="POST"> -->
+            <form action="/login" method="POST"> -->
                 <input type="text" name="nome" id="nome" placeholder="digite seu nome">
                 <input type="password" name="senha" id="senha" placeholder="digite seu senha">
                 <button type="submit">Entrar</button>
