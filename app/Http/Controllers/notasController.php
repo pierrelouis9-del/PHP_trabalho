@@ -1,9 +1,8 @@
 <?php 
-use resouces\views\projetos\notas;
+namespace App\Http\Controllers;
 class notasController{
     public function index(){
-        
-        require __DIR__ . "/../../../resources/views/Projetos/notas.php";
+        return view('Projetos.notas');
     
         }
         
