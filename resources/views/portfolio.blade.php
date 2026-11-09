@@ -254,7 +254,7 @@
                     </div>
 
                     <!--<a href="/index.php?rota=poo2" class="link-projeto">Ver projeto →</a> -->
-                    <a href="{{ route('poo2') }}" class="link-projeto">Ver projeto →</a> 
+                    {{-- <a href="{{ route('') }}" class="link-projeto">Ver projeto →</a> --}}
                 </div>
             </div>
 
