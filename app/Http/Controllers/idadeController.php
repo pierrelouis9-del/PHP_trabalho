@@ -1,14 +1,13 @@
-<?php 
+<?php
+
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 
-
-class idadeController extends Controller {
-    public function index(){
-        
+class idadeController extends Controller
+{
+    public function index()
+    {
         return view('projetos.idade');
-
-        }
-        
+    }
 }
-?>
