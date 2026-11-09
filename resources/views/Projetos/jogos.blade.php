@@ -87,7 +87,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <div class="inputs">
 
-            <form action="/jogos" method="POST">
+            <form action="{{ url('/jogos') }}" method="POST">
 
                 <label for="senha">Senha</label>
 
