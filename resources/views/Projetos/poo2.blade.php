@@ -158,9 +158,9 @@ function escapar($texto)
         </div>
 
         <div>
-            {{-- <p><strong>Nome Maquina: </strong><?= $nome ?></p>
-            <p><strong>Tipo De Maquina: </strong><?= $tipo ?></p>
-            <p><strong>Quantidade de Maquinas: </strong><?= $quantidade ?></p> --}}
+            {{-- <p><strong>Nome Maquina: </strong><?=// $nome ?></p>
+            <p><strong>Tipo De Maquina: </strong><?= //$tipo ?></p>
+            <p><strong>Quantidade de Maquinas: </strong><?= //$quantidade ?></p> --}}
             <div>
                 <p><strong>Nome Máquina:</strong> {{ $nome ?? 'Não informado' }}</p>
             
