@@ -20,7 +20,7 @@ $pdo->exec($sql);
 
 // $pdo->exec($alterar);          
 echo '<div class="mensagens">Tabela criada com sucesso!</div>';
-
+$res = "yo";
 $nome = "";
 $genero = "";
 $nota = "";
